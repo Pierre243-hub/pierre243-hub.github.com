@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Ministries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="logo">
+            <img src="logoP.jpeg" alt="Logo Pierre Ministries">
+        </div>
+        <div class="contact-info">
+            <p>Email: contact@pierreministries.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </header>
+
+    <!-- Menu de navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">Pierre Ministries <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Sous-menu 1</a></li>
+                    <li><a href="#">Sous-menu 2</a></li>
+                    <li><a href="#">Sous-menu 3</a></li>
+                    <li><a href="#">Sous-menu 4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">L'Administrateur</a></li>
+            <li><a href="#">Nos articles</a></li>
+            <li class="dropdown">
+                <a href="#">Le message de l'heure <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Sous-menu 1</a></li>
+                    <li><a href="#">Sous-menu 2</a></li>
+                    <li><a href="#">Sous-menu 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section L'Administrateur -->
+<section id="administrateur">
+    <h2>L'Administrateur</h2>
+    <div class="admin-profile">
+        <div class="admin-photo">
+            <img src="Pierre TUTU.jpeg" alt="Photo de l'Administrateur" id="adminImg">
+        </div>
+        <div class="admin-info">
+            <h3 id="adminName">Pierre Tutu</h3>
+            <p id="adminBio">
+                Pierre Tutu est le fondateur de Pierre Ministries. Passionné par la spiritualité et l'enseignement, il consacre sa vie à partager des messages inspirants et à guider les autres vers une vie épanouissante.
+            </p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <button id="toggleBio">Afficher plus</button>
+        </div>
+    </div>
+</section>
+
+<!-- Section Nos articles -->
+<section id="nos-articles">
+    <h2>Nos articles</h2>
+    <div class="articles-container">
+        <!-- Rubrique 1 : Partage des citations -->
+        <div class="article-card">
+            <div class="article-icon">
+                <i class="fas fa-quote-left"></i>
+            </div>
+            <h3>Partage des citations</h3>
+            <p>Découvrez des citations inspirantes pour nourrir votre esprit.</p>
+            <a href="partage-citations.html" class="article-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Rubrique 2 : Nos réels -->
+        <div class="article-card">
+            <div class="article-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <h3>Nos réels</h3>
+            <p>Regardez nos réels inspirants sur les réseaux sociaux.</p>
+            <a href="nos-reels.html" class="article-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Rubrique 3 : Bible -->
+        <div class="article-card">
+            <div class="article-icon">
+                <i class="fas fa-bible"></i>
+            </div>
+            <h3>Bible</h3>
+            <p>Explorez des passages bibliques et des enseignements spirituels.</p>
+            <a href="bible.html" class="article-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Section Message -->
+<section id="message-heure">
+    <h2>Le Message de l'Heure</h2>
+    <div class="message-grid">
+        <!-- Zone 1 : Connaître son jour -->
+        <article class="message-card">
+            <div class="message-icon">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Connaître son jour</h3>
+            <div class="message-photo">
+                <img src="jour.jpg" alt="Connaître son jour">
+            </div>
+            <p>Découvrez la signification spirituelle de votre jour de naissance.</p>
+            <a href="#" class="message-btn">En savoir plus</a>
+        </article>
+
+        <!-- Zone 2 : Auteur -->
+        <article class="message-card">
+            <div class="message-icon">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h3>Auteur</h3>
+            <div class="message-photo">
+                <img src="Pierre TUTU.jpeg" alt="Auteur du message">
+            </div>
+            <p>Rencontrez l'auteur inspiré derrière ces enseignements.</p>
+            <a href="#" class="message-btn">Découvrir</a>
+        </article>
+
+        <!-- Zone 3 : Divinité -->
+        <article class="message-card">
+            <div class="message-icon">
+                <i class="fas fa-hands-praying"></i>
+            </div>
+            <h3>Divinité</h3>
+            <div class="message-photo">
+                <img src="Christ d'Hoffmann.avif" alt="Divinité">
+            </div>
+            <p>Explorez les principes divins qui guident notre ministère.</p>
+            <a href="#" class="message-btn">Étudier</a>
+        </article>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Envoyez-nous un message directement sur WhatsApp.</p>
+    <form id="whatsappForm">
+        <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Envoyer via WhatsApp</button>
+    </form>
+</section>
+
+    </main>
+
+   <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Section Logo et Nom de l'entreprise -->
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="logoP.jpeg" alt="Logo de l'entreprise">
+                <h2>Pierre Ministries</h2>
+            </div>
+            <p>Inspiration, Éducation, Spiritualité</p>
+        </div>
+
+        <!-- Section Liens rapides -->
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul class="footer-links">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Nos articles</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+
+        <!-- Section Réseaux sociaux -->
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/22961616161" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Section Adresse -->
+        <div class="footer-section">
+            <h3>Nous contacter</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Inspiration, Cotonou, Bénin</p>
+            <p><i class="fas fa-phone"></i> +229 61 61 61 61</p>
+            <p><i class="fas fa-envelope"></i> contact@pierreministries.com</p>
+        </div>
+    </div>
+
+    <!-- Bouton Retour en haut -->
+    <button id="backToTop" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
