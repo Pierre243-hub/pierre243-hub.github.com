@@ -1,459 +1,379 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pierre Ministries- Accueil</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="icon"  type="image/png" href="/Logo.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierre Ministries</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Animation pour le bouton Faire un Don */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .donate-btn {
+      animation: pulse 2s infinite;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    /* Animation pour le formulaire WhatsApp */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .whatsapp-form {
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    /* Effet hover sur les événements */
+    .event-item:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    
+    /* Bouton Retour vers le Haut amélioré */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      z-index: 1000;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      opacity: 0.7;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    #backToTop:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    /* Background pour la citation dans la section About */
+    .about-citation {
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-left: 4px solid #007bff;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-
-        <!--BARRE DE NAVIGATION-->
-        <div class="nav-container">
-            <div class="logo-container">
-                <img src="/Logo.png" alt="Logo Église" class="logo">
-                <div class="church-name">
-                    <h1>PIERRE MINISTRIES</h1>
-                    <p>Page chrétienne interdenominationnelle</p>
-                </div>
-                <a href="perspetro7@gmail.com" class="email-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-
-            <nav>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">À propos<i class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li class="submenu-item"><a href="/about/William_Branham/index.html">WILLIAM BRANHAM</a>
-                            </li>
-                            <li class="submenu-item"><a href="/about/Jesus_Christ/index.html">JESUS-CHRIST</a></li>
-                            <li class="submenu-item"><a href="/about/Nous/index.html">NOUS !</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Multimédia<i class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li class="submenu-item"><a href="MULTIMEDIA/Galérie/index.html">Photos</a></li>
-                            <li class="submenu-item"><a href="MULTIMEDIA/Medias/index.html">Vidéos</a></li>
-                            <li class="submenu-item"><a href="MULTIMEDIA/Predications/index.html">Predications</a></li>
-                            <li class="submenu-item"><a href="MULTIMEDIA/Brochures/index.html">Brochures</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Événements <i class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li class="submenu-item"><a href="/Evenement/Citations/index.html">Citation du Jour !</a>
-                            </li>
-                            <li class="submenu-item"><a href="/Evenement/versets/index.html">Verset du jour !</a></li>
-                            <li class="submenu-item"><a href="/Evenement/Live/index.html">En direct</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/Contacts/index.html" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Menu mobile -->
-    <div class="overlay"></div>
-    <div class="mobile-menu">
-        <ul>
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">ACCUEIL</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">
-                    <span>À PROPOS</span>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </a>
-                <ul class="mobile-submenu">
-                    <li class="mobile-submenu-item"><a href="/about/William_Branham/index.html">WILLIAM BRANHAM</a></li>
-                    <li class="mobile-submenu-item"><a href="/about/Jesus_Christ/index.html">JESUS-CHRIST</a></li>
-                    <li class="mobile-submenu-item"><a href="/about/Nous/index.html">NOUS </a></li>
-                </ul>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">
-                    <span>MULTIMEDIA</span>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </a>
-                <ul class="mobile-submenu">
-                    <li class="mobile-submenu-item"><a href="/MULTIMEDIA/Galérie/index.html">Photos</a></li>
-                    <li class="mobile-submenu-item"><a href="/MULTIMEDIA/Medias/index.html">Vidéos</a></li>
-                    <li class="mobile-submenu-item"><a href="/MULTIMEDIA/Predications/index.html">Audios</a></li>
-                    <li class="mobile-submenu-item"><a href="/MULTIMEDIA/Brochures/index.html">Brochures</a></li>
-                </ul>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">
-                    <span>Événements</span>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </a>
-                <ul class="mobile-submenu">
-                    <li class="mobile-submenu-item"><a href="/Evenement/Citations/index.html">Citation du jour</a></li>
-                    <li class="mobile-submenu-item"><a href="/Evenement/versets/index.html">Verset du jour</a></li>
-                    <li class="mobile-submenu-item"><a href="/Evenement/Live/index.html">En Direct</a></li>
-                </ul>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="/Contacts/index.html" class="mobile-nav-link">Contact</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Nouveau diaporama dans la section hero -->
-    <section class="hero">
-        <div class="slider-container">
-            <div class="slider">
-                <!-- Slide 1 -->
-                <div class="slide">
-                    <img src="/Branham Tab.png" alt="Autel de l'église">
-                    <div class="slide-content">
-                        <h3>BIENVENUE CHEZ NOUS</h3>
-                        <p>Rejoignez notre communauté pour célébrer la foi ensemble</p>
-                        <a href="#" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide">
-                    <img src="/branham_tabernacletoday.jpg" alt="Communauté">
-                    <div class="slide-content">
-                        <h3>VOTRE FAMILLE SPIRITUELLE</h3>
-                        <p>Découvrez nos activités et groupes de partage</p>
-                        <a href="#" class="btn">Nos activités</a>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide">
-                    <img src="/BT.png" alt="Événements">
-                    <div class="slide-content">
-                        <h3>PROCHAINS ÉVÉNEMENTS</h3>
-                        <p>Participez à nos célébrations et rencontres</p>
-                        <a href="#" class="btn">Voir le calendrier</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contrôles du slider -->
-            <div class="slider-controls">
-                <button class="slider-btn prev-btn"></button>
-                <button class="slider-btn next-btn"></button>
-            </div>
-
-            <!-- Indicateurs -->
-            <div class="slider-indicators">
-                <div class="indicator active" data-slide="0"></div>
-                <div class="indicator" data-slide="1"></div>
-                <div class="indicator" data-slide="2"></div>
-            </div>
-        </div>
-    </section>
-
+  <!-- En-tête -->
+  <header class="bg-light py-3">
     <div class="container">
-        <div class="main-content">
-            <!-- PARTIE ENSEIGNEMENTS -->
-
-            <div class="left-section">
-                <div class="lesson">
-                    <h1>Nos articles</h1>
-                </div>
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="Groupe de Jeunes">
-                        <span class="image-label">Propagez la bonne nouvelle</span>
-                    </div>
-                    <div class="image-card-content">
-                        <h3>Evangélisé pour la gloire du Christ</h3>
-                        <p>Jésus a donné le commendement à ses disciples de partager la Bonne Nouvelle. Dans Matthieu
-                            28:19-20, il leur dit d'aller "faire de de toutes les nations des disciples." En
-                            évangélisant, nous obéissons à cet appel.</p>
-                        <a href="/Sermons/index.html">Découvrir plus →</a>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="École du Dimanche">
-                        <span class="image-label">Une vie consacrée à Christ</span>
-                    </div>
-                    <div class="image-card-content">
-                        <h3>Investir sa jeunesse à Christ</h3>
-                        <p>Dans un monde où les jeunes font face à des pressions sociales, des décisions importantes et
-                            parfois des doutes, la porole de Dieu offre réconfort et encouragement.</p>
-                        <a href="/Sermons/Jeunesse/index.html">En savoir plus →</a>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="Groupe de Prière">
-                        <span class="image-label">QUESTIONS ET REPONSES</span>
-                    </div>
-                    <div class="image-card-content">
-                        <h3>Séries de questions et réponses</h3>
-                        <p>Ici nous avons trié quelques questions posé au Réverend Branham</p>
-                        <a href="#">Nous rejoindre →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PARTIE HORAIRE ET ANNONCE -->
-            <div class="right-section">
-                <div class="worship-schedule">
-                    <h2 class="section-title"><span>Horaire des nos programmes en ligne</span></h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Jour</th>
-                                <th>Heure</th>
-                                <th>programmes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Dimanche</td>
-                                <td>19:00</td>
-                                <td>Prédication en direct sur Facebook</td>
-                            </tr>
-
-                            <tr>
-                                <td>Mercredi</td>
-                                <td>8:00</td>
-                                <td>Partage des prédications (Audio) sur WhatsApp</td>
-                            </tr>
-                            <tr>
-                                <td>Vendredi</td>
-                                <td>15:00</td>
-                                <td>Hors services</td>
-                            </tr>
-                            <tr>
-                                <td>Samedi</td>
-                                <td>19:00</td>
-                                <td>Mis en ligne des vidéos sur YouTube</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="announcement">
-                    <h2 class="section-title"><span>Annonces Hebdomadaires</span></h2>
-                    <p><strong>Camp d'été spirituel :</strong> Nous organisons un camp d'été pour les jeunes du 15 au 20
-                        juillet au domaine de la Roche. Au programme : randonnées spirituelles, temps de prière,
-                        activités sportives et veillées autour du feu. Les inscriptions sont ouvertes jusqu'au 30 juin.
-                    </p>
-                    <p><strong>Conférence spéciale :</strong> Le Père Martin Dubois donnera une conférence sur "La Foi
-                        dans le monde moderne" le 25 juin à 20h dans la salle paroissiale.</p>
-                    <img src="/PHOTO/Annonce.png" alt="Camp de Jeunesse" class="announcement-img">
-                </div>
-            </div>
-        </div>
+      <div class="d-flex justify-content-end align-items-center gap-3">
+        <!-- Zone de recherche -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Rechercher le titre" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Rechercher</button>
+        </form>
+        <!-- Icône de contact -->
+        <a href="contact.html" class="text-dark fs-4" title="Contact">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        <!-- Bouton Faire un Don -->
+        <a href="donation.html" class="btn btn-danger donate-btn">
+          Faire un Don
+        </a>
+      </div>
     </div>
+  </header>
 
-    <!-- Section About - Version ultime -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1 data-aos="fade-right">À Propos</h1>
-                    <h2 data-aos="fade-right" data-aos-delay="100"> Seigneur Jesus-Christ</h2>
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/1000362218-removebg-preview.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Pierre Ministries</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu À propos avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="/about/Jesus_Christ/index.html">Jesus-Christ</a></li>
+              <li><a class="dropdown-item" href="/about/William_Branham/index.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="/about/Nous/index.html">Nous !</a></li>
+            </ul>
+          </li>
+          <!-- Menu Programmes avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+              <li><a class="dropdown-item" href="/MULTIMEDIA/Predications/index.html">Audios</a></li>
+              <li><a class="dropdown-item" href="/MULTIMEDIA/Brochures/index.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="/MULTIMEDIA/Galérie/index.html">Photos</a></li>
+              <li><a class="dropdown-item" href="/MULTIMEDIA/Medias/index.html">Vidéos</a></li>
+            </ul>
+          </li>
+          <!-- Menu Ministères avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="ministriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              EVENEMENTS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ministriesDropdown">
+              <li><a class="dropdown-item" href="/Evenement/Citations/index.html">Citation du jour</a></li>
+              <li><a class="dropdown-item" href="/Evenement/Live/index.html">Live</a></li>
+              
+            </ul>
+          </li>
+          <!-- Menu Contact sans sous-menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="/Contacts/index.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                    <p class="lead-paragraph" data-aos="fade-right" data-aos-delay="150">Le Seigneur Jésus-Christ est le
-                        centre de gravité de toute la vie chrétienne. Il est le Fondateur de la Religion Chrétienne.
-                        C’est le Dieu des prophètes, le Sauveur et le Rédempteur de l’humanité. C’est le Dieu créateur
-                        de toute chose. Il est le Seul Dieu véritable digne de toute adoration. C’est la pierre rejetée
-                        par les bâtisseurs qui est devenue la principale de l’angle. C’est le premier et le Dernier, le
-                        véritable Dieu.</p>
+  <!-- Bannière principale (diaporama/carousel) -->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Bienvenu.png" class="d-block w-100" alt="Image 1" style="max-height: 500px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="Evanglisation.png" class="d-block w-100" alt="Image 2" style="max-height: 500px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="bienvenu22.png" class="d-block w-100" alt="Image 3" style="max-height: 500px; object-fit: cover;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
 
-                    <div class="secondary-paragraph" data-aos="fade-up" data-aos-delay="200">
-                        <span class="quote-mark">“</span>
-                        <em>Dieu a beaucoup de titres : Jéhovah, Jéhovah-Jiré, -Rapha, -Manassé. Oh, beaucoup! Il a sept
-                            noms composés en rapport avec la rédemption. Il a beaucoup de titres : la Rose de Saron, le
-                            Lis de la Vallée, l’Étoile du Matin; Père, Fils, Saint-Esprit. Tout ça. Mais Il a un seul
-                            Nom humain. Dieu avait seulement un Nom, et c’était “le Seigneur Jésus-Christ”.</em>
-                        <span class="quote-mark">”</span>
-                    </div>
-
-                    <div class="about-links" data-aos="fade-up" data-aos-delay="250">
-                        <a href="#" class="about-link transparent-frame link-more">
-                            <span class="link-text">En savoir plus</span>
-                            <span class="link-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </a>
-                        <a href="interview.html" class="about-link transparent-frame link-interview">
-                            <span class="link-text">Interview</span>
-                            <span class="link-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div class="watermark" aria-hidden="true">Pierre</div>
-                </div>
-
-                <div class="about-image" data-aos="fade-left" data-aos-delay="300">
-                    <div class="image-container">
-                        <img src="/PHOTO/JC.jpg" alt="Église Saint-Pierre vue extérieure">
-                        <div class="image-label">Patrimoine historique</div>
-                    </div>
-                </div>
-            </div>
+  <!-- Section Verset du jour améliorée -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Verset du jour</h2>
+      <div class="card mx-auto shadow" style="max-width: 600px;">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p class="fs-4 fst-italic">"Car il est temps que l'homme soit sauvé, et qu'il se rende compte qu'il est l'oeuvre de Dieu..."</p>
+            <footer class="blockquote-footer mt-3">Référence Biblique <cite title="Source Title">Exemple 3:16</cite></footer>
+          </blockquote>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Section Contact WhatsApp -->
-    <section class="whatsapp-section">
-        <div class="container">
-            <div class="whatsapp-content">
-                <div class="whatsapp-text" data-aos="fade-right">
-                    <h2>Contactez-nous directement</h2>
-                    <p>Pour faciliter nos échanges, je vous invite à nous écrire directement sur WhatsApp. N'hésitez
-                        pas, je serai ravi de vous répondre rapidement.</p>
-                    <div class="whatsapp-features">
-                        <div class="feature">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2 22L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"
-                                    stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14M9 10H9.01M15 10H15.01"
-                                    stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <span>Réponse rapide garantie</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2 22L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"
-                                    stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8 12H16M12 8V16" stroke="#25D366" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <span>Disponible 24h/24</span>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="whatsapp-form" data-aos="fade-left" data-aos-delay="150">
-                    <div class="form-group">
-                        <label for="name">Votre nom</label>
-                        <input type="text" id="name" placeholder="..." required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Numéro de téléphone</label>
-                        <input type="tel" id="phone" placeholder="+243849003672" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Votre message</label>
-                        <textarea id="message" rows="4"
-                            placeholder="Bonjour, je souhaiterais obtenir des informations sur..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="whatsapp-button">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2 22L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14M9 10H9.01M15 10H15.01"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Envoyer via WhatsApp
-                    </button>
-                </form>
-            </div>
+  <!-- Section Présentation de la Communauté -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Présentation de la Communauté</h2>
+      <p class="lead text-center">
+        Bienvenue dans notre communauté de foi. Nous sommes réunis pour partager l'amour, la foi et l'espérance en ce monde.
+        Notre lieu de rassemblement offre des services spirituels, des activités communautaires et des opportunités pour grandir ensemble.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Section About avec citation en background -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Photo à gauche -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="christ-at-33-heinrich-hofmann1.jpg" class="img-fluid" alt="À propos de nous">
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>A propos</h3>
-                <p>La paroisse Saint-Pierre, fondée en 1856, est une communauté chrétienne vivante au cœur de la ville.
-                    Nous accueillons tous ceux qui cherchent Dieu avec un cœur sincère.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h3>Menus</h3>
-                <div class="footer-links">
-                    <a href="#">Messes</a>
-                    <a href="#">Adoration</a>
-                    <a href="#">Catéchèse</a>
-                    <a href="#">Charité</a>
-                    <a href="#">Chorale</a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h3>Domicile</h3>
-                <p>Goma, Av Bunagana 020<br>Nord-Kivu </p>
-                <p>+243822732821</p>
-                <p>tutupierre87@gmail.com</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Liens rapides</h3>
-                <div class="footer-links">
-                    <a href="#">Shekinah Tabernacle</a>
-                    <a href="#">Peniel Tabernacle</a>
-                    <a href="#">Événements</a>
-                    <a href="#">Dons</a>
-                    <a href="#">FAQ</a>
-                </div>
-            </div>
+        <!-- Contenu à droite -->
+        <div class="col-md-6">
+          <h2 class="mb-4">À propos de nous</h2>
+          <p class="lead">
+            Nous sommes une communauté engagée et passionnée par le partage de la parole divine et l'amour inconditionnel.
+          </p>
+          <blockquote class="blockquote about-citation">
+            <p class="mb-0 fst-italic">"La foi n'est pas une lumière qui nous éternise, mais une flamme qui nous éclaire."</p>
+            <footer class="blockquote-footer mt-2">Citation Inspirante</footer>
+          </blockquote>
+          <p class="mt-3">
+            Nous croyons en un avenir lumineux où chaque individu est guidé par la paix et l'espérance. Rejoignez-nous pour construire ensemble un monde meilleur.
+          </p>
+          <a href="about.html" class="btn btn-primary">En savoir plus</a>
         </div>
+      </div>
+    </div>
+  </section>
+  
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+
+  <!-- Section Événements et Horaire/Annonces -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <!-- Partie Événements -->
+        <div class="col-md-6">
+          <h3 class="mb-4">Événements à venir</h3>
+          <div class="event-item mb-4">
+            <img src="Message.png" class="img-fluid mb-2" alt="Événement 1">
+            <h4>Événement 1</h4>
+            <p>Description de l'événement 1. Un moment exceptionnel de partage et de spiritualité.</p>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+          </div>
+          <div class="event-item mb-4">
+            <img src="Viens.png" class="img-fluid mb-2" alt="Événement 2">
+            <h4>Événement 2</h4>
+            <p>Description de l'événement 2. Une rencontre enrichissante pour tous.</p>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+          </div>
+          <div class="event-item mb-4">
+            <img src="Chemin.png" class="img-fluid mb-2" alt="Événement 3">
+            <h4>Événement 3</h4>
+            <p>Description de l'événement 3. Un temps de réflexion et d'inspiration.</p>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+          </div>
         </div>
-    </footer>
+        <!-- Partie Horaire et Annonces -->
+        <div class="col-md-6">
+          <h3 class="mb-4">Horaire des Activités</h3>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Jour</th>
+                <th>Activité</th>
+                <th>Heure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lundi</td>
+                <td>Messe</td>
+                <td>10:00</td>
+              </tr>
+              <tr>
+                <td>Mercredi</td>
+                <td>Étude Biblique</td>
+                <td>19:00</td>
+              </tr>
+              <tr>
+                <td>Dimanche</td>
+                <td>Culte</td>
+                <td>09:00</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="annonces mt-4">
+            <h3>Annonces</h3>
+            <p>Annonce importante : notre communauté organise un grand rassemblement ce week-end. Venez nombreux !</p>
+            <img src="/PHOTO/Annonce.png" class="img-fluid" alt="Annonce">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+    <!-- Section WhatsApp Formulaire avec animation -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Contactez-nous via WhatsApp</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <!-- Le formulaire ici ouvre une fenêtre WhatsApp (action vers API) -->
+          <form class="whatsapp-form border p-4 rounded" style="background-color: #e9f7ef;" action="https://api.whatsapp.com/send" method="get" target="_blank">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Numéro WhatsApp</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="+243XXXXXXXX" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="3" placeholder="Votre message" required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success">Envoyer via WhatsApp</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bouton Retour vers le Haut -->
+  <button id="backToTop" class="btn btn-secondary">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  
+  <!-- Pied de page détaillé -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <!-- Nom & Description -->
+        <div class="col-md-4 mb-4">
+          <h4>Nom de la Page</h4>
+          <p>Une courte description de notre mission spirituelle et de l'engagement de notre communauté.</p>
+        </div>
+        <!-- Liens Rapides -->
+        <div class="col-md-4 mb-4">
+          <h5>Liens Rapides</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Accueil</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">À Propos</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Programmes</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Coordonnées -->
+        <div class="col-md-4 mb-4">
+          <h5>Contact</h5>
+          <p>Adresse : 123 Rue de la Foi, Ville, Pays</p>
+          <p>
+            <a href="https://facebook.com" target="_blank" class="text-white text-decoration-none me-2">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+          </p>
+          <p>
+            <a href="#whatsapp-form" class="text-white text-decoration-none">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <hr class="bg-secondary">
+          <p class="mb-0">&copy; 2025 Nom de la Page. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (inclut Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Afficher ou masquer le bouton Retour vers le Haut
+    window.addEventListener("scroll", function() {
+      const backToTop = document.getElementById("backToTop");
+      backToTop.style.display = (window.scrollY > 100) ? "block" : "none";
+    });
+    // Défilement fluide vers le haut
+    document.getElementById("backToTop").addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
-
 </html>
