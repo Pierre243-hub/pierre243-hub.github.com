@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histoires</title>
+   <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Styles personnalisés */
+    .header-icons a {
+      color: #000;
+      margin-left: 15px;
+      font-size: 1.5rem;
+    }
+    .banner {
+      background: url('banner.jpg') center center/cover no-repeat;
+      height: 300px;
+      position: relative;
+    }
+    .banner h1 {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .col p {
+      text-align: justify;
+    }
+    .quote {
+      background: #f8f9fa;
+      border-left: 5px solid #0d6efd;
+      padding: 20px;
+      font-style: italic;
+    }
+    .section-img {
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Entête avec icônes alignées à droite -->
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="mailto:contact@example.com"><i class="bi bi-envelope"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+    </div>
+  </header>
+
+  <!-- Barre de navigation en bleu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Site Religieux</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À propos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#">Histoire</a></li>
+              <li><a class="dropdown-item" href="#">Mission</a></li>
+              <li><a class="dropdown-item" href="#">Vision</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="ministryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ministère
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ministryDropdown">
+              <li><a class="dropdown-item" href="#">Prières</a></li>
+              <li><a class="dropdown-item" href="#">Études bibliques</a></li>
+              <li><a class="dropdown-item" href="#">Témoignages</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+              <li><a class="dropdown-item" href="#">Email</a></li>
+              <li><a class="dropdown-item" href="#">Téléphone</a></li>
+              <li><a class="dropdown-item" href="#">Adresse</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bannière avec photo -->
+  <div class="banner">
+    <h1 class="text-center">Bienvenue sur notre site religieux</h1>
+  </div>
+
+  <!-- Présentation de la communauté -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col text-center">
+        <h2>Notre Communauté</h2>
+        <p>Nous sommes une communauté dédiée à la foi, à l'amour et à la solidarité. Rejoignez-nous dans la célébration de notre spiritualité et de nos valeurs communes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section de contenu paginé (chaque page a ses données dans HTML) -->
+  <section class="container py-5">
+    <div id="pageContents">
+      <!-- Page 1 -->
+      <div class="page-content" id="page-1">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <img src="footsteps-3938563_640.jpg" alt="Section 1" class="img-fluid section-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>PAPA j'essaie de suivre tes empreintes</h2> <br><br>
+            <p>On raconte l’histoire d’un homme, en Angleterre, il y a bien des années. Il s’est proposé d’aller boire le verre de l’amitié à Noël, juste pour sympathiser. Il est allé chez ses voisins et ils ont échangé des cadeaux. Tout le monde lui a dit : “Allons, Jean, prends juste un verre de ça.” Une petite gorgée par ici, une petite gorgée par là, et il s’est vraiment enivré. <br><br> Et alors qu’il rentrait à la maison, il était tombé environ quinze centimètres de neige. Et—et son petit garçon le suivait.
+               Il ne pouvait pas le porter, il était trop ivre. Et alors qu’il rentrait à la maison, il venait juste de se retourner et il a remarqué que son petit garçon titubait dans la neige. Et il a dit : “Fiston, pourquoi titubes-tu dans la neige?”  Il a dit : “Papa, j’essaie de suivre tes traces de pas.” Il a pris le petit garçon dans ses bras et a dit : “Ô Dieu, à partir d’aujourd’hui, je ne boirai plus jamais.” <br><br>Quelqu’un va suivre vos traces. Marchons sur cette ligne droite, du berceau jusqu’au Calvaire. Voilà les traces sur lesquelles nous voulons les faire marcher.</p>
+            <div class="quote my-4">
+              <p>"Quelqu’un va suive vos empreintes"</p>
+            </div>
+            <p>Description complémentaire pour la page 1 qui approfondit la citation et guide dans le cheminement spirituel.</p>
+            <div class="my-4">
+              <audio controls style="width: 100%;">
+                <source src="audio1.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="page-content d-none" id="page-2">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <img src="section2.jpg" alt="Section 2" class="img-fluid section-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>VOUS AVEZ PECHE CONTRE VOTRE MARI PAS CONTRE DIEU</h2> <br>
+            <p>Un peu plus tard, il y avait une jeune fille. Elle est peut-être assise ici ce matin. Je ne la vois pas, mais elle vient parfois. Elle est membre d’une église à New Albany, une église notable, une église remarquable à New Albany. J’y suis déjà allé. Elle veut… Elle a une maladie mentale, une sorte de psychonévrose. 
+              <br><br>Et elle ne peut pas, elle ne peut même pas quitter la ville, ni aller nulle part, car elle se met à crier et à pleurer, et à se comporter comme ça. Alors, je—j’ai prié pour elle deux ou trois fois, mais quelque chose ne me permettait pas de défier ce démon, d’une manière ou d’une autre. Je ne sais pas. 
+              <br><br>Je n’arrivais tout simplement pas à le faire. Elle est une bonne amie d’une infirmière qui habite dans le quartier, là-bas. Elles sont venues là-bas. Son état s’aggravait. Elle était comme ça depuis environ huit ans. 37 Et alors, elle est venue l’autre jour, et elle a dit… Je lui ai dit, j’ai dit : “Sœur, tout ce que je sais, c’est qu’il y a une raison pourquoi cela arrive. Je—je ne sais pas ce que c’est.” J’ai dit : “Je… Si vous pouviez venir.” 
+              <br><br> Elle a dit : “Mon pasteur a prié pour moi.” Et elle a dit : “Mon pasteur m’a envoyée ici, il a dit : ‘Va voir Frère Billy et vois ce qu’il dira.’” 39 Bon, j’ai dit : “Eh bien, je ne—je ne sais pas, sœur,” ai-je dit, “je suis exactement comme votre pasteur.” J’ai dit : “Avez-vous confessé tous vos péchés? — Tout.” 40 Elle est une enseignante de l’école du dimanche, elle a une très bonne classe et elle fait du bon travail. Mais cela pesait sur elle. 
+              <br><br>Eh bien, je—je ne savais pas quoi faire. Vous vous imaginez un peu comment je me sentais. Je—je ne savais vraiment pas quoi faire. 41 Nous l’avons emmenée dans la pièce. J’ai dit : “Très bien, venez.” Quand les gens viennent, nous arrêtons tout. Je l’ai emmenée dans une pièce. Je me suis assis et je me suis mis à parler des généalogies et du commencement, de l’origine du temps et tout, et je l’observais. C’était ce même matin. Dieu est toujours là, au moment crucial, vous savez. 
+              <br><br>Et au bout d’un moment, j’ai regardé dehors, et une vision est apparue. J’ai vu une automobile qui roulait à toute allure. 42 J’ai dit : “Votre état a quelque chose à voir avec une automobile.” Elle a dit : “Non, je n’ai jamais eu d’accident.” 43 J’ai dit : “Restez simplement là, humblement.” J’ai dit : “Je vous vois dans une voiture. Vous avez failli vous faire heurter par un train.” Elle—elle a sursauté. Elle a dit : “Oh!” 44 J’ai dit : “Oui, et vous n’êtes pas avec votre mari. Vous êtes avec un autre homme. Votre mari est à la guerre, outre-mer, à ce moment-là.” J’ai commencé et j’ai continué à dévoiler tout ça. J’ai dit : “Les choses que vous avez faites, les choses immorales! Vous lui en avez dit une partie, mais vous ne lui avez pas tout dit.” 
+              <br><br>Elle s’est mise à crier, en se tenant le visage comme ça. J’ai dit : “De plus, il n’y a pas longtemps, vous alliez vous faire opérer pour les amygdales, et vous aviez peur de recevoir l’anesthésique, parce que vous aviez peur de raconter tout cela sous les effets de l’anesthésique.” Elle a crié et est tombée par terre. Elle a dit : “C’est la vérité.” J’ai dit : “Comment pourriez-vous jamais arriver à quelque chose avec cela qui pèse sur vous?” Elle a dit : “J’ai demandé à Dieu de me pardonner.” 45 J’ai dit : “Vous n’avez jamais péché contre Dieu. Vous avez péché contre votre mari et contre vos vœux.” J’ai dit : “Retournez mettre cela en ordre, ensuite revenez. Je pourrai alors contrôler ce démon, vous voyez.” 
+              <br><br> Et j’ai dit : “Au fait, votre mari,” j’ai décrit son apparence, je ne l’ai jamais vu de ma vie, j’ai dit : “il a la même chose à vous confesser.” J’ai dit : “Là, si vous ne le croyez pas, appelez-le au téléphone et dites-lui de vous rencontrer.” Elle est allée l’appeler au téléphone. Ils se sont rencontrés sur la route. 47 Et les voilà qui reviennent, les larmes qui coulent sur leurs joues, ils s’étaient pardonnés l’un l’autre. Le démon l’a quittée, et là elle était libre. Voyez? 48 Bon, j’aurais pu crier et hurler après ce démon, et le chasser et tout le reste, et ils ne seraient jamais partis tant que cela n’avait pas été corrigé. Voyez? Vous voyez, vous devez trouver la cause avant de pouvoir trouver le remède.</p>
+            <div class="quote my-4">
+              <p>"La prière ouvre le cœur aux merveilles."</p>
+            </div>
+            <p>Description complémentaire pour la page 2 approfondissant l'importance de la prière dans notre quotidien.</p>
+            <div class="my-4">
+              <audio controls style="width: 100%;">
+                <source src="audio2.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="page-content d-none" id="page-3">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <img src="section3.jpg" alt="Section 3" class="img-fluid section-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>VOUS DEVEZ RESPECTER DIEU</h2> <br>
+            <p>Il y a quelque temps, à New Albany, j’étais en train de parler à un pécheur pour le conduire à Christ, lorsqu’un grand et gros homme aux mains calleuses, dans le garage, qui était un de mes amis, et dont le gendre exploitait le garage juste à côté… J’étais là prêchant à l’heure du dîner, je mangeais un sandwich et lui parlais de Dieu. Pendant la journée, je cherchais un endroit où aller à l’heure du dîner pour essayer de gagner une âme à Christ. 
+              <br><br>Il dit : “Monsieur Branham…” Je n’étais qu’un jeune prédicateur. Il dit : “Monsieur Branham, ma mère avait ce genre de religion, cette religion qui touche le cœur.” Et les larmes coulaient sur ses joues. Je lui dis : “Depuis combien de temps est-elle partie?” Il dit : “Des années. Elle a toujours prié pour moi.” 
+              <br><br> Je lui dis : “Le Dieu qui a entendu ses prières essaie d’y répondre en ce moment même.” Et cet homme vint à cet endroit et dit : “Bonjour!” Il était ivre. Il dit : “Hé, Billy, écoute, chaque fois que tu veux venir dans mon garage, tu peux venir, mais n’apporte pas avec toi ta vieille religion d’exalté.” 
+              <br><br> Je me tournai vers lui et dis : “Partout où Christ n’est pas le bienvenu, je n’irai pas.” 95 Il se retourna et dit : “Oh, reprends tes sens, mon garçon.” 96 J’entendis simplement dans mon cœur une Voix dire : “Tu récoltes ce que tu sèmes, et il vaudrait mieux pour toi qu’on suspendît à ton cou une meule de moulin et qu’on te jetât au fond de la mer.” Et son propre gendre, ce même après-midi, lui passa dessus avec un camion Chevrolet de deux tonnes chargé, et il fut écrasé. 
+              <br><br> Voyez-vous, vous devez respecter Dieu! Vous devez faire, vous… Dieu réclame le respect; Il l’exige.</p>
+            <div class="quote my-4">
+              <p>"Partout où Christ n'est pas le bienvenue, je n'irais pas"</p>
+            </div>
+            <p>Description complémentaire pour la page 3 qui inspire et reflète la solidarité entre les membres.</p>
+            <div class="my-4">
+              <audio controls style="width: 100%;">
+                <source src="audio3.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="page-content d-none" id="page-4">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <img src="section4.jpg" alt="Section 4" class="img-fluid section-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>UNE FEMME PAR SA VIE AMENE SON MARI IVROGNE AU SALUT</h2>
+            <p>Une… J’ai présenté une petite illustration ce matin, au sujet d’une personne qui… Une fois il y avait une petite dame qui avait—qui avait reçu le Saint-Esprit. C’était une petite dame très gentille. Ils… Elle disait… Eh bien, elle avait eu une vie très dure, et son mari était alcoolique. Et alors, elle continuait à avancer; elle le supportait patiemment. Il disait : “Si tu veux aller à l’église, chérie, vas-y!” Tandis que lui, il allait au saloon, ici, au Brown Derby. Il continuait comme ça. Alors, ils traînaient tout le temps là-bas, autrefois c’était chez Bonifer. Beaucoup d’entre vous, les anciens d’ici, vous vous souvenez de l’époque où c’était Bonifer qui tenait ça, là à l’angle de… Ça s’appelle Brown Derby maintenant, je pense. 
+             <br><br>Alors, ils traînaient là-bas, et voilà qu’un soir une question est venue à propos de l’église et des Chrétiens. L’un des vieux ivrognes qui étaient assis là a dit : “Des Chrétiens, ça n’existe plus, ça. Ça n’existe pas. Toute cette bande d’hypocrites,” il a dit, “vous les voyez, qui sont là à fumer, à boire et à faire la même chose que nous, et”, il a dit, “ils se disent Chrétiens. Ça n’existe pas.” 
+             <br><br> L’autre ivrogne s’est levé et il a dit : “Minute! Moi, j’en connais une.” Il a dit : “Qui ça?” Il a dit : “Ma femme.” Voyez? Elle était devenue salée. Pendant tout ce temps il le remarquait. Il a dit : “Je parie que si elle était mise à l’épreuve…” Il a dit : “Non, elle est toujours Chrétienne; je vais te le prouver.” Il a dit : “Je vais te dire ce que nous allons faire : montons à la maison, et je vais te montrer si elle est Chrétienne ou pas.” Il a dit : “Montons à la maison, et là, soyons vraiment ivres. Nous allons faire semblant d’être vraiment ivres.” Il a frappé à la porte, il est entré en titubant, en renversant tout sur son passage, et—et… “Allez, asseyez-vous donc par ici!”, et tout. Elle leur a installé une chaise, à chacun, et (les invités de son mari, vous savez), et elle a fait de son mieux pour leur faire bon accueil. 
+             <br><br>Il a dit : “Je veux que tu nous prépares à souper.” Alors, ils… Elle est allée leur préparer à souper. Il a dit : “Nous voulons du jambon et des œufs.” Il savait qu’ils en avaient, donc ils se sont fait préparer du jambon et des œufs. Quand il est arrivé à table, il les a regardés comme ça, il a pris son assiette et il a jeté tout ça par terre, en disant : “Tu le sais, que ce n’est pas comme ça que je veux mes œufs. Venez, les gars, allons, sortons d’ici”, comme ça—comme ça. 119 Ils sont sortis et se sont assis comme ça, vous savez. Et elle est venue; elle a dit : “Chéri, je—je suis désolée de ne pas les avoir préparés comme il faut; je vais t’en préparer d’autres. 120 — Oh, foutaises! tu le savais très bien, que ce n’est pas comme ça que je les voulais”, il faisait des histoires à n’en plus finir. 
+             <br><br>Ils sont allés un peu plus loin, ils se sont assis, ils faisaient semblant d’être ivres. Ils l’ont entendue, elle était là qui sanglotait un peu, en chantant tout bas : Jésus doit-Il porter Sa croix tout seul, tout seul, Et le reste du monde vivre dans l’insouciance? Il y a une croix pour chacun, Il y a une croix pour moi. Je porterai cette croix consacrée, Jusqu’à ce que la mort me libère. L’un des ivrognes a regardé l’autre, et il a dit : “C’est une Chrétienne; elle a ce qu’il faut!” Et cette petite femme-là a conduit son mari, et les autres aussi, à Christ ce soir-là. Voyez? Pourquoi? Voyez? Soyez simplement très gentils. Rappelez-vous simplement qu’Il sait tout à ce sujet.</p>
+            <div class="quote my-4">
+              <p>"Par ta vie, ton attitude, ta conduite tu gangera une âme pour Dieu"</p>
+            </div>
+            <p>Description complémentaire pour la page 4 soulignant la force collective et l'engagement.</p>
+            <div class="my-4">
+              <audio controls style="width: 100%;">
+                <source src="audio4.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 5 -->
+      <div class="page-content d-none" id="page-5">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <img src="section5.jpg" alt="Section 5" class="img-fluid section-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>LA PAIRE DE CHAUSSURES QUI RECONCILIE</h2>
+            <p>Pour terminer. Il y avait un homme et une femme, un mari et sa femme, qui se séparaient. Ils avaient essayé de se réconcilier. Ils étaient allés voir un psychiatre, pour voir s’il pouvait les rapprocher afin qu’ils soient en harmonie, mais il n’avait pas réussi. Ils étaient allés rencontrer tous ceux qu’ils pouvaient imaginer, dans le but d’essayer de rester ensemble, mais ils se disputaient sans cesse, et avaient toujours des divergences. 
+              <br><br>Ils ne pouvaient tout simplement pas se supporter l’un l’autre, ni supporter la présence de l’un l’autre, ils se mettaient à se disputer. Alors, ils avaient décidé de divorcer. 185 Donc, ils ont embauché un avocat pour conclure leur divorce. Et il leur a dit : “Eh bien, maintenant, avant toute chose,” a-t-il dit, “nous vendrons la maison.” Et il leur a dit : “Vous feriez mieux d’aller partager vos biens entre vous avant de procéder au divorce et que la maison soit vendue.” 
+              <br><br> Alors, le mari et la femme sont repartis ensemble. Ils sont rentrés chez eux. Ils sont allés au salon, et elle a dit : “Je prends ceci.” Et il a dit : “Je prends ceci.” 187 Ils se sont mis à se disputer, ils se sont emportés et ont continué à se comporter ainsi, l’un l’autre. Au bout d’un moment, ils se sont dit : “Eh bien, si tu acceptes ceci, je te laisse ceci.” Très bien, ça a duré un moment. Puis il a fallu aller dans le petit salon et dans différentes pièces, dans la cuisine, et dans la chambre à coucher. Ils ont partagé leurs biens. 
+              <br><br> Et enfin, ils se sont souvenus qu’il y avait des choses dans le grenier. Ils sont donc montés au grenier et ont ouvert une vieille malle. Et ils se sont mis à en sortir différentes choses, à dire : “Tu peux prendre ceci, et tu peux prendre ceci.” Et finalement, leurs yeux se sont posés sur un certain petit objet, et tous les deux l’ont attrapé. Ils se sont regardés. Qu’était-ce? Une petite paire de chaussures blanches qui appartenait à un bébé décédé. Ce bébé faisait partie de tous les deux. 
+              <br><br>Voilà que leurs mains étaient unies comme ça, sur la chaussure de ce bébé. En fait, à qui cela appartenait-il? À qui était-ce? Cela leur appartenait à tous les deux. Ils avaient des choses en commun. 189 Au bout d’un moment, alors qu’ils se regardaient l’un l’autre, les larmes se sont mises à couler sur leurs joues. Qu’était-ce? Ils avaient pu se partager tout le reste, mais quand ils sont arrivés là où ils avaient quelque chose en commun, cet enfant qui était au ciel, alors la dispute était terminée. 
+              <br><br>Quelques instants plus tard, ils étaient dans les bras l’un de l’autre. Le divorce était réglé. La paix régnait. 190 Et, frères, permettez-moi de vous dire ceci ce soir. Nous ne voulons pas que vous adhériez à une église. Mais je vous demande ceci. Il y a une chose que nous avons en commun, c’est Jésus-Christ. Nous L’avons en commun parmi nous. Nous ne pouvons pas tous être baptistes. Nous ne pouvons pas tous être méthodistes. Nous ne pouvons pas tous être unitaires, ou trinitaires, ou quoi que ce soit d’autre. 
+              <br><br>Nous ne pouvons pas être cela. Mais il y a une chose que nous avons en commun, c’est l’offre de pardon de Dieu, Son Fils, Jésus-Christ. En Lui, nous avons toutes choses. Mais c’est la première chose que nous devons accepter. Par la suite, nous pouvons obtenir d’autres choses, quand nous acceptons le pardon que Dieu nous a offert. Et ce ne sera pas par notre système d’instruction, ou par notre système dénominationnel, mais par le Sang de Jésus-Christ. Nous pouvons tous nous rencontrer là, sous la croix, être un et avoir des choses en commun. Croyez-vous cela?</p>
+            <div class="quote my-4">
+              <p>"La chaussure de l'enfant réconcilie le couple en instance de divorce (Ce qui nous unit est plus fort)"</p>
+            </div>
+            <p>Description complémentaire pour la page 5 invitant à la méditation et à la réflexion sur notre parcours spirituel.</p>
+            <div class="my-4">
+              <audio controls style="width: 100%;">
+                <source src="audio5.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination (5 pages) -->
+    <nav aria-label="Pagination de la section">
+      <ul class="pagination justify-content-center mt-4" id="pagination"></ul>
+    </nav>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 Site Religieux. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle avec Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script de gestion de la pagination et de l'affichage -->
+  <script>
+    let currentPage = 1;
+    const totalPages = 5;
+    
+    // Fonction qui affiche la page sélectionnée et masque les autres
+    function showPage(page) {
+      for (let i = 1; i <= totalPages; i++) {
+        const pageDiv = document.getElementById('page-' + i);
+        if (i === page) {
+          pageDiv.classList.remove('d-none');
+        } else {
+          pageDiv.classList.add('d-none');
+        }
+      }
+      currentPage = page;
+      renderPagination();
+    }
+    
+    // Génère la pagination dynamiquement
+    function renderPagination() {
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      // Bouton Précédent
+      const prevLi = document.createElement('li');
+      prevLi.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
+      const prevLink = document.createElement('a');
+      prevLink.className = 'page-link';
+      prevLink.href = '#';
+      prevLink.textContent = 'Précédent';
+      prevLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (currentPage > 1) {
+          showPage(currentPage - 1);
+        }
+      });
+      prevLi.appendChild(prevLink);
+      pagination.appendChild(prevLi);
+
+      // Boutons numériques pour chaque page
+      for (let i = 1; i <= totalPages; i++) {
+        const pageLi = document.createElement('li');
+        pageLi.className = 'page-item' + (i === currentPage ? ' active' : '');
+        const pageLink = document.createElement('a');
+        pageLink.className = 'page-link';
+        pageLink.href = '#';
+        pageLink.textContent = i;
+        pageLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          showPage(i);
+        });
+        pageLi.appendChild(pageLink);
+        pagination.appendChild(pageLi);
+      }
+
+      // Bouton Suivant
+      const nextLi = document.createElement('li');
+      nextLi.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
+      const nextLink = document.createElement('a');
+      nextLink.className = 'page-link';
+      nextLink.href = '#';
+      nextLink.textContent = 'Suivant';
+      nextLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+          showPage(currentPage + 1);
+        }
+      });
+      nextLi.appendChild(nextLink);
+      pagination.appendChild(nextLi);
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      showPage(1);
+    });
+  </script>
+</body>
+</html>
