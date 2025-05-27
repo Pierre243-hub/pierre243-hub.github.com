@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pierre Ministries</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+     /* Icônes de l'entête dans des cadres carrés */
+    .header-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .header-icons a:hover {
+      transform: scale(1.1);
+    }
+    /* Couleurs officielles */
+    .header-icons a.facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+    .header-icons a.contact {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .header-icons a.youtube {
+      background-color: #FF0000;
+      color: #fff;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    /* Barre de navigation personnalisée (bleu) */
+    .navbar-custom {
+      background-color: #007bff;
+    }
+    .navbar-custom .nav-link, 
+    .navbar-custom .navbar-brand {
+      color: #fff;
+    }
+    .navbar-custom .nav-link:hover, 
+    .navbar-custom .navbar-brand:hover {
+      color: #e2e6ea;
+    }
+    /* Présentation de la communauté */
+    .community {
+      padding: 60px 0;
+      background-color: #e9ecef;
+      text-align: center;
+    }
+    .community h2 {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    /* Footer */
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Entête -->
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="contact.html" aria-label="Contact" class="contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+  </header>
+  
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+        Pierre Ministries
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu 1 avec sous-menus -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCUEIL</a>
+          </li>
+          <!-- Menu 2 avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu2">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+            </ul>
+          </li>
+          <!-- Menu 3 avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu3">
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+            </ul>
+          </li>
+          <!-- Menu 4 sans sous-menus -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diaporama de bannière -->
+  <div id="carouselBanners" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Bannière 1 -->
+      <div class="carousel-item active">
+        <img src="banner1.jpg" class="d-block w-100" alt="Bannière 1">
+      </div>
+      <!-- Bannière 2 -->
+      <div class="carousel-item">
+        <img src="banner2.jpg" class="d-block w-100" alt="Bannière 2">
+      </div>
+      <!-- Bannière 3 -->
+      <div class="carousel-item">
+        <img src="banner3.jpg" class="d-block w-100" alt="Bannière 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanners" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+
+  <!-- Présentation de la communauté -->
+  <section class="community">
+    <div class="container">
+      <h2>Bienvenue dans notre Communauté de Foi</h2>
+      <p>
+        À travers ce contenu visuel, nous cherchons à offrir un espace d'inspiration et de soutien, en résonance avec le message authentique de William Marrion Branham.
+         Laissez-vous emporter par des moments de révélation, de guérison et de fraternité, et rejoignez une communauté vibrante qui se veut être une source d'espoir et de renouveau pour chacun de ses membres.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section "Nos Vidéos" avec des liens embed YouTube -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Nos Vidéos</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4W79zElDZ90?si=HcIm2WAoEIudwenS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Z_MMjcE9kT0?si=XVsdMuC2SHIlcEsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Z_MMjcE9kT0?si=XVsdMuC2SHIlcEsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Z_MMjcE9kT0?si=XVsdMuC2SHIlcEsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description -->
+  <section class="container my-5">
+    <p>
+      Rejoignez-nous et laissez la lumière de la foi transformer votre quotidien. 
+      Chez Pierre Ministries, chaque vidéo sur YouTube et Facebook est une invitation à renouer avec le message authentique et inspirant de l'amour divin, dans la lignée du renouveau prêché par William Branham.
+       En suivant nos publications, vous découvrirez des messages édifiants, des témoignages vivants et des moments de prière qui nourrissent une relation intime avec Dieu. Soyez acteur de votre foi : 
+       abonnez-vous dès maintenant pour vivre pleinement cette aventure spirituelle et partager un élan de fraternité au sein d’une communauté vibrante.
+
+
+    </p>
+  </section>
+
+  <!-- Footer / Copyright -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS (inclut Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

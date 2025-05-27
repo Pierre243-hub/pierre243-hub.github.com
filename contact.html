@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Religieux - Nom de la Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* === Top Header === */
+    .top-header {
+      background-color: #f8f9fa;
+      padding: 10px 0;
+    }
+    .top-header .top-link {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    
+    /* === Barre de navigation === */
+    .navbar-nav .nav-link, .navbar-brand {
+      color: #fff !important;
+    }
+
+    /* === Bannière (image réelle) === */
+    .banner {
+      text-align: center;
+      overflow: hidden;
+    }
+    .banner-img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* === Section Communauté === */
+    .community-section {
+      padding: 60px 0;
+      background-color: #f1f1f1;
+    }
+    .community-section h2 {
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    
+    /* === Section Promoteur === */
+    .promoter-section {
+      padding: 60px 0;
+    }
+    .promoter-img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    /* Cadre pour les liens du promoteur */
+    .promoter-links a {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 8px;
+      margin-right: 5px;
+      display: inline-block;
+    }
+    
+    /* === Pied de page === */
+    footer {
+      background-color: #343a40;
+      color: #ddd;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Entête supérieur avec icônes uniquement aux vraies couleurs -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-end">
+      <a href="https://facebook.com" target="_blank" class="top-link" title="Facebook">
+        <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
+      </a>
+      <a href="contact.html" class="top-link" title="Contact">
+        <i class="fas fa-envelope" style="color: #D44638;"></i>
+      </a>
+      <a href="don.html" class="top-link" title="Faire un don">
+        <i class="fas fa-hand-holding-heart" style="color: #FF0000;"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Pierre Ministries</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu 1 : Accueil avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Accueil
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Présentation</a></li>
+              <li><a class="dropdown-item" href="#">Nouveautés</a></li>
+            </ul>
+          </li>
+          <!-- Menu 2 : À Propos avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À Propos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Historique</a></li>
+              <li><a class="dropdown-item" href="#">Mission</a></li>
+              <li><a class="dropdown-item" href="#">Valeurs</a></li>
+            </ul>
+          </li>
+          <!-- Menu 3 : Services avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Conseil Spirituel</a></li>
+              <li><a class="dropdown-item" href="#">Groupes de Prière</a></li>
+              <li><a class="dropdown-item" href="#">Retraites</a></li>
+            </ul>
+          </li>
+          <!-- Menu 4 : Contact sans sous-menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bannière avec image réelle -->
+  <div class="banner">
+    <img src="Chemin.png" alt="Bannière" class="banner-img">
+  </div>
+
+  <!-- Présentation de la Communauté -->
+  <section class="community-section">
+    <div class="container">
+      <h2 class="text-center">Présentation de la Communauté</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <p>Bienvenue dans notre communauté religieuse, un lieu de partage, de prière et de solidarité. Ici, nous grandissons ensemble en foi et en soutien mutuel. Rejoignez-nous pour vivre des moments spirituels et enrichissants.</p>
+              <button class="btn btn-primary">Découvrir plus</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="LogoP.jpg" alt="Communauté" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Promoteur -->
+  <section class="promoter-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Rencontrez le Promoteur</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="Grand bill.jpg" alt="Promoteur" class="promoter-img">
+        </div>
+        <div class="col-md-8">
+          <h4>Nom du Promoteur</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Le promoteur est un leader engagé, inspirant et dévoué dans la transmission des valeurs spirituelles et humanistes de notre communauté.</p>
+          <div class="promoter-links mt-3">
+            <a href="#" class="text-danger fs-4" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-primary fs-4" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-success fs-4" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-info fs-4" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Nom de la Page. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Bundle incluant Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

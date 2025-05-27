@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brochures et cantiques</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <style>
+    /* Défilement doux */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Animation de pulsation pour le lien de don */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
+    }
+    .donation {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .donation:hover {
+      animation: pulse 1s ease-in-out infinite;
+    }
+    /* Aligner les éléments de l’entête à droite */
+    .header-right {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <!-- Entête -->
+  <header class="container my-3">
+    <div class="row">
+      <div class="col-12 header-right">
+        <div class="d-flex justify-content-end align-items-center gap-3">
+          <!-- Zone de recherche dans l'entête -->
+          <form class="d-flex" onsubmit="return false;">
+            <input type="text" id="headerSearch" class="form-control" placeholder="Rechercher titre..." />
+            <button class="btn btn-outline-secondary ms-2" type="submit">Recherche</button>
+          </form>
+          <!-- Icône de contact -->
+          <a href="#contact" class="text-dark">
+            <i class="bi bi-envelope-fill" style="font-size: 1.5rem;"></i>
+          </a>
+          <!-- Lien de don avec animation -->
+          <a href="#donation" class="btn btn-success donation">Faire un Don</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <!-- Logo et nom de la page -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+         <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+        <span>Pierre Ministries</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Les menus -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Menu 1 : Accueil -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCUEIL</a>
+          </li>
+          <!-- Menu 2 : Services avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               À PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="jesus.html">Jesus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+            </ul>
+          </li>
+          <!-- Menu 3 : Communauté avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="communauteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="communauteDropdown">
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+            </ul>
+          </li>
+          <!-- Menu 4 : Contact avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+           
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bannière principale (diaporama/carousel) -->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Bienvenu.png" class="d-block w-100" alt="Image 1" style="max-height: 500px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="Evanglisation.png" class="d-block w-100" alt="Image 2" style="max-height: 500px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="bienvenu22.png" class="d-block w-100" alt="Image 3" style="max-height: 500px; object-fit: cover;">
+      </div>
+    </div>
+    
+  </div>
+  <!-- Présentation de la Communauté -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="p-4 bg-light rounded shadow">
+          <h2 class="mb-3">Présentation de la Communauté</h2>
+          <p>
+            ... Mais un croyant, un vrai de vrai qui est vraiment affermi spirituellement, il lit sa bible sa Bible chaque jour, et i parle au seigneur. c'est vrai. pour lui, c'est indispensable. - La communion E-97 -
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bibliothèque -->
+  <section class="container my-5">
+    <h2 class="mb-4">Bibliothèque</h2>
+    <p>Ce petit tableau contient quelques chants du message. </p>
+    <!-- Zone de recherche des livres -->
+    <div class="mb-3">
+      <input type="text" id="bookSearch" class="form-control" placeholder="Rechercher un recueil de cantique..." />
+    </div>
+    <!-- Tableau des livres -->
+    <div class="table-responsive">
+      <table class="table table-bordered" id="booksTable">
+        <thead class="table-primary">
+          <tr>
+            <th>Livres</th>
+            <th>Voir</th>
+            <th>Télécharger</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cantiques Crois seulement</td>
+            <td><a href="Cantiques Crois seulement.pdf" target="_blank" class="btn btn-info btn-sm">Voir</a></td>
+            <td><a href="Cantiques Crois seulement.pdf" download class="btn btn-secondary btn-sm">Télécharger</a></td>
+          </tr>
+          <tr>
+            <td>Cantiques Hosana</td>
+            <td><a href="Cantiques Hosana.pdf" target="_blank" class="btn btn-info btn-sm">Voir</a></td>
+            <td><a href="Cantiques Hosana.pdf" download class="btn btn-secondary btn-sm">Télécharger</a></td>
+          </tr>
+          <tr>
+            <td>Chants Bouclier de David</td>
+            <td><a href="Chants Bouclier de David 2020.pdf" target="_blank" class="btn btn-info btn-sm">Voir</a></td>
+            <td><a href="Chants Bouclier de David 2020.pdf" download class="btn btn-secondary btn-sm">Télécharger</a></td>
+          </tr>
+          <tr>
+            <td>Cantique Pene Na Yo</td>
+            <td><a href="Cantique Pene Na Yo.pdf" target="_blank" class="btn btn-info btn-sm">Voir</a></td>
+            <td><a href="Cantique Pene Na Yo.pdf" download class="btn btn-secondary btn-sm">Télécharger</a></td>
+          </tr>
+          <!-- D'autres livres peuvent être ajoutés ici -->
+        </tbody>
+      </table>
+    </div>
+    <!-- Description en bas du tableau -->
+    <div class="mt-4 p-3 bg-light rounded shadow">
+      <h3>Remarque</h3>
+      <p>
+        Cette section vous offre un ensemble de ressources complémentaires. Vous pouvez télécharger des fichiers compressés contenant divers Brochures.
+      </p>
+      <p>
+        <a href="revelation_JC.zip" class="btn btn-link">Révelation de Jésus-Christ</a>
+        <a href="Adoption_fr.zip" class="btn btn-link">Adoption</a> 
+        <a href="cod_1.zip" class="btn btn-link">Conduite, Ordre et Doctrine 1</a>
+        <a href="cod_2.zip" class="btn btn-link">Conduite, Ordre et Doctrine 2</a>
+        <a href="Daniel.zip" class="btn btn-link">Daniel</a> 
+        <a href="expose.zip" class="btn btn-link">Exposé de 7 âges</a>
+        <a href="Hébreux_fr.zip" class="btn btn-link">Les Hébreux</a> 
+        <a href="Israel_et_Eglise.zip" class="btn btn-link">Israel_et_Eglise</a>
+        <a href="SeptSceaux_fr.zip" class="btn btn-link">Sept Sceaux</a>
+      </p>
+      <p>Pour plus des brochures cliquez sur le lien ce-dessous</p>
+      <p>
+        <a href="https://branham.fr/sermons" class="btn btn-secondary">En savoir plus</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 Mon site religieux. Tous droits réservés.</p>
+      <a href="#" class="btn btn-light">Retour vers le haut</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS (inclut Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script de recherche pour le tableau des livres -->
+  <script>
+    document.getElementById('bookSearch').addEventListener('keyup', function() {
+      var filter = this.value.toLowerCase();
+      var rows = document.querySelectorAll('#booksTable tbody tr');
+      rows.forEach(function(row) {
+        var title = row.cells[0].textContent.toLowerCase();
+        row.style.display = title.indexOf(filter) > -1 ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

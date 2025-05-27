@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pierre Ministries</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Icônes de l'entête dans des cadres carrés */
+    .header-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .header-icons a:hover {
+      transform: scale(1.1);
+    }
+    /* Couleurs officielles */
+    .header-icons a.facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+    .header-icons a.contact {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .header-icons a.youtube {
+      background-color: #FF0000;
+      color: #fff;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    /* Personnalisation de la barre de navigation */
+    .navbar-custom {
+      background-color: #007bff; /* Bleu */
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: #fff;
+    }
+    
+    /* Section du promoteur */
+    .promoter-section img {
+      max-width: 100%;
+      
+    }
+    /* Pied de page */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .section-header {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+   .col-md-8 p {
+    text-align: justify;
+   } 
+  </style>
+</head>
+<body>
+
+  <!-- Entête avec icônes alignées à droite -->
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="contact.html" aria-label="Contact" class="contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Barre de navigation en bleu -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="me-2">
+        <span>Pierre Ministries</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+              aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCUEIL</a>
+          </li>
+          <!-- Menu Histoire avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuHistoire" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               À PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuHistoire">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              
+            </ul>
+          </li>
+          <!-- Menu Mission avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuMission" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuMission">
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+            </ul>
+          </li>
+          
+          <!-- Menu Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bannière (photo) -->
+  <section class="banner">
+    <img src="Evanglisation.png" alt="Bannière" class="img-fluid w-100">
+  </section>
+
+  <!-- Présentation du promoteur -->
+  <section class="container my-5 promoter-section">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="Lg.jpg" alt="Photo du promoteur" class="img-fluid mb-3">
+      </div>
+      <div class="col-md-8">
+        <h2>À propos de Pierre Ministries</h2>
+        <p>
+          Pierre Ministries est une communauté chrétienne fondée par Pierre à Goma, en République démocratique du Congo, qui s'inspire du message prêché par William Branham. Ce message, axé sur le retour aux sources du christianisme primitif, met en avant la puissance transformatrice de la foi, l'importance de la guérison divine et la centralité de l'amour de Dieu. En résonnance avec cet enseignement, la communauté vise à encourager une relation intime et personnelle avec le Christ, en invitant chacun à expérimenter la grâce et les dons spirituels dans une pratique de foi authentique
+        </p>
+        <ul class="list-unstyled">
+          <li><strong>Email :</strong> tutupierre87@gmail.com</li>
+          <li><strong>Téléphone :</strong> +243 822732821</li>
+          <li><strong>Adresse :</strong> Goma, Nord-Kivu, République démocratique du Congo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenu principal: histoire, mission, objectif -->
+  <section class="container my-5">
+    <div class="section-header">
+      <h2>Notre Histoire</h2>
+    </div>
+    <p>
+      Notre histoire est riche en traditions et en moments forts qui ont forgé notre identité. Depuis de nombreuses années, nous nous sommes engagés sur un chemin spirituel, guidés par la foi et l'amour.
+    </p>
+
+    <div class="section-header">
+      <h2>Notre Mission</h2>
+    </div>
+    <p>
+      Basé sur le message de William Marrion Branham, Pierre Ministries se définit par une mission qui vise avant tout à rétablir une relation authentique et intime entre chaque croyant et Jésus-Christ. 
+      En s’inspirant de l’appel de Branham à une foi vivante et non institutionnalisée, le ministère cherche à réveiller la flamme spirituelle en apportant à chacun la guérison, le réconfort et la transformation par la puissance du Saint-Esprit.
+       Ainsi, la mission consiste à transmettre la Parole avec clarté, en mettant en évidence la grâce divine et la délivrance éprouvée dans une pratique de foi simple et renouvelée
+    </p>
+
+    <div class="section-header">
+      <h2>Nos Objectifs</h2>
+    </div>
+    <p>
+      Proclamer la vérité biblique et les prophéties : Diffuser le message de repentance, de salut et de guérison divine, afin de rappeler aux croyants la nécessité d’un changement intérieur et d’une attente active du retour du Christ. <br><br>
+    </p>
+  </section>
+
+  <!-- Copyright -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (inclut Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Quelques interactions simples : affichage dans la console lors d'un clic sur les éléments de menu dropdown
+    document.addEventListener('DOMContentLoaded', function(){
+      let dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggles.forEach(function(toggle){
+        toggle.addEventListener('click', function(){
+          console.log(toggle.textContent.trim() + ' cliqué');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

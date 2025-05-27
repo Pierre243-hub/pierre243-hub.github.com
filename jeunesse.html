@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeunesse</title>
+<link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
+  <!-- Google Fonts pour de belles polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome pour les icônes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    html {
+       scroll-behavior: smooth;
+    }
+    body {
+       font-family: 'Open Sans', sans-serif;
+    }
+    /* Style pour les icônes de l'entête */
+    .header-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    .header-icons a {
+      color: #333;
+      font-size: 24px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .header-icons a:hover {
+      transform: scale(1.2);
+    }
+    /* Animation pour l'icône YouTube */
+    .youtube-icon {
+      animation: pulse 2s infinite;
+      
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    /* Personnalisation de la barre de navigation */
+    .navbar-custom {
+      background-color: #007bff;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: #fff;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #ddd;
+    }
+    /* Stylisation de la présentation de la communauté */
+    .presentation {
+      padding: 40px;
+      background-color: #f8f9fa;
+    }
+    .presentation h2 {
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+    .presentation p {
+      text-align: justify;
+    }
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid #ccc;
+      padding: 15px;
+      margin: 20px 0;
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+    /* Stylisation de la section Inspirations Quotidiennes */
+    .inspirations h2 {
+      font-family: 'Playfair Display', serif;
+    }
+    .inspirations p {
+      text-align: justify;
+    }
+    /* Style pour le footer */
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    /* Bouton Retour vers le haut */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- En-tête aligné avec la barre de navigation -->
+  <header>
+    <div class="container">
+      <div class="header-icons">
+        <a href="https://www.facebook.com" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="mailto:contact@pierreministries.org">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="youtube-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="LOGO_png.png" alt="Logo" style="height:40px; margin-right:10px;">
+        Pierre Ministries
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+              aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav ms-auto">
+           <li class="nav-item">
+             <a class="nav-link" href="#">ACCUEIL</a>
+           </li>
+           <!-- Menu avec sous-menus 1 -->
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+               A PROPOS
+             </a>
+             <ul class="dropdown-menu" aria-labelledby="menu1">
+               <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+               <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+               <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+             </ul>
+           </li>
+           <!-- Menu avec sous-menus 2 -->
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+               MULTIMEDIAS
+             </a>
+             <ul class="dropdown-menu" aria-labelledby="menu2">
+               <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+               <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+               <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+             </ul>
+           </li>
+          
+           <!-- Menu simple -->
+           <li class="nav-item">
+             <a class="nav-link" href="contact.html">CONTACT</a>
+           </li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diaporama de bannières -->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+       <div class="carousel-item active">
+         <img src="banner1.jpg" class="d-block w-100" alt="Bannière 1">
+       </div>
+       <div class="carousel-item">
+         <img src="banner2.jpg" class="d-block w-100" alt="Bannière 2">
+       </div>
+       <div class="carousel-item">
+         <img src="banner3.jpg" class="d-block w-100" alt="Bannière 3">
+       </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" 
+            data-bs-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" 
+            data-bs-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+
+  <!-- Présentation de la communauté -->
+  <section class="presentation container my-5">
+     <h2>Bienvenue dans notre Communauté de Foi</h2>
+     <p>
+       Avant de commencer nôtre étude sur la jeunesse chrétienne... Prononçons quelques mots de prière. <br><br>
+
+Seigneur Jésus, nous sommes reconnaissants pour ce moment, de savoir que nous sommes réunis ici, les jeunes, les vieux et les gens d’un âge moyen. Et nous nous sommes réunis de ce côté-ci de l’Éternité, pour parler une fois de plus de Toi et des choses en rapport avec la Vie éternelle. <br><br>
+Et ces jeunes qui sont assis ici ce soir, certains d’entre eux vont recevoir leur diplôme, d’autres sont déjà diplômés. Mais je prends conscience, Seigneur, de quelque chose qui s’est produit juste quelques heures avant cette grande secousse, ou cette grande déflagration qui a eu lieu dans la montagne là-bas, au nord de Tucson, lorsque les Anges du Seigneur sont descendus. <br><br>
+Je me rappelle ce qui a été dit, et—et en particulier au sujet des jeunes. Je Te prie, Seigneur, de nous aider à comprendre. Et que je puisse dire quelque chose à ces jeunes ce soir, qui les aidera tout au long du voyage. Car, Seigneur, nous avons tous besoin de cette aide en ce moment. <br><br>
+Bénis-nous tous. Pardonne nos péchés. Et si, depuis que nous sommes là, nous avons fait quoi que ce soit qui T’ait déplu, nous Te prions de nous pardonner cela. Car nous sommes conscients, aujourd’hui, que notre lendemain n’est pas—pas garanti. Nous ne savons pas ce que demain nous réserve. Nous devons être prêts aujourd’hui à affronter demain. Et, pour ça, Dieu notre Père, nous ne connaissons qu’un seul moyen, c’est de nous préparer à Te voir, car nous sommes conscients qu’après un certain temps, nous allons tous le faire. Un de ces jours, nous devrons nous retrouver là, soit en paix, comme un ami ou un enfant, soit en ennemi. Loin de nous la pensée, Seigneur, d’être autre chose que Tes propres enfants bien-aimés.
+ Accorde ces choses, nous Te le demandons au Nom de Jésus. Amen.
+     </p>
+     <blockquote>
+       Et un des chefs du peuple l’interrogea, disant : Bon maître, que faut-il que j’aie fait pour hériter de la vie éternelle? Et Jésus lui dit : Pourquoi m’appelles-tu bon? Nul n’est bon, sinon un seul, Dieu. Tu sais les commandements : Ne commets point adultère; ne tue point; ne dérobe point; ne dis point de faux témoignage; honore ton père et ta mère. Et…dit : J’ai fait et gardé toutes ces choses dès ma jeunesse. Et quand Jésus eut entendu cela, il lui dit : Une chose te manque encore, vends tout ce que tu as, et distribuele aux pauvres,…tu auras un trésor dans les cieux;… viens, suis-moi.
+     </blockquote>
+     <p>
+       Ce site a été conçu pour rassembler une communauté active et engagée. Nous partageons des contenus inspirants et éducatifs qui nourrissent l'âme. Que vous soyez à la recherche de guidance spirituelle ou d'un espace de partage, nous serons toujours là pour vous.
+     </p>
+  </section>
+
+  <!-- Inspirations Quotidiennes (texte à gauche, photo à droite) -->
+  <section class="inspirations container my-5">
+    <h2 class="text-center mb-4">Inspirations Quotidiennes</h2>
+    <div class="row align-items-center">
+      <!-- Texte à gauche -->
+      <div class="col-md-6">
+        <p>
+          Chaque jour offre l'opportunité de se reconnecter avec notre essence spirituelle. Dans le tumulte du quotidien, un moment de recueillement peut raviver l'espoir et éveiller la gratitude.
+        </p>
+        <blockquote>
+          "La lumière de l'âme transcende les ombres du doute, illuminant chaque chemin emprunté."
+        </blockquote>
+        <p>
+          Nos témoignages et réflexions sont autant de pierres posées sur le chemin de la foi. Embrassons ensemble cette aventure spirituelle pour découvrir les trésors cachés en nous et autour de nous.
+        </p>
+      </div>
+      <!-- Photo à droite -->
+      <div class="col-md-6">
+        <img src="inspiration.jpg" class="img-fluid rounded" alt="Inspiration Quotidienne">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+     <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+     
+  </footer>
+
+  <!-- Bouton Retour vers le haut -->
+  <button id="backToTop" class="btn btn-primary">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script pour le bouton Retour vers le haut -->
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        backToTopButton.style.display = 'flex';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

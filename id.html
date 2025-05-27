@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Religieux</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Styles personnalisés */
+    .header-icons a {
+      color: #000;
+      margin-left: 15px;
+      font-size: 1.5rem;
+    }
+    .banner {
+      background: url('banner.jpg') center center/cover no-repeat;
+      height: 300px;
+      position: relative;
+    }
+    .banner h1 {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .quote {
+      background: #f8f9fa;
+      border-left: 5px solid #0d6efd;
+      padding: 20px;
+      font-style: italic;
+    }
+    .section-img {
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Entête avec icônes alignés à droite -->
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="mailto:contact@example.com"><i class="bi bi-envelope"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+    </div>
+  </header>
+
+  <!-- Barre de navigation en bleu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <!-- Logo en image -->
+        <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Site Religieux</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu sans sous-menu -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <!-- Menu avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À propos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#">Histoire</a></li>
+              <li><a class="dropdown-item" href="#">Mission</a></li>
+              <li><a class="dropdown-item" href="#">Vision</a></li>
+            </ul>
+          </li>
+          <!-- Second menu avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="ministryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ministère
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ministryDropdown">
+              <li><a class="dropdown-item" href="#">Prières</a></li>
+              <li><a class="dropdown-item" href="#">Études bibliques</a></li>
+              <li><a class="dropdown-item" href="#">Témoignages</a></li>
+            </ul>
+          </li>
+          <!-- Troisième menu avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+              <li><a class="dropdown-item" href="#">Email</a></li>
+              <li><a class="dropdown-item" href="#">Téléphone</a></li>
+              <li><a class="dropdown-item" href="#">Adresse</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bannière avec photo -->
+  <div class="banner">
+    <h1 class="text-center">Bienvenue sur notre site religieux</h1>
+  </div>
+
+  <!-- Présentation de la communauté -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col text-center">
+        <h2>Notre Communauté</h2>
+        <p>Nous sommes une communauté dédiée à la foi, à l'amour et à la solidarité. Rejoignez-nous dans la célébration de notre spiritualité et de nos valeurs communes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section à contenu paginé -->
+  <section class="container py-5">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <img id="sectionImage" src="" alt="Section Image" class="img-fluid section-img">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2 id="sectionTitle"></h2>
+        <p id="sectionDesc1"></p>
+        <div class="quote my-4">
+          <p id="sectionQuote"></p>
+        </div>
+        <p id="sectionDesc2"></p>
+      </div>
+    </div>
+    <!-- Pagination (5 pages) -->
+    <nav aria-label="Pagination de la section">
+      <ul class="pagination justify-content-center mt-4" id="pagination"></ul>
+    </nav>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 Site Religieux. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript pour Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script de gestion de pagination -->
+  <script>
+    let currentPage = 1;
+    const totalPages = 5;
+    
+    // Données pour chaque page
+    const sectionData = [
+      {
+        image: "Grand bill.jpg",
+        title: "Titre de la Section 1",
+        description1: "Description initiale de la section qui expose le contexte et l'importance du message spirituel pour la page 1.",
+        quote: "La foi est le pilier qui soutient nos vies et éclaire notre voie.",
+        description2: "Description complémentaire pour la page 1 qui approfondit la citation et guide dans le cheminement spirituel."
+      },
+      {
+        image: "section2.jpg",
+        title: "Titre de la Section 2",
+        description1: "Description initiale de la section pour la page 2, mettant en avant la prière et la méditation.",
+        quote: "La prière ouvre le cœur aux merveilles et aux miracles.",
+        description2: "Description complémentaire pour la page 2 approfondissant l'importance de la prière dans notre quotidien."
+      },
+      {
+        image: "section3.jpg",
+        title: "Titre de la Section 3",
+        description1: "Description initiale pour la page 3 basée sur l'engagement communautaire.",
+        quote: "L'espérance guide nos pas dans l'obscurité.",
+        description2: "Description complémentaire pour la page 3 qui inspire et reflète la solidarité entre les membres."
+      },
+      {
+        image: "section4.jpg",
+        title: "Titre de la Section 4",
+        description1: "Description initiale pour la page 4 mettant en avant la persévérance et la lumière intérieure.",
+        quote: "La persévérance nous mène vers la clarté du jour.",
+        description2: "Description complémentaire pour la page 4 soulignant la force collective et l'engagement."
+      },
+      {
+        image: "section5.jpg",
+        title: "Titre de la Section 5",
+        description1: "Description initiale pour la page 5 évoquant la sagesse et l'amour inconditionnel.",
+        quote: "La sagesse naît du partage et de l'écoute attentive.",
+        description2: "Description complémentaire pour la page 5 invitant à la méditation et à la réflexion sur notre parcours spirituel."
+      }
+    ];
+    
+    // Fonction pour mettre à jour le contenu de la section selon la page en cours
+    function updateSectionContent(page) {
+      const data = sectionData[page - 1];
+      document.getElementById("sectionImage").src = data.image;
+      document.getElementById("sectionTitle").textContent = data.title;
+      document.getElementById("sectionDesc1").textContent = data.description1;
+      document.getElementById("sectionQuote").textContent = data.quote;
+      document.getElementById("sectionDesc2").textContent = data.description2;
+    }
+    
+    // Fonction pour générer la pagination dynamique
+    function renderPagination() {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+      
+      // Bouton "Précédent"
+      const prevLi = document.createElement("li");
+      prevLi.className = "page-item" + (currentPage === 1 ? " disabled" : "");
+      const prevLink = document.createElement("a");
+      prevLink.className = "page-link";
+      prevLink.href = "#";
+      prevLink.textContent = "Précédent";
+      prevLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+          currentPage--;
+          updateSectionContent(currentPage);
+          renderPagination();
+        }
+      });
+      prevLi.appendChild(prevLink);
+      pagination.appendChild(prevLi);
+      
+      // Boutons des numéros de page
+      for (let i = 1; i <= totalPages; i++) {
+        const pageLi = document.createElement("li");
+        pageLi.className = "page-item" + (i === currentPage ? " active" : "");
+        const pageLink = document.createElement("a");
+        pageLink.className = "page-link";
+        pageLink.href = "#";
+        pageLink.textContent = i;
+        pageLink.addEventListener("click", function(e) {
+          e.preventDefault();
+          currentPage = i;
+          updateSectionContent(currentPage);
+          renderPagination();
+        });
+        pageLi.appendChild(pageLink);
+        pagination.appendChild(pageLi);
+      }
+      
+      // Bouton "Suivant"
+      const nextLi = document.createElement("li");
+      nextLi.className = "page-item" + (currentPage === totalPages ? " disabled" : "");
+      const nextLink = document.createElement("a");
+      nextLink.className = "page-link";
+      nextLink.href = "#";
+      nextLink.textContent = "Suivant";
+      nextLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+          currentPage++;
+          updateSectionContent(currentPage);
+          renderPagination();
+        }
+      });
+      nextLi.appendChild(nextLink);
+      pagination.appendChild(nextLi);
+    }
+    
+    // Initialisation au chargement du document
+    document.addEventListener("DOMContentLoaded", function() {
+      updateSectionContent(currentPage);
+      renderPagination();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communauté Religieuse</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    /* Icônes encadrées dans un cadre carré */
+    .icon-frame {
+      border: 2px solid #ddd;
+      /* Pas de border-radius pour un cadre carré */
+      padding: 8px;
+      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .facebook-icon {
+      color: #1877F2 !important;
+    }
+
+    .mail-icon {
+      color: #D14836 !important;
+    }
+
+    .youtube-icon {
+      color: #FF0000 !important;
+    }
+
+    /* Amélioration du background de la citation */
+    .quote {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      border-left: 5px solid #007bff;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- En-tête -->
+  <header class="bg-light py-2">
+    <div class="container">
+      <div class="d-flex justify-content-end header-icons">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="icon-frame facebook-icon">
+          <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="mailto:contact@example.com" class="icon-frame mail-icon" aria-label="Contact">
+          <i class="bi bi-envelope" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="icon-frame youtube-icon">
+          <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barre de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007bff;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="LOGO_png.png" alt="Logo" style="width:40px; height:40px; margin-right:10px;">
+        <span>Pierre Ministries</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCUEIL</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              À PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+             MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+              <li><a class="dropdown-item" href="#">Brochures</a></li>
+              <li><a class="dropdown-item" href="#">Photos</a></li>
+              <li><a class="dropdown-item" href="#">Vidéos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diaporama de Bannière -->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Bienvenu.png" class="d-block w-100" alt="Slide 1" />
+        
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400?text=Slide+2" class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Titre Slide 2</h5>
+          <p>Description du Slide 2</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400?text=Slide+3" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Titre Slide 3</h5>
+          <p>Description du Slide 3</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+
+  <!-- Présentation de la Communauté -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Présentation de la Communauté</h2>
+      <p class="lead">
+        Bienvenue dans notre communauté de foi. Nous nous engageons à vivre selon
+        les principes d'amour, de compassion et de bienveillance. Participez à nos
+        activités, partagez vos expériences et découvrez un espace d'échange et de soutien.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section About -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Photo à gauche -->
+        <div class="col-md-6">
+          <img src="WILLIAM MARRION BRANHAM.png" alt="About Image" class="img-fluid rounded" />
+        </div>
+        <!-- Contenu à droite -->
+        <div class="col-md-6">
+          <h2>À Propos de Nous</h2>
+          <p class="lead">
+            Notre mission est de propager l'amour divin et d'unir nos communautés dans une foi commune. Nous croyons que
+            chaque âme mérite guidance et soutien.
+          </p>
+          <div class="quote">
+            <blockquote class="blockquote">
+              <p class="mb-0">"La foi est le pont qui relie le ciel et la terre."</p>
+            </blockquote>
+          </div>
+          <p class="lead">
+            À travers nos programmes et initiatives, nous souhaitons offrir soutien, inspiration et une véritable
+            expérience communautaire ancrée dans la spiritualité.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nouvelle Section Spirituelle -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Inspiration et Espoir</h2>
+      <p class="lead">
+        Cette section explore notre parcours spirituel et les moments forts qui nourrissent notre foi et notre
+        engagement au quotidien.
+      </p>
+      <div class="quote">
+        <blockquote class="blockquote">
+          <p class="mb-0">"La prière transforme les obstacles en opportunités de foi."</p>
+        </blockquote>
+      </div>
+      <div class="my-4">
+        <img src="Grand bill.jpg" alt="Image Spirituelle" class="img-fluid rounded" />
+      </div>
+      <p class="text-center"><em>Que Dieu vous bénisse</em></p>
+    </div>
+  </section>
+
+  <!-- Footer / Copyright -->
+  <footer class="py-3 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">© 2025 Nom de la Page. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle avec Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

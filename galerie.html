@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Religieux</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome pour les icônes -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    /* Icônes de l'entête dans des cadres carrés */
+    .header-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .header-icons a:hover {
+      transform: scale(1.1);
+    }
+    /* Couleurs officielles */
+    .header-icons a.facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+    .header-icons a.contact {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .header-icons a.youtube {
+      background-color: #FF0000;
+      color: #fff;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Styles pour la fonctionnalité zoom sur les images */
+    .zoomable {
+      cursor: pointer;
+      transition: transform .2s;
+    }
+    .zoomable:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Entête avec icône de contact, lien Facebook et lien de don -->
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="contact.html" aria-label="Contact" class="contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Barre de navigation bleue -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="" alt="Logo" class="me-2">
+        <span>Pierre Ministries</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu 1 avec sous-menus -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCUEIL</a>
+          </li>
+          <!-- Menu 2 avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              A PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu2">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+            </ul>
+          </li>
+          <!-- Menu 3 avec sous-menus -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu3">
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+            </ul>
+          </li>
+          <!-- Menu 4 sans sous-menus -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diaporama des versets bibliques (Carousel Bootstrap) -->
+  <div id="versetsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="http://via.placeholder.com/800x400?text=Verset+1" class="d-block w-100" alt="Verset 1">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="http://via.placeholder.com/800x400?text=Verset+2" class="d-block w-100" alt="Verset 2">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="http://via.placeholder.com/800x400?text=Verset+3" class="d-block w-100" alt="Verset 3">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#versetsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#versetsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+
+  <!-- Présentation de la Communauté -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2>Présentation de la Communauté</h2>
+      <p class="lead">
+        Bienvenue dans notre communauté de foi, un lieu où l'amour, la solidarité et la spiritualité se rejoignent.
+        Nous partageons les enseignements bibliques afin d'inspirer et d'unir nos vies.
+      </p>
+      <p>
+        Fondée sur des principes d'amour et de foi, notre communauté se consacre à partager la lumière divine et
+        les enseignements sacrés. Ensemble, nous bâtissons une famille spirituelle solide.
+      </p>
+    </div>
+  </section>
+
+  <!-- Galerie de Photos avec zoom au clic -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Galerie</h2>
+      <div class="row">
+        <!-- Répéter pour 10 photos -->
+        <!-- Image 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="christ-at-33-heinrich-hofmann1.jpg" class="card-img-top zoomable" alt="Photo 1" data-description="Le Christ à 33 ans">
+            <div class="card-body">
+              <p class="card-text">Le Christ à 33 ans</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="nuée.jpg" class="card-img-top zoomable" alt="Photo 1" data-description="Le nuage surnaturel photographié dans le ciel de l'Arizona, en 1963">
+            <div class="card-body">
+              <p class="card-text">Le nuage surnaturel photographié dans le ciel de l'Arizona, en 1963</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="Grand bill.jpg" class="card-img-top zoomable" alt="Photo 2" data-description="Photo colorisée de La Colonne de Feu. L'originale est en noir et blanc.">
+            <div class="card-body">
+              <p class="card-text">Photo colorisée de La Colonne de Feu. L'originale est en noir et blanc.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="young_branham.jpg" class="card-img-top zoomable" alt="Photo 3" data-description="Frère Branham, dans sa jeunesse">
+            <div class="card-body">
+              <p class="card-text">Frère Branham, dans sa jeunesse</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="bt.jpg" class="card-img-top zoomable" alt="Photo 4" data-description="Le Branham Tabernacle, avant les rénovations de 1963">
+            <div class="card-body">
+              <p class="card-text">Le Branham Tabernacle, avant les rénovations de 1963</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="colonne de feu.jpg" class="card-img-top zoomable" alt="Photo 5" data-description="La photo monochrome de la Colonne de Feu">
+            <div class="card-body">
+              <p class="card-text">La photo monochrome de la Colonne de Feu</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="frère branham au bureau.jpg" class="card-img-top zoomable" alt="Photo 6" data-description="Frère Branham">
+            <div class="card-body">
+              <p class="card-text">Frère Branham</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 7 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="rivière OHIO.jpg" class="card-img-top zoomable" alt="Photo 7" data-description="Frère Branham en train de baptiser à la rivière Ohio, en 1933">
+            <div class="card-body">
+              <p class="card-text">Frère Branham en train de baptiser à la rivière Ohio, en 1933</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 8 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="couple.jpg" class="card-img-top zoomable" alt="Photo 8" data-description="Frère Branham et Soeur Meda Branham">
+            <div class="card-body">
+              <p class="card-text">Frère Branham et Soeur Meda Branham</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 9 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="afrique du sud.jpg" class="card-img-top zoomable" alt="Photo 9" data-description="Une partie de la foule assemblée sur le champ de course Greyville, à Durban, en Afrique du Sud">
+            <div class="card-body">
+              <p class="card-text">Une partie de la foule assemblée sur le champ de course Greyville, à Durban, en Afrique du Sud</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image 10 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="sr_Méda.jpg" class="card-img-top zoomable" alt="Photo 10" data-description="Frère Branham et Soeur Meda Branham dans les années 1940">
+            <div class="card-body">
+              <p class="card-text">Frère Branham et Soeur Meda Branham dans les années 1940</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description après la galerie -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3>Description de la Galerie</h3>
+      <p>
+        Cette galerie représente les moments forts et inspirants de notre communauté, illustrant la beauté de la foi et la joie de partager nos expériences spirituelles.
+        Chaque image raconte une histoire, invitant à la réflexion et à la prière.
+      </p>
+    </div>
+  </section>
+
+  <!-- Modal pour le zoom des images -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Zoom sur l'image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="" id="modalImage" class="img-fluid" alt="Zoom Image">
+          <p id="modalDescription" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Fonctionnalité de zoom sur les images de la galerie
+    document.querySelectorAll('.zoomable').forEach(function(item) {
+      item.addEventListener('click', function() {
+        var src = item.getAttribute('src');
+        var description = item.getAttribute('data-description');
+        document.getElementById('modalImage').src = src;
+        document.getElementById('modalDescription').textContent = description;
+        var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        myModal.show();
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Religieux Responsive</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+   /* Icônes de l'entête dans des cadres carrés */
+    .header-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .header-icons a:hover {
+      transform: scale(1.1);
+    }
+    /* Couleurs officielles */
+    .header-icons a.facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+    .header-icons a.contact {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .header-icons a.youtube {
+      background-color: #FF0000;
+      color: #fff;
+    }
+
+    /* Bannière unique avec une image responsive */
+    .banner img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* Présentation de la Communauté */
+    .hover-effect {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .hover-effect:hover {
+      transform: scale(1.02);
+    }
+
+    /* Design amélioré pour les lecteurs audio */
+    .audio-player {
+      background-color: #f7f7f7;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-top: 15px;
+    }
+    .audio-player audio {
+      width: 100%;
+      max-width: 100%;
+      outline: none;
+    }
+
+    /* Bouton Retour en Haut */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      display: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
+    
+    /* Pied de page */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête avec icônes -->
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="contact.html" aria-label="Contact" class="contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Lg.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-top me-2">
+        Pierre Ministries
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu 1 avec sous-menu -->
+         <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCEUIL</a>
+          </li>
+          <!-- Menu 2 avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu2">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+            </ul>
+          </li>
+          <!-- Menu 3 avec sous-menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu3">
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+            </ul>
+          </li>
+          <!-- Menu 4 sans sous-menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bannière unique avec une photo -->
+  <div class="banner">
+    <img src="Prière.png" alt="Bannière" class="img-fluid">
+  </div>
+
+  <!-- Présentation de la Communauté -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">La Prière</h2>
+      <div class="card p-4 shadow-sm hover-effect">
+        <div class="card-body">
+          <p class="card-text">
+           La prière n'est pas une chose mise à part. Quand nous
+prions, nous devrions projeter de prendre assez de temps,
+non seulement de parler à Dieu, mais aussi de Lui dire nos
+besoins. Et si nous croyons vraiment que Dieu entendra
+notre prière, alors Jésus a dit, demandez ce que vous
+voulez, et croyez que vous le recevrez.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sections alignées verticalement -->
+  <section class="py-5">
+    <div class="container">
+      <!-- Section 1 -->
+      <div class="mb-5">
+        <h3>Section 1</h3>
+        <p>
+          Un message spirituel pour inspirer votre foi et vous guider vers la paix intérieure. Profitez de ce moment de recueillement.
+        </p>
+        <div class="audio-player">
+          <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'élément audio.
+          </audio>
+        </div>
+      </div>
+      <!-- Section 2 -->
+      <div class="mb-5">
+        <h3>Section 2</h3>
+        <p>
+          Un autre enseignement inspirant pour élever votre esprit et nourrir vos prières. Laissez-vous porter par ces paroles de sagesse.
+        </p>
+        <div class="audio-player">
+          <audio controls>
+            <source src="audio2.mp3" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'élément audio.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bouton Retour en Haut -->
+  <button id="backToTop" class="btn btn-primary" title="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2025 Nom de la Page. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Script pour mettre en pause les autres lecteurs audio -->
+  <script>
+    document.addEventListener('play', function(e) {
+      const audios = document.getElementsByTagName('audio');
+      for (let i = 0; i < audios.length; i++) {
+        if (audios[i] !== e.target) {
+          audios[i].pause();
+        }
+      }
+    }, true);
+
+    // Gestion du bouton Retour en Haut
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

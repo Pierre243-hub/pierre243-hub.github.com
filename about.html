@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierre Ministries - Site Religieux Responsive</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Animation pour le lien de donation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .donation-link {
+      animation: pulse 2s infinite;
+    }
+    /* Aligner les éléments de l'entête à droite */
+    .header-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Entête -->
+  <header class="container py-3">
+    <div class="header-right">
+      <!-- Zone de recherche fonctionnelle -->
+      <form class="d-flex" role="search">
+        <input class="form-control" type="search" placeholder="Rechercher le titre" aria-label="Recherche">
+        <button class="btn btn-outline-success" type="submit">Go</button>
+      </form>
+      <!-- Icône de contact -->
+      <a href="contact.html" class="text-decoration-none">
+        <i class="bi bi-envelope-fill fs-4"></i>
+      </a>
+      <!-- Lien pour faire un don avec animation -->
+      <a href="donation.html" class="btn btn-danger donation-link">Faire un don</a>
+    </div>
+  </header>
+
+  <!-- Barre de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Logo et nom de la page -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Pierre Ministries</span>
+      </a>
+      <!-- Bouton de collapse pour mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menus et sous-menus -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              À propos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu1">
+              <li><a class="dropdown-item" href="#">Histoire</a></li>
+              <li><a class="dropdown-item" href="#">Mission</a></li>
+              <li><a class="dropdown-item" href="#">Vision</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu2">
+              <li><a class="dropdown-item" href="#">Culte</a></li>
+              <li><a class="dropdown-item" href="#">Études bibliques</a></li>
+              <li><a class="dropdown-item" href="#">Prière</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Communauté
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu3">
+              <li><a class="dropdown-item" href="#">Événements</a></li>
+              <li><a class="dropdown-item" href="#">Témoignages</a></li>
+              <li><a class="dropdown-item" href="#">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diaporama des Versets Bibliques -->
+  <div id="versesCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Verset 1 -->
+      <div class="carousel-item active">
+        <img src="verset1.jpg" class="d-block w-100" alt="Verset Biblique 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Verset Biblique 1</h5>
+          <p>"L'amour de Dieu est infini et sa grâce infinie."</p>
+        </div>
+      </div>
+      <!-- Verset 2 -->
+      <div class="carousel-item">
+        <img src="verset2.jpg" class="d-block w-100" alt="Verset Biblique 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Verset Biblique 2</h5>
+          <p>"La foi n'est pas une lumière qui nous éternise, mais une flamme qui nous éclaire."</p>
+        </div>
+      </div>
+      <!-- Verset 3 -->
+      <div class="carousel-item">
+        <img src="verset3.jpg" class="d-block w-100" alt="Verset Biblique 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Verset Biblique 3</h5>
+          <p>"Confie-toi en l'Éternel et fais le bien."</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#versesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#versesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+
+  <!-- Présentation de la Communauté -->
+  <section class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="mb-4">Présentation de la Communauté</h2>
+        <p class="lead">
+          Bienvenue dans notre communauté de foi. Nous nous réunissons pour partager l'amour, la foi et l'espérance.
+          Rejoignez-nous pour des services spirituels, des activités communautaires et une croissance personnelle enrichissante.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bootstrap JS et dépendances -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
