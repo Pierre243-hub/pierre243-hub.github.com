@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="google-site-verification" content="l3ySXxpXoZDz-8PEGbKZPK-yuJyc3Pm4uBZCa2QvwbQ" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pierre Ministries</title>
+  <title>Pierre Ministries-Accueil</title>
   <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,10 +26,34 @@
       }
     }
 
-    .donate-btn {
-      animation: pulse 2s infinite;
-      padding: 0.25rem 0.5rem;
-      font-size: 0.9rem;
+    /* Icônes de l'entête dans des cadres carrés */
+    .header-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .header-icons a:hover {
+      transform: scale(1.1);
+    }
+    /* Couleurs officielles */
+    .header-icons a.facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+    .header-icons a.contact {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .header-icons a.youtube {
+      background-color: #FF0000;
+      color: #fff;
     }
 
     /* Animation pour le formulaire WhatsApp */
@@ -79,32 +102,29 @@
 
     /* Background pour la citation dans la section About */
     .about-citation {
-      background-color: #f0f8ff;
-      padding: 15px;
-      border-left: 4px solid #007bff;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      border-left: 5px solid #007bff;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 
 <body>
   <!-- En-tête -->
-  <header class="bg-light py-3">
-    <div class="container">
-      <div class="d-flex justify-content-end align-items-center gap-3">
-        <!-- Zone de recherche -->
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Rechercher le titre" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Rechercher</button>
-        </form>
-        <!-- Icône de contact -->
-        <a href="contact.html" class="text-dark fs-4" title="Contact">
-          <i class="bi bi-envelope-fill"></i>
-        </a>
-        <!-- Bouton Faire un Don -->
-        <a href="donation.html" class="btn btn-danger donate-btn">
-          Faire un Don
-        </a>
-      </div>
+  <header class="container py-3">
+    <div class="d-flex justify-content-end header-icons">
+      <a href="https://www.facebook.com/pierre.tutu.92" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="contact.html" aria-label="Contact" class="contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com/@VoiceofGod2" target="_blank" aria-label="YouTube" class="youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
     </div>
   </header>
 
@@ -237,7 +257,7 @@
               éclaire."</p>
             <footer class="blockquote-footer mt-2">Citation Inspirante</footer>
           </blockquote>
-          <p class="mt-3">
+          <p class="lead">
             Nous croyons en un avenir lumineux où chaque individu est guidé par la paix et l'espérance. Rejoignez-nous
             pour construire ensemble un monde meilleur.
           </p>
@@ -256,7 +276,7 @@
           <div class="event-item mb-4">
             <img src="Message.png" class="img-fluid mb-2" alt="Événement 1">
             <h4>Allez partout le monde</h4>
-            <p>L’évangélisation est l’action d’annoncer la Bonne Nouvelle de Jésus-Christ au monde. C’est le cœur de la
+            <p class="lead" >L’évangélisation est l’action d’annoncer la Bonne Nouvelle de Jésus-Christ au monde. C’est le cœur de la
               mission chrétienne : faire connaître le salut, l’amour de Dieu et inviter chacun à une relation
               personnelle avec Christ.
             </p>
@@ -265,7 +285,7 @@
           <div class="event-item mb-4">
             <img src="Viens.png" class="img-fluid mb-2" alt="Événement 2">
             <h4>Investir sa jeunesse en Christ</h4>
-            <p>
+            <p class="lead">
               Une jeunesse qui veut investir en Jésus-Christ est une génération décidée à placer sa foi, ses talents,
               son temps et son avenir entre les mains de Dieu. C’est un choix de vie centré sur la recherche de la
               volonté divine, la transformation personnelle et le service aux autres.
@@ -276,7 +296,7 @@
             <img src="Chemin.png" class="img-fluid mb-2" alt="Événement 3">
             <h4>Impact du témoignage
             </h4>
-            <p>Un bon témoignage peut éveiller la foi chez les autres, redonner l’espoir, et attirer les âmes à Christ,
+            <p class="lead">Un bon témoignage peut éveiller la foi chez les autres, redonner l’espoir, et attirer les âmes à Christ,
               parfois bien plus qu’un sermon.
             </p>
             <a href="temoignages.html" class="btn btn-primary">En savoir plus</a>
@@ -313,7 +333,7 @@
           </table>
           <div class="annonces mt-4">
             <h3>Annonces</h3>
-            <p>Annonce importante : notre communauté organise un grand rassemblement ce week-end. Venez nombreux !</p>
+            <p class="lead">Annonce importante : notre communauté organise un grand rassemblement ce week-end. Venez nombreux !</p>
             <img src="+243849003672, www.sitevraimentsuper.fr.jpg" class="img-fluid" alt="Annonce">
           </div>
         </div>
@@ -374,18 +394,18 @@
         <div class="col-12 col-md-4 mb-4">
           <h5 class="text-uppercase mb-4">Liens Rapides</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Accueil</a></li>
-            <li class="mb-2"><a href="#" class="text-white text-decoration-none">À propos</a></li>
-            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Services</a></li>
-            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+            <li class="mb-2"><a href="https://branham.org/home" class="text-white text-decoration-none">Voice Of God Recordings</a></li>
+            <li class="mb-2"><a href="https://branham.fr/" class="text-white text-decoration-none">Restauration Promise</a></li>
+            <li class="mb-2"><a href="https://shekinahgospel.org/" class="text-white text-decoration-none">Shekinah Tabernacle</a></li>
+            <li class="mb-2"><a href="https://themessage.com/fr/home" class="text-white text-decoration-none">Le Message</a></li>
           </ul>
         </div>
         <!-- Adresses -->
         <div class="col-12 col-md-4 mb-4">
           <h5 class="text-uppercase mb-4">Nos Adresses</h5>
-          <p><i class="fas fa-home me-2"></i>020 La frontière, Goma, RDC</p>
-          <p><i class="fas fa-envelope me-2"></i>tutupierre87@gmail.com</p>
-          <p><i class="fas fa-phone me-2"></i>+243 849003672</p>
+          <p><i class="bi bi-geo-alt"></i> 020 La frontière, Goma, RDC</p>
+          <p><i class="bi bi-envelope"></i> tutupierre87@gmail.com</p>
+          <p><i class="bi bi-phone"></i> +243 849003672</p>
         </div>
       </div>
       <hr class="mb-4">

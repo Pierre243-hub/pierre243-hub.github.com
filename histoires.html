@@ -11,13 +11,41 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     /* Styles personnalisés */
+    /* Icônes de l'entête dans des cadres carrés */
     .header-icons a {
-      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
       margin-left: 15px;
-      font-size: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .header-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    /* Couleurs officielles */
+    .header-icons a.facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+
+    .header-icons a.contact {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .header-icons a.youtube {
+      background-color: #FF0000;
+      color: #fff;
     }
     .banner {
-      background: url('banner.jpg') center center/cover no-repeat;
+      background: url("Coline.jpg") center/cover no-repeat;
       height: 300px;
       position: relative;
     }
@@ -52,18 +80,25 @@
   <!-- Entête avec icônes alignées à droite -->
   <header class="container py-3">
     <div class="d-flex justify-content-end header-icons">
-      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="mailto:contact@example.com"><i class="bi bi-envelope"></i></a>
-      <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="contact.html" aria-label="Contact" class="contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
     </div>
   </header>
+
 
   <!-- Barre de navigation en bleu -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
-        <span>Site Religieux</span>
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Pierre Ministries</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,36 +106,32 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">ACCUEIL</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              À propos
+              À PROPOS
             </a>
             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="#">Histoire</a></li>
-              <li><a class="dropdown-item" href="#">Mission</a></li>
-              <li><a class="dropdown-item" href="#">Vision</a></li>
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries/a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="ministryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ministère
+              MULTIMEDIAS
             </a>
             <ul class="dropdown-menu" aria-labelledby="ministryDropdown">
-              <li><a class="dropdown-item" href="#">Prières</a></li>
-              <li><a class="dropdown-item" href="#">Études bibliques</a></li>
-              <li><a class="dropdown-item" href="#">Témoignages</a></li>
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Contact
+            <a class="nav-link dropdown-toggle" href="contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CONTACT
             </a>
-            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-              <li><a class="dropdown-item" href="#">Email</a></li>
-              <li><a class="dropdown-item" href="#">Téléphone</a></li>
-              <li><a class="dropdown-item" href="#">Adresse</a></li>
-            </ul>
+            
           </li>
         </ul>
       </div>
@@ -109,15 +140,16 @@
 
   <!-- Bannière avec photo -->
   <div class="banner">
-    <h1 class="text-center">Bienvenue sur notre site religieux</h1>
+    <h1 class="text-center">HISTOIRES EDIFIANTES</h1>
   </div>
 
   <!-- Présentation de la communauté -->
   <section class="container py-5">
     <div class="row">
       <div class="col text-center">
-        <h2>Notre Communauté</h2>
-        <p>Nous sommes une communauté dédiée à la foi, à l'amour et à la solidarité. Rejoignez-nous dans la célébration de notre spiritualité et de nos valeurs communes.</p>
+        <h2>Histoires édifiantes</h2>
+        <p>Les histoires chrétiennes sont des récits inspirants tirés de la Bible, de la vie des croyants ou de témoignages vécus. Elles visent à enseigner des valeurs spirituelles, renforcer la foi, encourager à persévérer, et montrer comment Dieu agit dans la vie des gens.
+</p>
       </div>
     </div>
   </section>
@@ -129,18 +161,18 @@
       <div class="page-content" id="page-1">
         <div class="row mb-4">
           <div class="col text-center">
-            <img src="footsteps-3938563_640.jpg" alt="Section 1" class="img-fluid section-img">
+            <img src="father-2770301_1280.jpg" alt="Section 1" class="img-fluid section-img">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <h2>PAPA j'essaie de suivre tes empreintes</h2> <br><br>
+            <h2>PAPA J'ESSAYE DE SUIVRE TES TRACES</h2> <br><br>
             <p>On raconte l’histoire d’un homme, en Angleterre, il y a bien des années. Il s’est proposé d’aller boire le verre de l’amitié à Noël, juste pour sympathiser. Il est allé chez ses voisins et ils ont échangé des cadeaux. Tout le monde lui a dit : “Allons, Jean, prends juste un verre de ça.” Une petite gorgée par ici, une petite gorgée par là, et il s’est vraiment enivré. <br><br> Et alors qu’il rentrait à la maison, il était tombé environ quinze centimètres de neige. Et—et son petit garçon le suivait.
                Il ne pouvait pas le porter, il était trop ivre. Et alors qu’il rentrait à la maison, il venait juste de se retourner et il a remarqué que son petit garçon titubait dans la neige. Et il a dit : “Fiston, pourquoi titubes-tu dans la neige?”  Il a dit : “Papa, j’essaie de suivre tes traces de pas.” Il a pris le petit garçon dans ses bras et a dit : “Ô Dieu, à partir d’aujourd’hui, je ne boirai plus jamais.” <br><br>Quelqu’un va suivre vos traces. Marchons sur cette ligne droite, du berceau jusqu’au Calvaire. Voilà les traces sur lesquelles nous voulons les faire marcher.</p>
             <div class="quote my-4">
               <p>"Quelqu’un va suive vos empreintes"</p>
             </div>
-            <p>Description complémentaire pour la page 1 qui approfondit la citation et guide dans le cheminement spirituel.</p>
+            
             <div class="my-4">
               <audio controls style="width: 100%;">
                 <source src="audio1.mp3" type="audio/mpeg">
@@ -155,12 +187,12 @@
       <div class="page-content d-none" id="page-2">
         <div class="row mb-4">
           <div class="col text-center">
-            <img src="section2.jpg" alt="Section 2" class="img-fluid section-img">
+            <img src="repentance.jpg" alt="Section 2" class="img-fluid section-img">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <h2>VOUS AVEZ PECHE CONTRE VOTRE MARI PAS CONTRE DIEU</h2> <br>
+            <h2 id="titre2">VOUS AVEZ PECHE CONTRE VOTRE MARI PAS CONTRE DIEU</h2> <br>
             <p>Un peu plus tard, il y avait une jeune fille. Elle est peut-être assise ici ce matin. Je ne la vois pas, mais elle vient parfois. Elle est membre d’une église à New Albany, une église notable, une église remarquable à New Albany. J’y suis déjà allé. Elle veut… Elle a une maladie mentale, une sorte de psychonévrose. 
               <br><br>Et elle ne peut pas, elle ne peut même pas quitter la ville, ni aller nulle part, car elle se met à crier et à pleurer, et à se comporter comme ça. Alors, je—j’ai prié pour elle deux ou trois fois, mais quelque chose ne me permettait pas de défier ce démon, d’une manière ou d’une autre. Je ne sais pas. 
               <br><br>Je n’arrivais tout simplement pas à le faire. Elle est une bonne amie d’une infirmière qui habite dans le quartier, là-bas. Elles sont venues là-bas. Son état s’aggravait. Elle était comme ça depuis environ huit ans. 37 Et alors, elle est venue l’autre jour, et elle a dit… Je lui ai dit, j’ai dit : “Sœur, tout ce que je sais, c’est qu’il y a une raison pourquoi cela arrive. Je—je ne sais pas ce que c’est.” J’ai dit : “Je… Si vous pouviez venir.” 
@@ -172,7 +204,7 @@
             <div class="quote my-4">
               <p>"La prière ouvre le cœur aux merveilles."</p>
             </div>
-            <p>Description complémentaire pour la page 2 approfondissant l'importance de la prière dans notre quotidien.</p>
+            
             <div class="my-4">
               <audio controls style="width: 100%;">
                 <source src="audio2.mp3" type="audio/mpeg">
@@ -187,7 +219,7 @@
       <div class="page-content d-none" id="page-3">
         <div class="row mb-4">
           <div class="col text-center">
-            <img src="section3.jpg" alt="Section 3" class="img-fluid section-img">
+            <img src="respect.jpg" alt="Section 3" class="img-fluid section-img">
           </div>
         </div>
         <div class="row">
@@ -201,7 +233,7 @@
             <div class="quote my-4">
               <p>"Partout où Christ n'est pas le bienvenue, je n'irais pas"</p>
             </div>
-            <p>Description complémentaire pour la page 3 qui inspire et reflète la solidarité entre les membres.</p>
+            
             <div class="my-4">
               <audio controls style="width: 100%;">
                 <source src="audio3.mp3" type="audio/mpeg">
@@ -216,7 +248,7 @@
       <div class="page-content d-none" id="page-4">
         <div class="row mb-4">
           <div class="col text-center">
-            <img src="section4.jpg" alt="Section 4" class="img-fluid section-img">
+            <img src="couple_model.jpg" alt="Section 4" class="img-fluid section-img">
           </div>
         </div>
         <div class="row">
@@ -242,10 +274,10 @@
       </div>
 
       <!-- Page 5 -->
-      <div class="page-content d-none" id="page-5">
+      <div class="page-content d-none" id="page-5" id="#">
         <div class="row mb-4">
           <div class="col text-center">
-            <img src="section5.jpg" alt="Section 5" class="img-fluid section-img">
+            <img src="chaussure.jpg" alt="Section 5" class="img-fluid section-img">
           </div>
         </div>
         <div class="row">
@@ -261,7 +293,7 @@
             <div class="quote my-4">
               <p>"La chaussure de l'enfant réconcilie le couple en instance de divorce (Ce qui nous unit est plus fort)"</p>
             </div>
-            <p>Description complémentaire pour la page 5 invitant à la méditation et à la réflexion sur notre parcours spirituel.</p>
+            <p>Pour plus des histoires, veuillez télécharger ce petit livre <a href="https://play.google.com/store/apps/details?id=com.histoiresedifiantes.frpaul&pcampaignid=web_share">Ici</a></p>
             <div class="my-4">
               <audio controls style="width: 100%;">
                 <source src="audio5.mp3" type="audio/mpeg">
@@ -282,7 +314,7 @@
   <!-- Pied de page -->
   <footer class="bg-light py-4">
     <div class="container text-center">
-      <p class="mb-0">&copy; 2025 Site Religieux. Tous droits réservés.</p>
+      <p class="mb-0">&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
     </div>
   </footer>
 
@@ -306,6 +338,11 @@
       }
       currentPage = page;
       renderPagination();
+      // Défilement jusqu'au titre
+      const titleElement = document.querySelector('#page-' + page + ' img');
+      if (titleElement) {
+        titleElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
     
     // Génère la pagination dynamiquement
