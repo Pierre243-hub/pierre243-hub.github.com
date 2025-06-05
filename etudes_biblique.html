@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communauté Religieuse</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* Style personnalisé */
+        .navbar {
+            background-color: #0d6efd !important;
+            /* Bleu Bootstrap */
+        }
+
+        /* Icônes de l'entête dans des cadres carrés */
+        .header-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-left: 15px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .header-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Couleurs officielles */
+        .header-icons a.facebook {
+            background-color: #3b5998;
+            color: #fff;
+        }
+
+        .header-icons a.contact {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .header-icons a.youtube {
+            background-color: #FF0000;
+            color: #fff;
+        }
+
+        /* Bannière responsive */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 0;
+            padding-bottom: 25%;
+            /* Ratio 4:1 par défaut */
+            background-image: url("");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Adaptations pour différents écrans */
+        @media (max-width: 992px) {
+            .banner {
+                padding-bottom: 30%;
+                /* Ratio un peu plus carré pour tablettes */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                padding-bottom: 40%;
+                /* Ratio plus carré pour mobiles en mode paysage */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .banner {
+                padding-bottom: 60%;
+                /* Ratio presque carré pour petits mobiles */
+            }
+        }
+
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 30px 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .quote-section.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .quote-section::before {
+            content: "";
+            font-size: 80px;
+            color: #0d6efd;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.2;
+        }
+
+        .pagination {
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        /* Bouton vers le haut */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-3px);
+        }
+
+        /* Animation de défilement fluide */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #page1 p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bouton vers le haut -->
+    <div class="back-to-top" id="backToTop">
+        <i class="bi bi-hand-index-thumb"></i>
+    </div>
+
+    <!-- Entête avec icône de contact, lien Facebook et lien de don -->
+    <header class="container py-3">
+        <div class="d-flex justify-content-end header-icons">
+            <a href="index.html" target="_blank" aria-label="Facebook" class="facebook">
+                <i class="bi bi-house-fill"></i>
+            </a>
+            <a href="contact.html" aria-label="Contact" class="contact">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://www.youtube.com/@VoiceofGod2" target="_blank" aria-label="YouTube" class="youtube">
+                <i class="bi bi-youtube"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Barre de navigation bleue -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="LOGO_png.png" alt="Logo" width="40" height="40"
+                    class="d-inline-block align-top me-2">
+                Pierre Ministries
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ACCUEIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown">
+                            À PROPOS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+                            <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+                            <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown">
+                            MULTIMEDIAS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+                            <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+                            <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bannière responsive -->
+    <div class="banner-container">
+        <div class="banner"></div>
+    </div>
+
+    <!-- Le reste du code reste inchangé -->
+    <!-- Présentation de la communauté -->
+    <div class="container" id="main-content">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h1>Bienvenue dans notre communauté</h1>
+                <p class="lead">Nous sommes une communauté spirituelle dédiée à la paix, l'amour et la compréhension
+                    mutuelle. Notre mission est de guider les personnes vers une vie plus épanouissante à travers nos
+                    enseignements et nos pratiques.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section avec pagination -->
+    <div class="container mt-5">
+        <div id="content-section">
+            <!-- Page 1 (active par défaut) -->
+            <div class="content-page active" id="page1">
+                <h2 id="page-title-1">Nos Valeurs Fondamentales</h2>
+                <p>Apocalypse 1.1-3 “Révélation de Jésus-Christ, que Dieu lui a donnée pour montrer à Ses serviteurs les
+                    choses qui doivent arriver bientôt, et qu’Il a fait connaître, par l’envoi de Son ange, à Son
+                    serviteur Jean, <br>
+                    2 lequel a attesté la Parole de Dieu et le témoignage de Jésus-Christ, tout ce qu’il a vu. <br>
+                    3 Heureux celui qui lit et ceux qui entendent les paroles de la prophétie, et qui gardent les choses
+                    qui y sont écrites ! Car le temps est proche.
+                </p>
+                <h3>Le sang de Dieu dans un bébé (L’origine de Jésus-Christ)</h3> <br>
+                <p>
+                    Et donc, Dieu en était digne. Il est descendu, il y a de cela quelque mille neuf cents ans, sous
+                    forme d'un bébé né dans une crèche, couvert de l'ombre du Saint-Esprit, non pas né par le désir
+                    sexuel. Il était Dieu. Le Sang de Dieu était en Lui. <br>
+                    56 Le bébé, c'est toujours le sang de son père, jamais celui de sa mère. Nous savons tous cela.
+                    Sans... j'ai enseigné cela ici bien des fois avant, et vous savez que le bébé n'a pas une seule
+                    goutte de sang de sa mère en lui, rien du tout. <br>
+                    57 Non, ce n'est pas possible. C'est toujours le sang du mâle. Une poule peut pondre un œuf, mais si
+                    l’œuf n'est pas fécondé, il ne va jamais éclore. Peu importe combien cet œuf est joli et peu importe
+                    de quelle bonne manière elle le couve, il restera toujours non fécondé. Il restera là même et
+                    pourrira, c'est vrai, à moins que l'oiseau mâle ait été avec la femelle ; car le germe de vie vient
+                    du mâle. <br>
+                    58 Donc, quand Marie, ne connaissant pas d'homme, était avec le Mâle, Dieu, le Tout-Puissant Jéhovah
+                    - et Il l'a couverte de l'ombre; et Dieu est le Créateur qui créa une cellule de Sang dans le sein
+                    de Marie qui ne connaissait pas d'homme du tout.
+                </p>
+
+
+                <div class="quote-section">
+                    <blockquote class="blockquote">
+                        <p>"La compassion et la compréhension sont les clés d'une vie harmonieuse."</p>
+                        <footer class="blockquote-footer">Ancien de la communauté</footer>
+                    </blockquote>
+                </div>
+
+                <p>Nous croyons en l'importance de la famille, du service aux autres et de la recherche constante de la
+                    sagesse. Ces principes nous aident à construire une société meilleure.</p>
+            </div>
+
+            <!-- Page 2 -->
+            <div class="content-page" id="page2" style="display:none;">
+                <h2 id="page-title-2">Nos Pratiques Quotidiennes</h2>
+                <p>Chaque jour, nous nous engageons dans des pratiques qui nourrissent notre esprit et notre âme.</p>
+
+                <div class="quote-section">
+                    <blockquote class="blockquote">
+                        <p>"La méditation quotidienne est comme une pluie bienfaisante pour l'âme assoiffée."</p>
+                        <footer class="blockquote-footer">Membre depuis 15 ans</footer>
+                    </blockquote>
+                </div>
+
+                <p>Nos pratiques incluent la méditation matinale, l'étude des textes sacrés, le service communautaire et
+                    des réunions hebdomadaires pour partager nos expériences.</p>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="content-page" id="page3" style="display:none;">
+                <h2 id="page-title-3">Événements Communautaires</h2>
+                <p>Nous organisons régulièrement des événements pour rassembler nos membres et partager notre
+                    spiritualité.</p>
+
+                <div class="quote-section">
+                    <blockquote class="blockquote">
+                        <p>"C'est dans le partage que nous trouvons la véritable joie de la communauté."</p>
+                        <footer class="blockquote-footer">Organisateur d'événements</footer>
+                    </blockquote>
+                </div>
+
+                <p>Nos événements incluent des célébrations saisonnières, des retraites spirituelles, des conférences et
+                    des activités caritatives pour aider ceux dans le besoin.</p>
+            </div>
+
+            <!-- Page 4 -->
+            <div class="content-page" id="page4" style="display:none;">
+                <h2 id="page-title-4">Enseignements pour les Jeunes</h2>
+                <p>Nous accordons une importance particulière à l'éducation spirituelle des jeunes générations.</p>
+
+                <div class="quote-section">
+                    <blockquote class="blockquote">
+                        <p>"Instruis l'enfant selon la voie qu'il doit suivre, et quand il sera vieux, il ne s'en
+                            détournera pas."</p>
+                        <footer class="blockquote-footer">Proverbe ancien</footer>
+                    </blockquote>
+                </div>
+
+                <p>Nos programmes pour les jeunes incluent des écoles du dimanche, des camps d'été spirituels et des
+                    activités adaptées à chaque groupe d'âge pour les aider à grandir avec des valeurs solides.</p>
+            </div>
+
+            <!-- Page 5 -->
+            <div class="content-page" id="page5" style="display:none;">
+                <h2 id="page-title-5">Rejoignez-Nous</h2>
+                <p>Nous accueillons chaleureusement tous ceux qui cherchent un chemin spirituel et une communauté
+                    bienveillante.</p>
+
+                <div class="quote-section">
+                    <blockquote class="blockquote">
+                        <p>"Vous n'êtes pas seul sur ce chemin. Nous marchons ensemble vers la lumière."</p>
+                        <footer class="blockquote-footer">Guide spirituel</footer>
+                    </blockquote>
+                </div>
+
+                <p>Que vous soyez nouveau dans la spiritualité ou que vous cherchiez simplement à approfondir votre
+                    pratique, vous trouverez chez nous un foyer spirituel. Contactez-nous pour en savoir plus sur nos
+                    activités et comment vous pouvez participer.</p>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link prev" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link page-btn" href="#" data-page="1">1</a></li>
+                <li class="page-item"><a class="page-link page-btn" href="#" data-page="2">2</a></li>
+                <li class="page-item"><a class="page-link page-btn" href="#" data-page="3">3</a></li>
+                <li class="page-item"><a class="page-link page-btn" href="#" data-page="4">4</a></li>
+                <li class="page-item"><a class="page-link page-btn" href="#" data-page="5">5</a></li>
+                <li class="page-item">
+                    <a class="page-link next" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer avec copyright -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS et dépendances -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Script pour la pagination
+        document.addEventListener('DOMContentLoaded', function () {
+            const pageButtons = document.querySelectorAll('.page-btn');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            const contentPages = document.querySelectorAll('.content-page');
+            let currentPage = 1;
+
+            // Fonction pour afficher une page spécifique
+            function showPage(pageNumber) {
+                contentPages.forEach(page => {
+                    page.style.display = 'none';
+                });
+
+                const activePage = document.getElementById(`page${pageNumber}`);
+                activePage.style.display = 'block';
+
+                // Activer l'animation de la citation
+                setTimeout(() => {
+                    const quoteSection = activePage.querySelector('.quote-section');
+                    if (quoteSection) {
+                        quoteSection.classList.add('animated');
+                    }
+                }, 100);
+
+                // Mettre à jour l'état actif des boutons de pagination
+                pageButtons.forEach(button => {
+                    button.parentElement.classList.remove('active');
+                    if (parseInt(button.getAttribute('data-page')) === pageNumber) {
+                        button.parentElement.classList.add('active');
+                    }
+                });
+
+                currentPage = pageNumber;
+
+                // Faire défiler vers le titre de la page
+                const pageTitle = document.getElementById(`page-title-${pageNumber}`);
+                if (pageTitle) {
+                    pageTitle.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            // Écouteurs d'événements pour les boutons numérotés
+            pageButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const pageNumber = parseInt(this.getAttribute('data-page'));
+                    showPage(pageNumber);
+                });
+            });
+
+            // Bouton précédent
+            prevButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (currentPage > 1) {
+                    showPage(currentPage - 1);
+                }
+            });
+
+            // Bouton suivant
+            nextButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (currentPage < contentPages.length) {
+                    showPage(currentPage + 1);
+                }
+            });
+
+            // Afficher la première page au chargement
+            showPage(1);
+
+            // Bouton vers le haut
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Animer les citations lorsqu'elles deviennent visibles
+            const animateQuotes = function () {
+                const quoteSections = document.querySelectorAll('.quote-section');
+
+                quoteSections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+
+                    if (sectionPosition < screenPosition) {
+                        section.classList.add('animated');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateQuotes);
+            animateQuotes(); // Animer au chargement si déjà visible
+        });
+    </script>
+</body>
+
+</html>
