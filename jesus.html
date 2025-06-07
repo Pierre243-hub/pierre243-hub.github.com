@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,37 +13,72 @@
   <style>
     /* Animation pour le lien de don */
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
+
     .donation-link {
       animation: pulse 2s infinite;
       margin-left: 15px;
-      font-size: 0.8rem; /* Taille réduite */
+      font-size: 0.8rem;
+      /* Taille réduite */
     }
+
     /* Améliorations pour la section About */
     #about blockquote {
-      background-color: #e7f1ff;  /* Fond bleu pâle */
+      background-color: #e7f1ff;
+      /* Fond bleu pâle */
       padding: 20px;
       border-left: 5px solid #007bff;
       border-radius: 5px;
       margin: 20px 0;
       font-style: italic;
     }
+
     /* Styles pour la section About-Plus */
     #about-plus h2 {
       font-weight: 700;
     }
+
     #about-plus .card {
       transition: transform 0.3s;
     }
+
     #about-plus .card:hover {
       transform: translateY(-5px);
     }
+
     /* Styles pour la nouvelle section Description Détaillée */
-    .custom-citation {
-      background-color: #fff3cd; /* Fond jaune pâle pour les citations */
+    .custom-citation1 {
+      background-color: #f4f5f8;
+      /* Fond jaune pâle pour les citations */
+      padding: 15px;
+      border-left: 5px solid #1e3126;
+      border-radius: 5px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .custom-citation2 {
+      background-color: #cc3e06;
+      /* Fond jaune pâle pour les citations */
+      padding: 15px;
+      border-left: 5px solid #11110f;
+      border-radius: 5px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .custom-citation3 {
+      background-color: #fff3cd;
+      /* Fond jaune pâle pour les citations */
       padding: 15px;
       border-left: 5px solid #ffc107;
       border-radius: 5px;
@@ -51,6 +87,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Entête avec recherche, icône de contact et lien de don -->
@@ -62,8 +99,8 @@
       </form>
       <!-- Icône de contact -->
       <div class="me-3">
-        <a href="#contact" class="text-dark">
-          <i class="bi bi-envelope-fill fs-4"></i>
+        <a href="contact.html" class="text-dark">
+          <i class="bi bi-phone-fill"></i>
         </a>
       </div>
       <!-- Lien pour faire un don -->
@@ -76,12 +113,12 @@
   <!-- Barre de navigation en bleu -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
         <span>Pierre Ministries</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -92,8 +129,9 @@
           </li>
           <!-- Menu 2 avec sous-menus -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               À PROPOS
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              À PROPOS
             </a>
             <ul class="dropdown-menu" aria-labelledby="menu2">
               <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
@@ -102,13 +140,14 @@
           </li>
           <!-- Menu 3 avec sous-menus -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               MULTIMEDIAS
             </a>
             <ul class="dropdown-menu" aria-labelledby="menu3">
-              <li><a class="dropdown-item" href="#">Brochures</a></li>
-              <li><a class="dropdown-item" href="#">Photos</a></li>
-              <li><a class="dropdown-item" href="#">Vidéos</a></li>
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
             </ul>
           </li>
           <!-- Menu 4 sans sous-menu -->
@@ -122,24 +161,24 @@
 
   <!-- Diaporama des versets bibliques -->
   <div id="carouselBiblicalVerses" class="carousel slide" data-bs-ride="carousel">
-    
+
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="Dieu.png" class="d-block w-100" alt="Verset Biblique 1">
         <div class="carousel-caption d-none d-md-block">
-         
+
         </div>
       </div>
       <div class="carousel-item">
         <img src="Dieu partout.png" class="d-block w-100" alt="Verset Biblique 2">
         <div class="carousel-caption d-none d-md-block">
-          
+
         </div>
       </div>
       <div class="carousel-item">
         <img src="Pierre Ministries (2).png" class="d-block w-100" alt="Verset Biblique 3">
         <div class="carousel-caption d-none d-md-block">
-          
+
         </div>
       </div>
     </div>
@@ -157,10 +196,12 @@
   <section id="presentation" class="py-5">
     <div class="container">
       <div class="text-center mb-4">
-        <h2>Présentation de la Communauté</h2>
+        <h2>Jésus-Christ</h2>
         <p class="lead">
-          Bienvenue dans notre communauté de foi, un lieu où l'amour, la solidarité et la spiritualité se rejoignent.
-          Nous partageons les enseignements bibliques afin d'inspirer et d'unir nos vies.
+          La seule façon pour vous de dire que Jésus est le Christ, c’est quand le Saint-Esprit entre en vous et rend témoignage, et témoigne Lui-même “qu’Il est le Fils de Dieu”. C’est la seule façon pour vous de connaître la résurrection, 
+          c’est quand le Saint-Esprit rend témoignage. “Quand Lui, le Saint-Esprit sera venu, Il témoignera de Moi, 
+          Il vous montrera les choses à venir; Il vous rappellera ces choses que Je vous ai dites.” Vous ne le trouverez jamais à l’école. Voyez? Lui vous rappellera ces choses.
+    
         </p>
       </div>
     </div>
@@ -172,16 +213,20 @@
       <div class="row align-items-center">
         <!-- Contenu textuel -->
         <div class="col-md-6">
-          <h2 class="mb-4">À Propos</h2>
+          <h2 class="mb-4">Hébreux 13:8</h2>
           <p>
-            Fondée sur des principes d'amour et de foi, notre communauté se consacre à partager la lumière divine et les enseignements sacrés. Chacun y trouve l'inspiration pour sa quête spirituelle.
+             Et Qui est Jésus-Christ? La Parole. “Au commencement était la Parole, et la Parole était avec Dieu, et la Parole était Dieu. Et la Parole a été faite chair et Elle a habité parmi nous.”
+              “Jésus-Christ, le même hier, aujourd’hui, et éternellement.”
+ 
           </p>
           <blockquote>
-            <p class="mb-0">"La foi est le voyage intérieur qui révèle la lumière en chacun de nous."</p>
-            <footer class="blockquote-footer mt-2">Anonyme</footer>
+            <p class="mb-0">"Jésus lui dit: Je suis le chemin, la vérité, et la vie. Nul ne vient au Père que par moi."</p>
+            <footer class="blockquote-footer mt-2">Jean 14 : 6</footer>
           </blockquote>
           <p>
-            Nous œuvrons pour bâtir un espace solidaire et chaleureux où le partage, l'écoute et la bienveillance sont au cœur de nos actions.
+            (la révélation spirituelle montrant qui est Dieu, qui est Jésus, et qu’Il est la révélation de Dieu, Dieu fait chair et révélé au monde. 
+            Il était dans le monde; Dieu était en Christ, réconciliant le monde avec Lui-même et révélant ce que Dieu était, dans un corps de chair)…” “Tu es le Christ, le Oint, le Fils de Dieu.”
+
           </p>
         </div>
         <!-- Image à droite -->
@@ -195,15 +240,16 @@
   <!-- Section About-Plus -->
   <section id="about-plus" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5">Enrichissons Notre Histoire</h2>
+      <h2 class="text-center mb-5">Enrichissons Notre réflexion</h2>
       <div class="row g-4">
         <!-- Carte Nos Valeurs -->
         <div class="col-md-4">
           <div class="card shadow h-100">
-            <img src="LOGO_png.png" class="card-img-top" alt="Nos Valeurs">
+            <img src="nuée.jpg" class="card-img-top" alt="Nos Valeurs">
             <div class="card-body">
-              <h5 class="card-title">Nos Valeurs</h5>
-              <p class="card-text">Découvrez les principes et l'éthique qui nous guident vers un avenir lumineux et empreint d'espoir.</p>
+              <h5 class="card-title">Proverbes 3:5-6</h5>
+              <p class="card-text">Confie-toi à l’Éternel de tout ton cœur, et ne t’appuie pas sur ta propre intelligence.
+                 Dans toutes tes voies, reconnais-le, et il dirigera tes sentiers.</p>
             </div>
           </div>
         </div>
@@ -212,8 +258,9 @@
           <div class="card shadow h-100">
             <img src="young_branham.jpg" class="card-img-top" alt="Nos Activités">
             <div class="card-body">
-              <h5 class="card-title">Nos Activités</h5>
-              <p class="card-text">Participez à des événements spirituels, ateliers et rencontres qui renforcent notre engagement communautaire.</p>
+              <h5 class="card-title">Psaume 103:2-3 </h5>
+              <p class="card-text">Mon âme, bénis l’Éternel, Et n’oublie aucun de ses bienfaits! 
+                C’est lui qui pardonne toutes tes iniquités, Qui guérit toutes tes maladies</p>
             </div>
           </div>
         </div>
@@ -222,8 +269,8 @@
           <div class="card shadow h-100">
             <img src="bt.jpg" class="card-img-top" alt="Témoignages">
             <div class="card-body">
-              <h5 class="card-title">Témoignages</h5>
-              <p class="card-text">Lisez des histoires inspirantes et les parcours de foi de nos membres qui témoignent de leur transformation.</p>
+              <h5 class="card-title">Matthieu 6:33 </h5>
+              <p class="card-text">Mais cherchez d’abord son royaume et sa justice, et toutes ces choses vous seront données aussi</p>
             </div>
           </div>
         </div>
@@ -234,41 +281,60 @@
   <!-- Nouvelle Section: Description Détaillée -->
   <section id="detailed-description" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5">bref détail sur la divinité de Jésus-Christ</h2>
-      
+      <h2 class="text-center mb-5">Découvrez 3 versets bibliques sur Jésus</h2>
+
       <!-- Bloc 1: Notre Mission -->
       <div class="mb-5">
-        <h3>Notre Mission</h3>
-        <p style="background-color: #e9f7ef; color: #155724; padding: 15px; border-radius: 5px;">
-          Notre mission est de guider chaque individu vers l'épanouissement spirituel et la quête d'une vie empreinte de sérénité et de partage. Nous créons des espaces où la prière, la méditation et l'action solidaire s'entrelacent pour offrir un soutien chaleureux à chacun.
-        </p>
-        <blockquote class="custom-citation">
-          <p>"La lumière divine se trouve dans le cœur de ceux qui cherchent la vérité."</p>
-          <footer class="blockquote-footer">Saint Paul</footer>
+
+        <blockquote class="custom-citation1">
+          <p>"Car un enfant nous est né, un fils nous est donné, Et la domination reposera sur son épaule;
+            On l’appellera Admirable, Conseiller, Dieu puissant, Père éternel, Prince de la paix.</p>
+          <footer class="blockquote-footer">Ésaïe 9:5</footer>
         </blockquote>
       </div>
-      
+
       <!-- Bloc 2: Nos Valeurs Fondamentales -->
       <div class="mb-5">
-        <h3>Nos Valeurs Fondamentales</h3>
-        <p style="background-color: #fcefee; color: #721c24; padding: 15px; border-radius: 5px;">
-          Nous croyons en la charité, la compassion et l'humilité. Chaque geste, chaque parole est guidé par l'amour et le respect de chacun. En diffusant ces valeurs, nous aspirons à créer une communauté solidaire et engagée.
-        </p>
-        <blockquote class="custom-citation">
-          <p>"L'amour véritable naît de la compassion et se renforce par le partage."</p>
-          <footer class="blockquote-footer">Mère Teresa</footer>
+
+        <blockquote class="custom-citation2">
+          <p>"
+
+            Tout le monde le méprisait et l’évitait.
+            C’était un homme qui souffrait,
+            habitué à la douleur.
+            Il était comme quelqu’un
+            que personne ne veut regarder.
+            Nous le méprisions, nous le comptions pour rien.
+            Pourtant, ce sont nos maladies qu’il supportait,
+            c’est de notre souffrance qu’il s’était chargé.
+            Et nous, nous pensions :
+            c’est Dieu qui le punit de cette façon,
+            c’est Dieu qui le frappe et l’abaisse.
+            Mais il était blessé à cause de nos fautes,
+            il était écrasé à cause de nos péchés.
+            La punition qui nous donne la paix
+            est tombée sur lui.
+            Et c’est par ses blessures
+            que nous sommes guéris."</p>
+          <footer class="blockquote-footer">Ésaïe 53.3-5</footer>
         </blockquote>
       </div>
-      
+
       <!-- Bloc 3: Notre Engagement Spirituel -->
       <div class="mb-5">
-        <h3>Notre Engagement Spirituel</h3>
-        <p style="background-color: #e3f2fd; color: #0d47a1; padding: 15px; border-radius: 5px;">
-          Engagés dans la quête spirituelle, nous organisons régulièrement des séances de méditation, des ateliers de réflexion et des espaces d’échange pour renforcer notre foi collective tout en favorisant le bien-être personnel.
-        </p>
-        <blockquote class="custom-citation">
-          <p>"L'engagement envers la foi est le pont qui unit les cœurs et transforme les vies."</p>
-          <footer class="blockquote-footer">Inconnu</footer>
+
+        <blockquote class="custom-citation3">
+          <p>"
+
+            Lui, il est l’égal de Dieu, parce qu’il est Dieu depuis toujours. Pourtant, cette égalité, il n’a pas
+            cherché à la garder à tout prix pour lui. Mais tout ce qu’il avait, il l’a laissé. Il s’est fait serviteur,
+            il est devenu comme les hommes, et tous voyaient que c’était bien un homme. Il s’est fait plus petit encore
+            : il a obéi jusqu’à la mort, et il est mort sur une croix !
+            C’est pourquoi Dieu l’a placé très haut et il lui a donné le nom qui est au-dessus de tous les autres noms.
+            Alors tous ceux qui sont dans le ciel, sur la terre et chez les morts tomberont à genoux quand ils
+            entendront le nom de Jésus. Et tous reconnaîtront ceci : Jésus-Christ est le Seigneur, pour la gloire de
+            Dieu le Père."</p>
+          <footer class="blockquote-footer">Philippiens 2.6-11</footer>
         </blockquote>
       </div>
     </div>
@@ -283,9 +349,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script pour la recherche dans les titres -->
   <script>
-    document.getElementById('searchInput').addEventListener('keyup', function() {
+    document.getElementById('searchInput').addEventListener('keyup', function () {
       let query = this.value.toLowerCase();
-      document.querySelectorAll('h1, h2, h3').forEach(function(element) {
+      document.querySelectorAll('h1, h2, h3').forEach(function (element) {
         if (query !== "" && element.textContent.toLowerCase().includes(query)) {
           element.style.backgroundColor = 'yellow';
         } else {
@@ -295,4 +361,5 @@
     });
   </script>
 </body>
+
 </html>
