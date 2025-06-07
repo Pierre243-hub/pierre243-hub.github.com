@@ -39,6 +39,78 @@
     .header-right {
       text-align: right;
     }
+
+    /* La box qui contient toute la structure */
+    .box {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 1112px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .box h3 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .box p.description {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* Grille des liens */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    /* Style pour chaque lien de la grille */
+    .grid-item {
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+    }
+    .grid-item:hover {
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+    .grid-item img {
+      width: 220px;
+      height: 342px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+    .grid-item p {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* Pour tablettes et petits écrans */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-item img {
+        width: 180px;
+        height: 280px;
+      }
+    }
+
+    /* Pour mobiles */
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+      .grid-item img {
+        width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -133,9 +205,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="p-4 bg-light rounded shadow">
-          <h2 class="mb-3">Présentation de la Communauté</h2>
+          <h2 class="mb-3">Notre Bibliothèque</h2>
           <p>
-            ... Mais un croyant, un vrai de vrai qui est vraiment affermi spirituellement, il lit sa bible sa Bible chaque jour, et i parle au seigneur. c'est vrai. pour lui, c'est indispensable. - La communion E-97 -
+            Mais un croyant, un vrai de vrai qui est vraiment affermi spirituellement, il lit sa bible sa Bible chaque jour, et i parle au seigneur. c'est vrai. pour lui, c'est indispensable. - La communion E-97 -
           </p>
         </div>
       </div>
@@ -144,7 +216,7 @@
 
   <!-- Bibliothèque -->
   <section class="container my-5">
-    <h2 class="mb-4">Bibliothèque</h2>
+    <h2 class="mb-4">Recueil des Cantiques (Français et Lingala)</h2>
     <p>Ce petit tableau contient quelques chants du message. </p>
     <!-- Zone de recherche des livres -->
     <div class="mb-3">
@@ -186,34 +258,55 @@
       </table>
     </div>
     <!-- Description en bas du tableau -->
-    <div class="mt-4 p-3 bg-light rounded shadow">
-      <h3>Remarque</h3>
-      <p>
-        Cette section vous offre un ensemble de ressources complémentaires. Vous pouvez télécharger des fichiers compressés contenant divers Brochures.
-      </p>
-      <p>
-        <a href="revelation_JC.zip" class="btn btn-link">Révelation de Jésus-Christ</a>
-        <a href="Adoption_fr.zip" class="btn btn-link">Adoption</a> 
-        <a href="cod_1.zip" class="btn btn-link">Conduite, Ordre et Doctrine 1</a>
-        <a href="cod_2.zip" class="btn btn-link">Conduite, Ordre et Doctrine 2</a>
-        <a href="Daniel.zip" class="btn btn-link">Daniel</a> 
-        <a href="expose.zip" class="btn btn-link">Exposé de 7 âges</a>
-        <a href="Hébreux_fr.zip" class="btn btn-link">Les Hébreux</a> 
-        <a href="Israel_et_Eglise.zip" class="btn btn-link">Israel_et_Eglise</a>
-        <a href="SeptSceaux_fr.zip" class="btn btn-link">Sept Sceaux</a>
-      </p>
-      <p>Pour plus des brochures cliquez sur le lien ci-dessous</p>
-      <p>
-        <a href="https://branham.fr/sermons" class="btn btn-secondary">En savoir plus</a>
-      </p>
+    <div class="box">
+    <!-- Titre et description -->
+    <h3>Les Séries de Brochures</h3>
+    <p class="description">Voici une description des fichiers compressés disponibles en téléchargement. Cliquez sur chacun pour accéder au fichier correspondant.</p>
+    
+    <!-- Grille de neuf liens -->
+    <div class="grid-container">
+      <a href="revelation_JC.zip" class="grid-item">
+        <img src="RJC.png" alt="Fichier compressé 1">
+        <p>Révélation de Jésus-Christ</p>
+      </a>
+      <a href="cod_1.zip" class="grid-item">
+        <img src="RPU.png" alt="Fichier compressé 2">
+        <p>Conduite, Ordre, doctrine #1</p>
+      </a>
+      <a href="cod_2.zip" class="grid-item">
+        <img src="RPU.png" alt="Fichier compressé 3">
+        <p>Conduite, Ordre, doctrine #2</p>
+      </a>
+      <a href="Hébreux_fr.zip" class="grid-item">
+        <img src="Hebrews.png" alt="Fichier compressé 4">
+        <p>Les hébreux</p>
+      </a>
+      <a href="Daniel.zip" class="grid-item">
+        <img src="Deniel.png" alt="Fichier compressé 5">
+        <p>Soixante-dix semaines de Daniel</p>
+      </a>
+      <a href="Israel_et_Eglise.zip" class="grid-item">
+        <img src="israel.png" alt="Fichier compressé 6">
+        <p>Israel et L'Eglise</p>
+      </a>
+      <a href="Adoption_fr.zip" class="grid-item">
+        <img src="adoption.png" alt="Fichier compressé 7">
+        <p>Adoption</p>
+      </a>
+      <a href="SeptSceaux_fr.zip" class="grid-item">
+        <img src="7_Seals.png" alt="Fichier compressé 8">
+        <p>La révélation des Sept Sceaux</p>
+      </a>
+      
     </div>
+  </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-3 mt-5">
     <div class="container text-center">
-      <p>&copy; 2025 Pierre Ministries Tous droits réservés.</p>
-      <a href="#" class="btn btn-light">Retour vers le haut</a>
+      <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
+      
     </div>
   </footer>
 
