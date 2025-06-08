@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dons - Airtel Money &amp; M-Pesa</title>
+  <style>
+    /* Réinitialisation et styles de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fc;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    /* Conteneur principal */
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #007BFF;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    /* Boutons de dons */
+    .donation-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .donation-buttons a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+    .donation-buttons a:hover {
+      transform: translateY(-3px);
+    }
+    .airtel {
+      background: #e53935;
+    }
+    .airtel:hover {
+      background: #d32f2f;
+    }
+    .mpesa {
+      background: #f9a825;
+    }
+    .mpesa:hover {
+      background: #f57f17;
+    }
+    /* Conteneur pour afficher le numéro et le message */
+    #phone-info {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
+      background: #eef8ff;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+    /* État actif déclenchant l'animation */
+    #phone-info.active {
+      opacity: 1;
+      max-height: 200px;
+      padding: 20px;
+    }
+    /* Adaptation responsive pour les écrans larges */
+    @media (min-width: 600px) {
+      .donation-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .donation-buttons a {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Faites un Don</h1>
+    <p>Votre soutien est précieux. Choisissez votre méthode de don via Airtel Money ou M-Pesa.</p>
+    <div class="donation-buttons">
+      <!-- Le data-type permettra d'identifier le type de don -->
+      <a class="airtel donation-button" data-type="airtel" href="#">Airtel Money</a>
+      <a class="mpesa donation-button" data-type="mpesa" href="#">M-Pesa</a>
+    </div>
+    <!-- Conteneur caché qui affichera le numéro et le message -->
+    <div id="phone-info"></div>
+  </div>
+
+  <script>
+    // Écoute des clics sur les boutons de dons
+    document.querySelectorAll('.donation-button').forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();  // Empêche le rechargement de la page
+        let type = this.getAttribute('data-type');
+        let infoDiv = document.getElementById('phone-info');
+        let message = '';
+
+        // Personnalisation du message et du numéro en fonction du type
+        if (type === 'airtel') {
+          message = `<p>Merci pour votre soutien chaleureux !</p>
+                     <p>Pour Airtel Money, contactez-nous au <strong>+243 810 123 456</strong>.</p>`;
+        } else if (type === 'mpesa') {
+          message = `<p>Merci pour votre générosité !</p>
+                     <p>Pour M-Pesa, contactez-nous au <strong>+243 820 654 321</strong>.</p>`;
+        }
+        // Réinitialisation de l'animation
+        infoDiv.innerHTML = message;
+        infoDiv.classList.remove('active');
+        // Petite temporisation pour permettre la réactivation de la transition
+        setTimeout(() => {
+          infoDiv.classList.add('active');
+        }, 10);
+      });
+    });
+  </script>
+</body>
+</html>
