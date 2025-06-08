@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Site Religieux Responsive</title>
+  <title>La prière</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-   /* Icônes de l'entête dans des cadres carrés */
+    /* Icônes de l'entête dans des cadres carrés */
     .header-icons a {
       display: flex;
       align-items: center;
@@ -22,18 +24,22 @@
       text-decoration: none;
       transition: transform 0.2s;
     }
+
     .header-icons a:hover {
       transform: scale(1.1);
     }
+
     /* Couleurs officielles */
     .header-icons a.facebook {
       background-color: #3b5998;
       color: #fff;
     }
+
     .header-icons a.contact {
       background-color: #28a745;
       color: #fff;
     }
+
     .header-icons a.youtube {
       background-color: #FF0000;
       color: #fff;
@@ -51,6 +57,7 @@
       transition: transform 0.3s ease;
       cursor: pointer;
     }
+
     .hover-effect:hover {
       transform: scale(1.02);
     }
@@ -61,13 +68,30 @@
       border: 1px solid #ddd;
       border-radius: 5px;
       padding: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       margin-top: 15px;
     }
+
     .audio-player audio {
       width: 100%;
       max-width: 100%;
       outline: none;
+    }
+
+    /* Background pour la citation dans la section About */
+    .about-citation {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      border-left: 5px solid #007bff;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mb-5 p {
+      text-align: justify;
+      font-family: sans-serif;
+      font-size: medium;
     }
 
     /* Bouton Retour en Haut */
@@ -82,7 +106,7 @@
       height: 50px;
       padding: 0;
     }
-    
+
     /* Pied de page */
     footer {
       background-color: #333;
@@ -92,18 +116,19 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- En-tête avec icônes -->
   <header class="container py-3">
     <div class="d-flex justify-content-end header-icons">
-      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+      <a href="https://www.facebook.com/pierre.tutu.92" target="_blank" aria-label="Facebook" class="facebook">
         <i class="bi bi-facebook"></i>
       </a>
       <a href="contact.html" aria-label="Contact" class="contact">
         <i class="bi bi-envelope"></i>
       </a>
-      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube">
+      <a href="https://www.youtube.com/@VoiceofGod2" target="_blank" aria-label="YouTube" class="youtube">
         <i class="bi bi-youtube"></i>
       </a>
     </div>
@@ -113,22 +138,23 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="Lg.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-top me-2">
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-top me-2">
         Pierre Ministries
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <!-- Menu 1 avec sous-menu -->
-         <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">ACCEUIL</a>
           </li>
           <!-- Menu 2 avec sous-menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               À PROPOS
             </a>
             <ul class="dropdown-menu" aria-labelledby="menu2">
@@ -139,8 +165,9 @@
           </li>
           <!-- Menu 3 avec sous-menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             MULTIMEDIAS
+            <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              MULTIMEDIAS
             </a>
             <ul class="dropdown-menu" aria-labelledby="menu3">
               <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
@@ -169,13 +196,18 @@
       <div class="card p-4 shadow-sm hover-effect">
         <div class="card-body">
           <p class="card-text">
-           La prière n'est pas une chose mise à part. Quand nous
-prions, nous devrions projeter de prendre assez de temps,
-non seulement de parler à Dieu, mais aussi de Lui dire nos
-besoins. Et si nous croyons vraiment que Dieu entendra
-notre prière, alors Jésus a dit, demandez ce que vous
-voulez, et croyez que vous le recevrez.
+            La prière n'est pas une chose mise à part. Quand nous
+            prions, nous devrions projeter de prendre assez de temps,
+            non seulement de parler à Dieu, mais aussi de Lui dire nos
+            besoins. Et si nous croyons vraiment que Dieu entendra
+            notre prière, alors Jésus a dit, demandez ce que vous
+            voulez, et croyez que vous le recevrez.
           </p>
+          <blockquote class="blockquote about-citation">
+            <p class="mb-0 fst-italic">Faites en tout temps par l'Esprit toutes sortes de prières et de supplications.
+              Veillez à cela avec une entière persévérance, et priez pour tous les saints.</p>
+            <footer class="blockquote-footer mt-2">Éphésiens 6:18</footer>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -186,9 +218,17 @@ voulez, et croyez que vous le recevrez.
     <div class="container">
       <!-- Section 1 -->
       <div class="mb-5">
-        <h3>Section 1</h3>
+        <h3>Dieu exauce les prières</h3> <br><br>
         <p>
-          Un message spirituel pour inspirer votre foi et vous guider vers la paix intérieure. Profitez de ce moment de recueillement.
+          Nous voulons tous être conduits par l'Esprit; exactement ce que l'Esprit nous dit de faire, alors nous voulons
+          le faire promptement.
+
+          Et souvenons-nous, alors que nous obéissons à l'Esprit, il y a une grande leçon que nous voulons apprendre,
+          c'est de ne jamais être pressés. Voyez-vous? Prenez votre temps, ayez la foi. Si nous avons demandé quelque
+          chose à Dieu, souvenons-nous que Dieu exauce les prières. Il le fait en Son temps, de la meilleure façon,
+          Il fait concourir la chose parfaitement bien pour nous. Et si ce n'est pas le cas, alors qu'est-ce que nous
+          faisons ici ce matin? Ça - ça nous donne quoi de nous prétendre chrétiens? Dieu... Si Ceci n'est pas la Parole
+          de Dieu, alors, si Elle n'est pas vraie, alors nous sommes les plus malheureux de tous les hommes.
         </p>
         <div class="audio-player">
           <audio controls>
@@ -199,9 +239,62 @@ voulez, et croyez que vous le recevrez.
       </div>
       <!-- Section 2 -->
       <div class="mb-5">
-        <h3>Section 2</h3>
+        <h3>Avez-vous un besoin aujourd’hui? Avez-vous un besoin qui dépasse vos capacités physiques?</h3> <br><br>
         <p>
-          Un autre enseignement inspirant pour élever votre esprit et nourrir vos prières. Laissez-vous porter par ces paroles de sagesse.
+          Pensez-y tandis que nous prions. Avez-vous un besoin aujourd’hui? Avez-vous un besoin qui dépasse vos
+          capacités physiques? Êtes-vous tellement à court d’argent que vous ne pouvez pas payer votre loyer? Les
+          enfants ont-ils besoin de chaussures neuves, et vous n’avez pas l’argent pour les leur acheter? Le pot est-il
+          vide chez vous, et la cruche à peu près sèche? Vous ne pouvez pas acheter de fourrage pour votre bétail et...
+          quelque chose ne va pas; souvenez-vous : Il a fait une promesse.
+
+          Êtes-vous malade : le médecin dit qu’il vous faut subir une opération, et vous n’avez pas l’argent
+          nécessaire? Êtes-vous dans le besoin? <br>
+
+          Êtes-vous un pécheur? Votre besoin est-il grand, sachant que si Dieu appelait aujourd’hui, vous seriez
+          perdu? Êtes-vous un rétrograde, fuyant Dieu? Vous savez que vous êtes membre d’une église, et pourtant vous
+          savez bien que vous n’êtes pas en règle, votre propre conscience vous dit que vous n’êtes pas en règle selon
+          la Parole : vous avez un besoin. Ne laissez pas ces paroles tomber parmi les épines ou sur des pierres, des
+          coeurs de pierre; puissent-elles tomber dans une bonne terre fertile. <br>
+
+          Vous qui êtes malade et condamné par la médecine, si vous promettez à Dieu de Le servir tous les jours de
+          votre vie et que vous êtes certain qu’Il est Dieu, venez donc satisfaire à Son exigence. Si vous avez un
+          besoin, voulez-vous commencer par lever la main pour dire à Dieu que vous avez besoin de quelque chose? Que
+          Dieu vous bénisse! Prions. <br>
+
+          Ô Seigneur, aussi sûr que je me tiens à cette chaire ce matin, je sais que pas une seule de ces mains ne
+          peut se lever sans que Tu le saches, car Tu es Dieu. Tu as dit : “Ne vend-on pas tant de passereaux pour deux
+          sous? Combien plus valez-vous qu’un passereau!” À combien plus forte raison as-Tu vu les mains de ces êtres
+          mortels pour lesquels Ton Fils Jésus est mort! Combien plus as-Tu vu leurs mains que Tu n’aurais vu tomber un
+          passereau ce matin. Je pense que... qu’une douzaine de passereaux ne se vendrait pas pour un sou ce matin,
+          parce que personne n’en veut; il y aurait le problème de s’en occuper. Mais Tu connais chacun d’eux; Tu
+          connais chacune des plumes qui recouvrent leur corps. Tu connais chacun des cheveux de notre tête. <br>
+
+          Ô Seigneur, exauce notre prière; fais en sorte qu’ils soient certains que Tu es Dieu ce matin, et que
+          c’est Ton Esprit. Puissent l’engourdissement et le prestige caractérisant cette religion des temps modernes se
+          détacher d’eux; “Oh, je suis membre de telle église”, disent-ils. Ô Dieu, puisse cela s’effacer de leurs
+          pensées à l’instant même. Puissent-ils maintenant entrevoir, un bref instant, la Vie Éternelle. Et alors, ils
+          La rechercheront et auront soif d’Elle, désirant savoir ce que Dieu est, puisqu’ils sont certains qu’Il existe
+          et qu’Il tient Sa Parole. <br>
+
+          Quant aux pécheurs, puissent-ils rapidement se repentir et se préparer à être baptisés au Nom de
+          Jésus-Christ. Tu as alors promis de leur donner le Saint-Esprit. Tu l’as dit, Seigneur; Tu tiens Ta promesse.
+          <br>
+
+          S’il y a ici un rétrograde qui est certain que Tu es Dieu, mais qui se soit égaré, puisse-t-il venir
+          aujourd’hui, parce que Tu as dit : “Si vos péchés sont comme le cramoisi, ils deviendront blancs comme la
+          neige; s’ils sont rouges comme la pourpre, ils deviendront blancs comme la laine.” <br>
+
+          Et puissent ceux qui sont malades prendre conscience que Tu es Dieu, que Tu tiens Ta Parole; Tu dois tenir
+          Ta Parole. Et, alors qu’ils viennent se placer là avec leur Huile – l’Esprit qui est en eux confessant qu’ils
+          croient – et aussi avec la Parole, – le Pain de Vie qui a été distribué, Christ, qui a été broyé pour eux au
+          fil de l’Ancien et du Nouveau Testament, pour montrer qu’Il est le même hier, aujourd’hui, et pour toujours, –
+          puissent-ils donc mélanger cette Parole et l’Huile, l’Esprit, qu’ils possèdent, et se relever de l’autel en
+          disant : “C’est tout ce que je possède, Seigneur; je Te l’apporte.” Oh, combien Tu le multiplieras, combien
+          cela déclenchera l’entrée en scène du Dieu de l’histoire; combien Jéhovah, le coeur ému, pourra dire : “J’ai
+          un enfant qui est prêt à M’obéir. Je l’ai mis à l’épreuve, et il a montré qu’il M’aime et qu’il Me croit. Il
+          est certain que J’existe.” Car il est déclaré : “Celui qui s’approche de Dieu doit croire qu’Il existe, et
+          qu’Il est le rémunérateur de ceux qui Le cherchent.” Accorde-le en cette heure, tandis que nous nous en
+          remettons à Toi.
         </p>
         <div class="audio-player">
           <audio controls>
@@ -211,11 +304,82 @@ voulez, et croyez que vous le recevrez.
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <!-- Section 1 -->
+      <div class="mb-5">
+        <h3>Mais c’est notre motif, dans notre coeur, que Dieu entend</h3> <br><br>
+        <p>
+          Il y avait un petit–petit garçon, une fois, dans le sud, dont on–on racontait qu’il s’était agenouillé au
+          milieu d’un rang qu’il venait de labourer. Et un–un membre du clergé qui passait par là a entendu ce petit
+          garçon qui récitait l’alphabet : “A, B, C, D”, et ainsi de suite; et comme il était à genoux, le membre du
+          clergé était fort troublé. Donc, il a entendu ce petit garçon réciter l’alphabet, et dire ensuite : “Amen.”
+
+          Et, comme il se relevait, eh bien, le membre du clergé lui a parlé, il a dit : “Fiston, je suis un... le
+          serviteur du Seigneur. Je t’ai entendu prier, mais tu ne faisais que réciter l’alphabet. Et je–je ne comprends
+          pas pourquoi tu ne faisais que réciter l’alphabet.”
+
+          Il a dit : “Monsieur, je–je ne sais pas prier.” Il a dit : “Je–je n’ai jamais prié. Mais ma mère et mon
+          père qui sont déjà partis au Ciel, eux, ils priaient.” Et il a dit : “Maman, je... elle est morte quand
+          j’étais tout petit garçon. Mais je me rappelle l’avoir entendue, quand elle avait des problèmes, elle
+          s’adressait au Seigneur, elle priait. Et j’étais tellement jeune quand elle est morte, qu’elle n’a pas pu
+          m’apprendre à prier. Et on m’a placé sous la responsabilité d’une personne méchante, qui me bat et me
+          maltraite. Et je–je... pensais qu’après avoir appris mon alphabet, peut-être que si je prenais tous les–les
+          mots, que je récitais toutes les lettres, qu’Il serait peut-être capable de les assembler pour comprendre ce
+          que j’ai voulu dire.”
+
+          Voilà une prière remplie de sincérité. Bien sûr qu’Il serait capable de les assembler. Ce n’est pas notre
+          manière de prier, ce qui sort de nos lèvres, mais c’est notre motif, dans notre coeur, que Dieu entend.
+          Parfois Il n’entend pas nos lèvres, Il entend notre intention, ce qu’il y a dans notre coeur, notre motif.
+        </p>
+        <div class="audio-player">
+          <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'élément audio.
+          </audio>
+        </div>
+      </div>
+      <div class="container">
+        <!-- Section 1 -->
+        <div class="mb-5">
+          <h3>Nous attendre au Seigneur et Lui donner la possibilité de nous parler</h3> <br><br>
+          <p>
+            Alors qu’autrefois, les hommes et les femmes priaient toute la nuit, leurs maisons étaient mises en ordre
+            selon le Livre du Seigneur, et Dieu avait la première place dans leur foyer. <br>
+
+             Voyez-vous, nous laissons passer trop de choses avant le Seigneur. On ne peut pas faire la réunion de
+            prière, parce qu’il y a M. Godfrey ce soir. On ne peut pas faire la réunion de prière, parce qu’il y a Nous
+            aimons Sucie ce soir. Ou quelque idiotie du genre, qui nous prend notre temps, alors nous n’avons pas le
+            temps d’écouter la Voix du Seigneur. Et ceux qui prétendent être Chrétiens, ils se contentent de
+            s’agenouiller, de faire une petite prière comme ceci, une petite prière maison, comme : “Seigneur, bénis-moi
+            et bénis ma famille, et prends soin de nous. Bonne nuit.” Et le lendemain matin, ils se lèvent et disent :
+            “Guide-nous tout au long de la journée. Bonne journée.” <br>
+
+             Nous devons nous attendre au Seigneur. Voyez-vous, c’est nous qui parlons tout le temps. Nous ne Lui
+            donnons pas la possibilité de nous parler à Son tour. Alors que si nous priions, et que nous priions jusqu’à
+            ce que notre âme entre dans la Présence de Dieu, et qu’ensuite nous nous détendions et que nous écoutions Sa
+            Voix. <br>
+
+             Mais il y a tellement de voix aujourd’hui, qui nous éloignent de la Voix du Seigneur. Il y a la voix du
+            plaisir. Tant de gens écoutent celle-là, alors ils vont quelque part passer de bons moments. Et beaucoup
+            d’entre eux font profession d’être Chrétiens. Une espèce de spectacle de rock-and-roll va avoir lieu, ils ne
+            peuvent vraiment pas écouter ce qui est saint. Ils disent : “Eh bien, je suis Chrétien, il faudrait que je
+            lise un verset de la Bible aujourd’hui. Oui, ‘Jésus pleura.’” Avec ça, c’est classé. On continue son chemin.
+            Mais pour ce qui est de vraiment s’agenouiller et prier, ils ont trop d’autres choses à faire. Il y a
+            tellement de voix dans le monde, tellement de choses qui détournent notre attention de sur Dieu. <br>
+          </p>
+          <div class="audio-player">
+            <audio controls>
+              <source src="audio1.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas l'élément audio.
+            </audio>
+          </div>
+        </div>
   </section>
 
   <!-- Bouton Retour en Haut -->
   <button id="backToTop" class="btn btn-primary" title="Retour en haut">
-    <i class="bi bi-arrow-up"></i>
+    <i class="bi bi-arrow-up-circle"></i>
   </button>
 
   <!-- Pied de page -->
@@ -227,7 +391,7 @@ voulez, et croyez que vous le recevrez.
 
   <!-- Script pour mettre en pause les autres lecteurs audio -->
   <script>
-    document.addEventListener('play', function(e) {
+    document.addEventListener('play', function (e) {
       const audios = document.getElementsByTagName('audio');
       for (let i = 0; i < audios.length; i++) {
         if (audios[i] !== e.target) {
@@ -249,4 +413,5 @@ voulez, et croyez que vous le recevrez.
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
