@@ -1,275 +1,356 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jeunesse</title>
-<link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
-  <!-- Google Fonts pour de belles polices -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeunesse-Chrétienne</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="young_branham.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome pour les icônes -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     html {
-       scroll-behavior: smooth;
+      scroll-behavior: smooth;
     }
-    body {
-       font-family: 'Open Sans', sans-serif;
-    }
-    /* Style pour les icônes de l'entête */
-    .header-icons {
+
+    /* Style des icônes dans des cadres */
+    .icon-box {
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
       display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-      padding: 10px 0;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 0.5rem;
+      cursor: pointer;
     }
-    .header-icons a {
-      color: #333;
-      font-size: 24px;
-      text-decoration: none;
-      transition: transform 0.3s ease;
+
+    .icon-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .header-icons a:hover {
-      transform: scale(1.2);
-    }
-    /* Animation pour l'icône YouTube */
-    .youtube-icon {
-      animation: pulse 2s infinite;
-      
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-      100% { transform: scale(1); }
-    }
-    /* Personnalisation de la barre de navigation */
-    .navbar-custom {
-      background-color: #007bff;
-    }
-    .navbar-custom .navbar-brand,
-    .navbar-custom .nav-link {
+
+    /* Lien animé moderne */
+    .animated-link {
+      display: inline-block;
       color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 25px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
-    .navbar-custom .nav-link:hover {
-      color: #ddd;
+
+    .animated-link:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.2);
     }
-    /* Stylisation de la présentation de la communauté */
-    .presentation {
-      padding: 40px;
-      background-color: #f8f9fa;
+
+    /* Style pour le bandeau (banner) */
+    .banner {
+      background-image: url('banner.jpg');
+      /* Remplacer par le chemin de votre image */
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      position: relative;
     }
-    .presentation h2 {
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
     }
-    .presentation p {
-      text-align: justify;
+
+    .banner-content {
+      position: relative;
+      z-index: 2;
     }
-    blockquote {
-      font-style: italic;
-      border-left: 4px solid #ccc;
-      padding: 15px;
-      margin: 20px 0;
-      background-color: #e9ecef;
+
+    /* Section avec background moderne */
+    .modern-section {
+      background: linear-gradient(45deg, #f3ec78, #af4261);
+      color: white;
+    }
+
+    /* Blockquote amélioré */
+    blockquote.blockquote-custom {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-left: 5px solid #fff;
       border-radius: 5px;
     }
-    /* Stylisation de la section Inspirations Quotidiennes */
-    .inspirations h2 {
-      font-family: 'Playfair Display', serif;
-    }
-    .inspirations p {
-      text-align: justify;
-    }
-    /* Style pour le footer */
-    footer {
-      background-color: #343a40;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    /* Bouton Retour vers le haut */
-    #backToTop {
+
+    /* Bouton "Retour en haut" */
+    #btn-back-to-top {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 50px;
-      height: 50px;
       display: none;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      z-index: 999;
+      z-index: 99;
     }
   </style>
 </head>
-<body id="top">
 
-  <!-- En-tête aligné avec la barre de navigation -->
-  <header>
+<body>
+
+  <!-- Entête avec icônes dans des cadres -->
+  <header class="bg-light py-2">
     <div class="container">
-      <div class="header-icons">
-        <a href="https://www.facebook.com" target="_blank">
-          <i class="fab fa-facebook"></i>
+      <div class="d-flex justify-content-end">
+        <a href="#" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profil">
+          <i class="bi bi-person" style="font-size: 1.5rem;"></i>
         </a>
-        <a href="mailto:contact@pierreministries.org">
-          <i class="fas fa-envelope"></i>
+        <a href="#" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Livre">
+          <i class="bi bi-book" style="font-size: 1.5rem;"></i>
         </a>
-        <a href="https://www.youtube.com" target="_blank" class="youtube-icon">
-          <i class="fab fa-youtube"></i>
+        <a href="#" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Galerie">
+          <i class="bi bi-images" style="font-size: 1.5rem;"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom">
+  <!-- Barre de navigation bleue -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="LOGO_png.png" alt="Logo" style="height:40px; margin-right:10px;">
-        Pierre Ministries
+      <a class="navbar-brand" href="#">
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Pierre Ministries</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
-              aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-         <ul class="navbar-nav ms-auto">
-           <li class="nav-item">
-             <a class="nav-link" href="#">ACCUEIL</a>
-           </li>
-           <!-- Menu avec sous-menus 1 -->
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-               A PROPOS
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="menu1">
-               <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
-               <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
-               <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
-             </ul>
-           </li>
-           <!-- Menu avec sous-menus 2 -->
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-               MULTIMEDIAS
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="menu2">
-               <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
-               <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
-               <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
-             </ul>
-           </li>
-          
-           <!-- Menu simple -->
-           <li class="nav-item">
-             <a class="nav-link" href="contact.html">CONTACT</a>
-           </li>
-         </ul>
+        <ul class="navbar-nav ms-auto">
+          <!-- Menu simple -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">ACCUEIL</a>
+          </li>
+          <!-- Menu avec sous-menu 1 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+              À PROPOS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+            </ul>
+          </li>
+          <!-- Menu avec sous-menu 2 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+
+            </ul>
+          </li>
+          <!-- Dernier menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Diaporama de bannières -->
-  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-       <div class="carousel-item active">
-         <img src="banner1.jpg" class="d-block w-100" alt="Bannière 1">
-       </div>
-       <div class="carousel-item">
-         <img src="banner2.jpg" class="d-block w-100" alt="Bannière 2">
-       </div>
-       <div class="carousel-item">
-         <img src="banner3.jpg" class="d-block w-100" alt="Bannière 3">
-       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" 
-            data-bs-slide="prev">
-       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Précédent</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" 
-            data-bs-slide="next">
-       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Suivant</span>
-    </button>
-  </div>
-
-  <!-- Présentation de la communauté -->
-  <section class="presentation container my-5">
-     <h2>Bienvenue dans notre Communauté de Foi</h2>
-     <p>
-       Avant de commencer nôtre étude sur la jeunesse chrétienne... Prononçons quelques mots de prière. <br><br>
-
-Seigneur Jésus, nous sommes reconnaissants pour ce moment, de savoir que nous sommes réunis ici, les jeunes, les vieux et les gens d’un âge moyen. Et nous nous sommes réunis de ce côté-ci de l’Éternité, pour parler une fois de plus de Toi et des choses en rapport avec la Vie éternelle. <br><br>
-Et ces jeunes qui sont assis ici ce soir, certains d’entre eux vont recevoir leur diplôme, d’autres sont déjà diplômés. Mais je prends conscience, Seigneur, de quelque chose qui s’est produit juste quelques heures avant cette grande secousse, ou cette grande déflagration qui a eu lieu dans la montagne là-bas, au nord de Tucson, lorsque les Anges du Seigneur sont descendus. <br><br>
-Je me rappelle ce qui a été dit, et—et en particulier au sujet des jeunes. Je Te prie, Seigneur, de nous aider à comprendre. Et que je puisse dire quelque chose à ces jeunes ce soir, qui les aidera tout au long du voyage. Car, Seigneur, nous avons tous besoin de cette aide en ce moment. <br><br>
-Bénis-nous tous. Pardonne nos péchés. Et si, depuis que nous sommes là, nous avons fait quoi que ce soit qui T’ait déplu, nous Te prions de nous pardonner cela. Car nous sommes conscients, aujourd’hui, que notre lendemain n’est pas—pas garanti. Nous ne savons pas ce que demain nous réserve. Nous devons être prêts aujourd’hui à affronter demain. Et, pour ça, Dieu notre Père, nous ne connaissons qu’un seul moyen, c’est de nous préparer à Te voir, car nous sommes conscients qu’après un certain temps, nous allons tous le faire. Un de ces jours, nous devrons nous retrouver là, soit en paix, comme un ami ou un enfant, soit en ennemi. Loin de nous la pensée, Seigneur, d’être autre chose que Tes propres enfants bien-aimés.
- Accorde ces choses, nous Te le demandons au Nom de Jésus. Amen.
-     </p>
-     <blockquote>
-       Et un des chefs du peuple l’interrogea, disant : Bon maître, que faut-il que j’aie fait pour hériter de la vie éternelle? Et Jésus lui dit : Pourquoi m’appelles-tu bon? Nul n’est bon, sinon un seul, Dieu. Tu sais les commandements : Ne commets point adultère; ne tue point; ne dérobe point; ne dis point de faux témoignage; honore ton père et ta mère. Et…dit : J’ai fait et gardé toutes ces choses dès ma jeunesse. Et quand Jésus eut entendu cela, il lui dit : Une chose te manque encore, vends tout ce que tu as, et distribuele aux pauvres,…tu auras un trésor dans les cieux;… viens, suis-moi.
-     </blockquote>
-     <p>
-       Ce site a été conçu pour rassembler une communauté active et engagée. Nous partageons des contenus inspirants et éducatifs qui nourrissent l'âme. Que vous soyez à la recherche de guidance spirituelle ou d'un espace de partage, nous serons toujours là pour vous.
-     </p>
-  </section>
-
-  <!-- Inspirations Quotidiennes (texte à gauche, photo à droite) -->
-  <section class="inspirations container my-5">
-    <h2 class="text-center mb-4">Inspirations Quotidiennes</h2>
-    <div class="row align-items-center">
-      <!-- Texte à gauche -->
-      <div class="col-md-6">
-        <p>
-          Chaque jour offre l'opportunité de se reconnecter avec notre essence spirituelle. Dans le tumulte du quotidien, un moment de recueillement peut raviver l'espoir et éveiller la gratitude.
-        </p>
-        <blockquote>
-          "La lumière de l'âme transcende les ombres du doute, illuminant chaque chemin emprunté."
-        </blockquote>
-        <p>
-          Nos témoignages et réflexions sont autant de pierres posées sur le chemin de la foi. Embrassons ensemble cette aventure spirituelle pour découvrir les trésors cachés en nous et autour de nous.
-        </p>
-      </div>
-      <!-- Photo à droite -->
-      <div class="col-md-6">
-        <img src="inspiration.jpg" class="img-fluid rounded" alt="Inspiration Quotidienne">
-      </div>
+  <!-- Bannière -->
+  <section class="banner d-flex align-items-center">
+    <div class="container banner-content text-center text-white">
+      <h1 class="display-4">La jeunesse chrétienne</h1>
+      <p class="lead">Un chemin vers la spiritualité et l'inspiration</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-     <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
-     
-  </footer>
+  <!-- Section principale améliorée -->
+  <section class="modern-section py-5">
+    <div class="container">
+      <h2 class="mb-4">William Branham</h2>
+      <p class="mb-4">
+        Nous vivons dans les derniers jours, l’ère la plus sombre de l’histoire de l’humanité où plusieurs démons sont à
+        l’œuvre. Ils cherchent à détruire tout le monde, et particulièrement les jeunes sont plus dans leur collimateur.
+        Pour s’en sortir, ces jeunes ont besoin de beaucoup d’enseignements mais aussi et surtout être pleinement
+        remplis du Saint-Esprit. C’est dans cette optique que l’étude des jeunes est organisée afin de pouvoir leur
+        donner une bonne base dans le Message de l’heure en dehors des prédications qui sont prêchées dans chaque
+        réunion.
+      </p>
 
-  <!-- Bouton Retour vers le haut -->
-  <button id="backToTop" class="btn btn-primary">
-    <i class="fas fa-arrow-up"></i>
+      <!-- Blockquote amélioré -->
+      <blockquote class="blockquote blockquote-custom">
+        <p class="mb-0 fst-italic">Comment le jeune homme rendra-t-il pur son sentier ? En se dirigeant d'après ta
+          parole.
+
+          Je te cherche de tout mon cœur : Ne me laisse pas égarer loin de tes commandements !
+
+          Je serre ta parole dans mon cœur, Afin de ne pas pécher contre toi.</p> <br>
+        <footer class="blockquote-footer text-white">
+          Psaumes 119 : 9 – 11 <cite title="Source de l'inspiration"></cite>
+        </footer>
+      </blockquote>
+
+      <p class="mb-4">
+        Considérons pendant quelques instants ce jeune homme dont il était question dans <strong>Luc 18:18-22</strong>.
+        Sans
+        doute ce
+        garçon était-il né dans un bon foyer, tout comme vous les jeunes. Il avait été élevé par de bons parents. En
+        effet, cela s’est confirmé quand Jésus lui a présenté les commandements de Dieu. Il a dit : “Je les ai observés
+        dès ma jeunesse.” Cela montrait qu’il avait—qu’il avait été—qu’il avait été bien élevé. Il n’était pas un petit
+        vaurien. Et, vous savez, il—il avait reçu une éducation qui lui permettait de savoir ce qui était bien, tout
+        comme vous, les jeunes. Peut-être avait-il grandi auprès d’une maman et d’un papa qui craignaient Dieu, et
+        qui—qui—qui l’avaient bien enseigné pendant son enfance. Bon, ça, c’est bien.
+      </p>
+
+      <p>Et ce garçon avait une ambition : il désirait recevoir la Vie Éternelle. Il a dit : “Bon maître, que dois-je
+        faire pour hériter la Vie Éternelle?” <br>
+
+        Voyez, malgré tout ce que vous possédez dans ce monde, l’âme, qui se trouve au dedans de vous, vous dit qu’il y
+        a quelque chose dont vous avez besoin, quelque chose que vous ne possédez pas. En ayant simplement la richesse…
+        Ou, ce n’est pas nécessairement toujours la richesse. Ça pourrait être la popularité, une jolie jeune fille,
+        elle peut tourner ses pensées vers sa beauté. Peut-être qu’elle est très populaire à l’école. Peut- être que le
+        garçon peut avoir toutes les filles qu’il veut. Il a un certain sentiment de sécurité. La sécurité, ce n’est pas
+        ça. Ces choses flétriront, comme la fleur dans le champ. Voyez? Elles disparaîtront. Ça ne va pas tarder. Encore
+        quelques révolutions du soleil, et elles disparaîtront, mais ensuite vous avez une âme qui, elle, doit vivre
+        Éternellement.</p>
+
+      <p>Mais il y a une chose qui ne s’obtient pas par héritage. Vous devez L’accepter. Cette chose, c’est la Vie
+        Éternelle. Et vous ne pouvez L’accepter qu’en suivant Jésus, par l’expérience de la nouvelle Naissance. Ne
+        négligez pas cela.</p>
+
+      <blockquote class="blockquote blockquote-custom">
+        <p class="mb-0 fst-italic">Je vous montre un véritable investissement à faire. Placez votre vie, votre temps,
+          votre argent, votre talent, placez tout ce que vous avez en Christ. Dieu nous a garanti cela en Le
+          ressuscitant. Nous ressusciterons dans les derniers jours. Il l'a promis. A quoi d'autre vous attendriez-vous?
+          Dites-moi un investissement que vous pourriez faire et qui rapporterait autant que cela? Dites-moi dans quoi
+          vous pourriez investir ce matin et gagner dix millions de dollars, mais pour être un cadavre demain? Quel bien
+          cela vous fera-t-il? A quoi servirait-il à un homme de gagner le monde entier mais de perdre son âme? A quoi
+          bon être populaire, être appelé ceci, cela, diacre, docteur membre du conseil presbytéral, évêque, ancien,
+          pape, ou peu importe le titre qu'on puisse vous donner? Ce sont des éloges des hommes. <br><br>
+          Je préfère être traité d'exalté par les gens, et être un fils de Dieu dans mon cœur, étant né de nouveau, et
+          ayant l'Esprit de Dieu en moi, et Lui prouvant cela en confirmant Sa Parole et en me faisant vivre. "Je ne vis
+          plus comme autrefois", a dit Paul. Et pourtant c'était un enseignant et un érudit. Mais sa vie changea quand
+          il rencontra Christ, et il fit son investissement en Christ. Il devint dès lors un autre homme.</p> <br>
+        <footer class="blockquote-footer text-white">
+          William Marrion BRANHAM <cite title="Source de l'inspiration"></cite>
+        </footer>
+      </blockquote>
+
+      <p>Maintenant, nous nous rendons compte que tout ce qui a un commencement a une fin. Et il n'y a qu'une seule
+        chose qui n'a jamais eu de commencement, et c'est Dieu. Et quand la Bible parle là (Je ne pense pas que je cite
+        cela mal, devant un érudit du grec, et un Grec.), le mot "Zoe" signifie "la Vie même de Dieu". Alors si nous
+        avons la Vie éternelle, le mot grec "Zoe" signifie que nous avons une partie de la Vie de Dieu, parce que nous
+        sommes une partie de Lui. Nous sommes Ses fils et Ses filles. Donc, nous avons la Vie éternelle, et Elle ne
+        meurt pas. Vous avez la Vie éternelle. <br><br>
+        Il n'y a qu'une forme de Vie éternelle, et c'est Dieu. Dieu est éternel. Il n'a jamais eu de commencement, Il ne
+        pourra jamais avoir de fin. Et le seul moyen pour que nous soyons éternels avec Lui, c'est d'être une partie de
+        Lui. La seule façon pour moi d'être un Branham, c'était d'être une partie d'un Branham. La seule façon pour moi
+        d'être de la race humaine, c'est d'en faire partie. Et la seule façon pour moi d'être un fils de Dieu, c'est
+        d'être une partie de Dieu. Il me faut alors naître de Son Esprit. Amen. C'est ça. Vendez tous vos crédos
+        dénominationnels et faites un investissement dans la Vie éternelle.</p>
+
+      <blockquote class="blockquote blockquote-custom">
+        <h2>Prière du Prophète Branham</h2>
+        <p class="mb-0 fst-italic">Seigneur Jésus! Ces jeunes, les hommes et les femmes de demain, s’il y a un
+          lendemain. Nous devons les former, Seigneur. Nous ressentons ce fardeau, de les former comme s’il y aura un
+          lendemain. S’il n’y en a pas, alors, c’est aujourd’hui ou jamais.
+
+          Et, Père, nous savons que nul n’est agréé devant Toi. Aucune chair ne peut se glorifier. Aucune instruction,
+          si bonnes ces choses soient-elles, aucune bonne œuvre, aucune institution religieuse, aucune psychologie, rien
+          ne peut confirmer Dieu, rien d’autre que le Saint-Esprit. Il est l’Instrument, Dieu Lui-même sous la forme de
+          la Vie Éternelle, qui peut venir à chacun de nous individuellement. Et nous sommes reconnaissants pour cela. <br><br>
+
+          Assurément, c’est ce qui a été exprimé lorsque Pierre a fait sa confession. Jésus lui a répondu : “Ce ne sont
+          pas la chair et le Sang qui t’ont révélé cela. Tu n’as jamais appris cela dans un séminaire. Tu n’as jamais
+          appris cela à l’école.” C’est quelque chose de personnel, quelque chose que chaque individu doit recevoir. Tu
+          as dit : “Sur ce roc Je bâtirai Mon Église, et les portes du séjour des morts ne pourront pas La vaincre.”
+          Nous sommes reconnaissants pour cela, Seigneur.
+
+          Cette Voix-là est encore vivante ce soir. Et il y a encore des postes, des avant-postes, des postes d’écoute,
+          des stations de réception, de foi, qui peuvent accepter Cela. Nous prions que ces enfants, chacun d’eux,
+          reçoivent Cela, Seigneur, dans leur cœur. Et qu’ils se souviennent que ce qui compte, ce n’est pas ce qu’ils
+          font pour être bons, mais qu’ils… Dieu ne nous juge pas par ce que nous faisons, mais par ce que nous avons
+          accepté. C’est par notre foi que nous sommes sauvés, et non par nos œuvres. Ainsi nous prions, Père Céleste,
+          qu’ils saisissent maintenant la vision, qu’ils voient, et qu’ils entendent cette glorieuse invitation
+          Éternelle : “Viens, suis-Moi.” <br><br>
+
+          Puisse chacun d’eux, Seigneur, se détourner de toutes les choses du monde, de cette vie mortelle de pacotille.
+          Les voici ce soir, avec leurs cheveux blonds dorés, certains avec les cheveux noirs, les yeux sombres, les
+          yeux bleus, ils sont là, au mieux de leur forme.
+
+          Et comme l’a dit ce grand écrivain : “Souviens-toi de ton Créateur pendant les jours de ta jeunesse, avant que
+          les jours mauvais arrivent. Alors tu n’y prendras point de plaisir.” Et, Seigneur Jésus, Tu as dit à Pierre :
+          “Quand tu étais plus jeune, tu te levais et tu allais où tu voulais. Mais quand tu seras vieux, quelqu’un te
+          mènera où tu ne voudras pas aller.” Qu’ils se souviennent : “Le jour, c’est aujourd’hui. Le moment, c’est
+          maintenant.” Accorde-le, Père. <br><br>
+
+          Je réclame tous ceux qui sont ici ce soir, à commencer par mon propre enfant, jusqu’à chaque enfant ici. Je
+          sens que Tu m’as confié la tâche de veiller sur eux. Je les réclame tous — des griffes de Satan et de la mort,
+          à la Vie en Jésus-Christ. Amen.</p> <br>
+        
+      </blockquote>
+
+      <!-- Lien animé moderne avec icône -->
+      <div class="mt-4 text-center">
+        <a href="conseils.html" class="animated-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bouton "Retour en haut" -->
+  <button id="btn-back-to-top" class="btn btn-primary">
+    <i class="bi bi-arrow-up-circle"></i>
   </button>
 
-  <!-- Bootstrap JS Bundle with Popper -->
+  <!-- Footer avec copyright -->
+  <footer class="bg-dark text-center text-white py-3">
+    <div class="container">
+      <small>&copy; 2025 Pierre Ministries. Tous droits réservés.</small>
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Script pour le bouton Retour vers le haut -->
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        backToTopButton.style.display = 'flex';
+    // Initialisation des tooltips Bootstrap
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Gestion du bouton "Retour en haut"
+    const mybutton = document.getElementById("btn-back-to-top");
+
+    window.addEventListener("scroll", function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
       } else {
-        backToTopButton.style.display = 'none';
+        mybutton.style.display = "none";
       }
     });
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    mybutton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 </body>
+
 </html>
