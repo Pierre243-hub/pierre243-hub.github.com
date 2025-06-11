@@ -1,280 +1,300 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pierre Ministries</title>
-<link rel="icon" type="image/png" sizes="32x32" href="Grand bill.jpg">
-  <!-- Google Fonts pour de belles polices -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <title>évangélisation-message</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Vision_Photo.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome pour les icônes -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-    html {
-       scroll-behavior: smooth;
-    }
-    body {
-       font-family: 'Open Sans', sans-serif;
-    }
-    /* Style pour les icônes de l'entête */
-    .header-icons {
+    /* Icônes de l'entête */
+    /* Style des icônes dans des cadres */
+    .icon-box {
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
       display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-      padding: 10px 0;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 0.5rem;
+      cursor: pointer;
     }
-    .header-icons a {
-      color: #333;
-      font-size: 24px;
-      text-decoration: none;
-      transition: transform 0.3s ease;
+
+    .icon-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .header-icons a:hover {
-      transform: scale(1.2);
-    }
-    /* Animation pour l'icône YouTube */
-    .youtube-icon {
-      animation: pulse 2s infinite;
-      
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-      100% { transform: scale(1); }
-    }
-    /* Personnalisation de la barre de navigation */
-    .navbar-custom {
-      background-color: #007bff;
-    }
-    .navbar-custom .navbar-brand,
-    .navbar-custom .nav-link {
-      color: #fff;
-    }
-    .navbar-custom .nav-link:hover {
-      color: #ddd;
-    }
-    /* Stylisation de la présentation de la communauté */
-    .presentation {
-      padding: 40px;
+
+    /* Section Bannière */
+    .banner-section {
+      padding: 20px 0;
       background-color: #f8f9fa;
+      /* pour une légère séparation visuelle */
     }
-    .presentation h2 {
+
+    .banner-title {
+      color: #333;
+      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
     }
-    .presentation p {
+
+    /* Section Contenu Principal */
+    .main-content {
+      padding: 60px 0;
+    }
+
+    .justify-text {
       text-align: justify;
     }
+
+    /* Design de la date */
+    #currentDatetime {
+      background: #f0f8ff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      margin-top: 20px;
+    }
+
+    /* Amélioration du background de la citation */
     blockquote {
-      font-style: italic;
-      border-left: 4px solid #ccc;
-      padding: 15px;
-      margin: 20px 0;
-      background-color: #e9ecef;
+      background-color: #e9f7ef;
+      border-left: 5px solid #28a745;
+      padding: 15px 20px;
       border-radius: 5px;
+      font-size: 1.1rem;
     }
-    /* Stylisation de la section Inspirations Quotidiennes */
-    .inspirations h2 {
-      font-family: 'Playfair Display', serif;
-    }
-    .inspirations p {
-      text-align: justify;
-    }
-    /* Style pour le footer */
-    footer {
-      background-color: #343a40;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    /* Bouton Retour vers le haut */
-    #backToTop {
+
+     /* Bouton "Retour en haut" */
+    #btn-back-to-top {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 50px;
-      height: 50px;
       display: none;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      z-index: 999;
+      z-index: 99;
     }
   </style>
 </head>
-<body id="top">
 
-  <!-- En-tête aligné avec la barre de navigation -->
-  <header>
+<body>
+  <!-- Entête avec icônes dans des cadres -->
+  <header class="bg-light py-2">
     <div class="container">
-      <div class="header-icons">
-        <a href="https://www.facebook.com" target="_blank">
-          <i class="fab fa-facebook"></i>
+      <div class="d-flex justify-content-end">
+        <a href="jesus.html" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="jésus-christ">
+          <i class="bi bi-person" style="font-size: 1.5rem;"></i>
         </a>
-        <a href="mailto:contact@pierreministries.org">
-          <i class="fas fa-envelope"></i>
+        <a href="citation.html" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Brochure">
+          <i class="bi bi-book" style="font-size: 1.5rem;"></i>
         </a>
-        <a href="https://www.youtube.com" target="_blank" class="youtube-icon">
-          <i class="fab fa-youtube"></i>
+        <a href="galerie.html" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Galerie">
+          <i class="bi bi-images" style="font-size: 1.5rem;"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom">
+  <!-- Barre de navigation bleue -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
     <div class="container">
+      <!-- Logo et nom du site -->
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" alt="Logo" style="height:40px; margin-right:10px;">
+        <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="rounded-circle me-2">
         Pierre Ministries
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
-              aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Menu de navigation -->
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-         <ul class="navbar-nav ms-auto">
-           <li class="nav-item">
-             <a class="nav-link" href="#">Accueil</a>
-           </li>
-           <!-- Menu avec sous-menus 1 -->
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-               Services
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="menu1">
-               <li><a class="dropdown-item" href="#">Prière</a></li>
-               <li><a class="dropdown-item" href="#">Conférences</a></li>
-               <li><a class="dropdown-item" href="#">Études bibliques</a></li>
-             </ul>
-           </li>
-           <!-- Menu avec sous-menus 2 -->
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-               Événements
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="menu2">
-               <li><a class="dropdown-item" href="#">Culte</a></li>
-               <li><a class="dropdown-item" href="#">Retraites</a></li>
-               <li><a class="dropdown-item" href="#">Ateliers</a></li>
-             </ul>
-           </li>
-           <!-- Menu avec sous-menus 3 -->
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="menu3" role="button" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-               Ressources
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="menu3">
-               <li><a class="dropdown-item" href="#">Articles</a></li>
-               <li><a class="dropdown-item" href="#">Vidéos</a></li>
-               <li><a class="dropdown-item" href="#">Livres</a></li>
-             </ul>
-           </li>
-           <!-- Menu simple -->
-           <li class="nav-item">
-             <a class="nav-link" href="#">Contact</a>
-           </li>
-         </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ACCUEIL</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              A PROPOS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu1">
+              <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+              <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+              <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              MULTIMEDIAS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu2">
+              <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+              <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+              <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Diaporama de bannières -->
-  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-       <div class="carousel-item active">
-         <img src="banner1.jpg" class="d-block w-100" alt="Bannière 1">
-       </div>
-       <div class="carousel-item">
-         <img src="banner2.jpg" class="d-block w-100" alt="Bannière 2">
-       </div>
-       <div class="carousel-item">
-         <img src="banner3.jpg" class="d-block w-100" alt="Bannière 3">
-       </div>
+  <!-- Section Bannière avec titre au-dessus de la photo -->
+  <section class="banner-section">
+    <div class="container text-center">
+      <img src="nouvelle_peter.png" alt="Bannière" class="img-fluid fade-in-up" style="max-width: 100%;">
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" 
-            data-bs-slide="prev">
-       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Précédent</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" 
-            data-bs-slide="next">
-       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Suivant</span>
-    </button>
+  </section>
+
+  <!-- Section Contenu Principal -->
+
+  <!-- Date et heure automatiques, design amélioré -->
+  <div class="text-center fade-in-up">
+    <span id="currentDatetime"></span>
   </div>
 
-  <!-- Présentation de la communauté -->
-  <section class="presentation container my-5">
-     <h2>Bienvenue dans notre Communauté de Foi</h2>
-     <p>
-       Nous sommes réunis pour partager l'amour divin, la foi et l'espoir. Notre objectif est d'inspirer chacun à travers des activités spirituelles, des moments de prière et de réflexion commune. Notre communauté vous accueille avec des bras ouverts pour explorer, apprendre et grandir ensemble.
-     </p>
-     <blockquote>
-       "La foi est le pont qui relie nos cœurs à la lumière divine."
-     </blockquote>
-     <p>
-       Ce site a été conçu pour rassembler une communauté active et engagée. Nous partageons des contenus inspirants et éducatifs qui nourrissent l'âme. Que vous soyez à la recherche de guidance spirituelle ou d'un espace de partage, nous serons toujours là pour vous.
-     </p>
-  </section>
+  <section class="main-content">
+    <div class="container">
 
-  <!-- Inspirations Quotidiennes (texte à gauche, photo à droite) -->
-  <section class="inspirations container my-5">
-    <h2 class="text-center mb-4">Inspirations Quotidiennes</h2>
-    <div class="row align-items-center">
-      <!-- Texte à gauche -->
-      <div class="col-md-6">
-        <p>
-          Chaque jour offre l'opportunité de se reconnecter avec notre essence spirituelle. Dans le tumulte du quotidien, un moment de recueillement peut raviver l'espoir et éveiller la gratitude.
-        </p>
-        <blockquote>
-          "La lumière de l'âme transcende les ombres du doute, illuminant chaque chemin emprunté."
-        </blockquote>
-        <p>
-          Nos témoignages et réflexions sont autant de pierres posées sur le chemin de la foi. Embrassons ensemble cette aventure spirituelle pour découvrir les trésors cachés en nous et autour de nous.
-        </p>
-      </div>
-      <!-- Photo à droite -->
-      <div class="col-md-6">
-        <img src="inspiration.jpg" class="img-fluid rounded" alt="Inspiration Quotidienne">
-      </div>
+
+
+      <h1 class="display-4 fw-bold text-center fade-in-up">Bonne nouvelle</h1>
+
+      <blockquote class="blockquote text-center fade-in-up my-4">
+        <p class="fst-italic">Et alors, quand les voyageurs qui entraient dans le pays entendaient ces nouvelles au
+          sujet de ce grand Don de Dieu, ils allaient le dire aux autres. C’est ainsi que la Bonne Nouvelle était
+          répandue
+          : d’une personne à l’autre.</p>
+      </blockquote>
+      <p class="lead justify-text fade-in-up">
+        Tant de choses pourraient être dites à ce sujet. Ceci est la dernière commission que le Seigneur a donnée à
+        l'Eglise.
+
+        Le chrétien sait que c'est la Venue du Seigneur. Voyez-vous? Il y a une atmosphère. Cela dépend de sur quoi vous
+        jetez les regards, car notre Seigneur a dit exactement ce qui allait arriver à ce moment-là, et nous ne
+        connaissons ni la minute ni l'heure, mais nous savons que nous approchons de quelque chose maintenant.
+
+        Quelque chose est sur le point d'arriver. Maintenant, le monde ne voit pas cela. Ils en rient, parce que c'est
+        comme ils l'ont fait autrefois. Mais nous savons que cela s'approche. <br><br>
+
+        Et c'est la raison pour laquelle j'ai choisi ce point aujourd'hui, sur l'évangélisation au temps de la fin. Et
+        lorsque nous faisons un travail missionnaire ou une mission à l'étranger, avec la Parole de Dieu, nous savons
+        que nous sommes toujours dans la volonté de Dieu, car la première commission de Jésus à Son Eglise était :
+        "Allez et prêchez l'Evangile." Cette dernière commission était de prêcher l'Evangile.
+
+        Si je vous dis que je suis chrétien, et si l'Esprit de Christ est en moi, ou en vous, alors nous ferons les
+        œuvres de Christ. Jésus a dit, dans saint Jean : "Celui qui croit en Moi, fera aussi les œuvres que Je fais."
+        Ensuite Il a dit ici : "Voici les miracles qui accompagneront ceux qui auront cru."
+      </p>
+
+
+
+      <h1 class="display-4 fw-bold text-center fade-in-up">Le message est urgent</h1> <br>
+      <!-- Photo responsive de 1472x832 px sous le titre -->
+
+      <blockquote class="blockquote text-center fade-in-up my-4">
+        <p class="fst-italic"> Sortez et allez parmi les gens ici, et répandez la nouvelle partout, et venez. Amenez les
+          gens ici. S’il le faut, la Bible dit : «Obligez-les, contraignez-les à entrer. Descendez dans les rues et le
+          long des haies et – et contraignez – c’est-à-dire forcez les. « Venez ! »</p>
+      </blockquote>
+
+      <p class="lead justify-text fade-in-up">
+        Je vous assure, mes frères, si nous pouvions avoir un tel enthousiasme, [sachant] que notre message est urgent…
+        Nous n’avons pas de temps pour des niaiseries. Apportons le Message à un peuple, à un peuple qui a enduré des
+        persécutions… <br>
+        C’est la chose essentielle : répandre le Message, car nous vivons dans une heure où il est plus tard que nous ne
+        le pensons.
+
+      </p>
+      <h1 class="display-4 fw-bold text-center fade-in-up">Le ministère des bandes</h1> <br>
+
+
+      <p class="lead justify-text fade-in-up">
+        Le ministère des bandes est une chose mondiale, partout. Je pense que c’est un moyen que Dieu a pour répandre le
+        Message là dans les pays des païens, là où il doit être traduit. Et en Allemagne, et ailleurs, ils ont des
+        bandes qu’ils amènent à leurs assemblées, de centaines et centaines de gens; et ils mettent de petites choses
+        dans leurs oreilles, et ils connectent cela à un magnétophone. Et juste comme je parle, le ministre se tient là
+        et rend les mêmes expressions, mais dans d’autres langues, et ils apportent cela devant de centaines de gens. Et
+        des centaines de gens sont sauvés et guéris, juste par ces bandes qui vont à travers le monde. Tout en anglais,
+        mais c’est traduit dans beaucoup, beaucoup de différentes langues des tribus à travers le monde. Nous en
+        entendons parler par courrier. pour plus de détail sur les messages audios et brochures du prophète William
+        Branham <a href="https://branham.fr/">cliquez ici</a> <br><br>
+
+        De toutes les façons, vous ne pouvez pas visiter chaque pays, vous pouvez y envoyer les bandes. Dieu trouvera un
+        moyen de saisir cet esprit là où cette semence est semée. C’est vrai.
+
+        Reviens à la Parole, mon frère, reviens à Dieu. Ne fais pas attention à cette église à laquelle tu appartiens.
+        Tu peux rester là si tu veux, s'ils te permettent de rester. Mais la première chose à faire c'est de venir à
+        Dieu. C'est juste. Ceci est l'évangélisation au temps de la fin. Oui, le caractère.
+
+      </p>
+      <blockquote class="blockquote text-center fade-in-up my-4">
+        <p class="fst-italic">Je dirai, frères, si vous n’avez pas été appelé à être un missionnaire, cherchez quelqu’un
+          dans votre église… Faites tout ce qui est en votre pouvoir et supportez quelqu’un qui est là-bas. Faites
+          quelque chose à ce sujet. Voyez-vous ? Vous ne pouvez pas être dans l’erreur quand vous êtes un missionnaire.
+          Les ordres généraux disent d’aller dans le monde entier.</p>
+      </blockquote>
+
+     
+
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-     <p>&copy; 2025 Pierre Ministries. Tous droits réservés.</p>
-     <p>Conçu pour inspirer et unir une communauté de croyants.</p>
-  </footer>
-
-  <!-- Bouton Retour vers le haut -->
-  <button id="backToTop" class="btn btn-primary">
-    <i class="fas fa-arrow-up"></i>
+   <!-- Bouton "Retour en haut" -->
+  <button id="btn-back-to-top" class="btn btn-primary">
+   <i class="bi bi-arrow-up-circle"></i>
   </button>
 
-  <!-- Bootstrap JS Bundle with Popper -->
+  <!-- Footer -->
+  <footer class="bg-light py-3">
+    <div class="container text-center">
+      <small>&copy; <span id="year"></span> Pierre Ministries. Tous droits réservés.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS avec Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Script pour le bouton Retour vers le haut -->
+
+  <!-- Script pour afficher la date et l'heure automatiquement -->
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        backToTopButton.style.display = 'flex';
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById('currentDatetime').textContent = now.toLocaleString();
+    }
+    // Mise à jour toutes les secondes
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    // Affichage automatique de l'année dans le footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Gestion du bouton "Retour en haut"
+    const mybutton = document.getElementById("btn-back-to-top");
+
+    window.addEventListener("scroll", function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
       } else {
-        backToTopButton.style.display = 'none';
+        mybutton.style.display = "none";
       }
     });
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    mybutton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 </body>
+
 </html>
