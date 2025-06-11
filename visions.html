@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Visions</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Vision_Photo.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+       /* Style des icônes dans des cadres */
+    .icon-box {
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+
+    .icon-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+        /* Bannière : image de fond uniquement */
+        .banner {
+            background: url("Vision_Photo.jpg") no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+        }
+
+        /* Section d'introduction */
+        .intro-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        /* Justification du texte sous le grand titre */
+        .intro-section p {
+            text-align: justify;
+        }
+
+        /* Section de citation : suppression du background du container 
+       et mise à jour du blockquote avec un background dégradé */
+        .quote-section {
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .quote-section blockquote {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(196, 24, 24, 0.2), rgba(151, 58, 58, 0.05));
+            border-left: 5px solid #fff;
+            border-radius: 10px;
+            font-size: 1rem;
+            text-align: left;
+            color: #000;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section pour 7 paragraphes avec images */
+        .paragraph-section {
+            padding: 60px 20px;
+        }
+
+        .paragraph-item {
+            margin-bottom: 40px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .paragraph-item img {
+            display: block;
+            width: 640px;
+            height: 428px;
+            margin: 0 auto 20px auto;
+            /* centre l'image */
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .paragraph-item p {
+            font-size: 1rem;
+            text-align: justify;
+            /* justification du texte */
+        }
+
+        .paragraph-item p::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .paragraph-line {
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+
+        /* Délais d'animation pour chaque paragraphe */
+        .anim-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .anim-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .anim-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .anim-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .anim-delay-5 {
+            animation-delay: 1s;
+        }
+
+        .anim-delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .anim-delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        /* Bouton "Retour en haut" */
+    #btn-back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      z-index: 99;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Entête avec icônes dans des cadres -->
+  <header class="bg-light py-2">
+    <div class="container">
+      <div class="d-flex justify-content-end">
+        <a href="#" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profil">
+          <i class="bi bi-person" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="#" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Livre">
+          <i class="bi bi-book" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="#" class="icon-box" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Galerie">
+          <i class="bi bi-images" style="font-size: 1.5rem;"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <!-- Barre de navigation en bleu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+               <img src="LOGO_png.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Pierre Ministries</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            À PROPOS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu2">
+                            <li><a class="dropdown-item" href="jesus.html">Jésus-Christ</a></li>
+                            <li><a class="dropdown-item" href="prophet.html">William Branham</a></li>
+                            <li><a class="dropdown-item" href="nous.html">Pierre Ministries</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menu4" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            MULTIMEDIAS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu4">
+                            <li><a class="dropdown-item" href="citation.html">Brochures</a></li>
+                            <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
+                            <li><a class="dropdown-item" href="medias.html">Vidéos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bannière avec seulement l'image -->
+    <section class="banner"></section>
+
+    <!-- Section d'introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <p class="lead" id="date">Date: </p>
+            <h1 class="display-4">Sept Visions</h1>
+            <p class="mt-4">Un dimanche matin du mois de juin 1933, Frère Branham a reçu une série de sept visions qui
+                s’accompliraient avant la Venue du Seigneur. Nous l’avons tous entendu parler de ces visions, et nous
+                avons même été témoins de l’accomplissement de quelques-unes d’entre elles au cours des dernières
+                années. La voiture en forme d’œuf est monnaie courante depuis près de vingt ans, et comme c’est la
+                conception qui offre le meilleur rendement, ce modèle n’est pas près de disparaître. Les voitures sans
+                conducteur sont sur le point de faire leur entrée sur le marché. Ces voitures sont équipées de capteurs
+                qui guident la voiture, sans incident, sur nos routes modernes. Elles seront bientôt mises en production
+                pour être offertes aux automobilistes. Tous les événements convergent vers la dernière vision : la
+                destruction des États-Unis.
+                Le moment est venu de se rappeler ces prophéties alors que nous voyons l’accomplissement de celles-ci de
+                nos propres yeux. C’est le moment opportun de se remémorer ces prophéties alors qu’elles s’accomplissent
+                devant nos yeux. Voici un passage de l’Exposé des Sept Âges de l’Église, tiré du chapitre portant sur
+                Laodicée.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section de citation avec background dégradé sur le blockquote -->
+    <section class="quote-section">
+        <div class="container">
+            <blockquote class="blockquote">
+                <p class="mb-0">Le Seigneur Jésus m’a parlé, en disant que la venue du Seigneur était proche, mais
+                    qu’avant Son retour, sept événements de première importance allaient se produire. Je les ai tous
+                    notés, et, ce matin-là, j’ai raconté la révélation du Seigneur.</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Section avec 7 paragraphes et images -->
+    <section class="paragraph-section">
+        <div class="container">
+            <!-- Paragraphe 1 -->
+            <div class="paragraph-item anim-delay-1">
+                <img src="Mussolini.jpg" alt="Image 1" class="img-fluid">
+                <p>
+                    1. D’après la première vision, Mussolini allait envahir l’Éthiopie, et ce pays allait “tomber sous
+                    sa coupe”. Cette vision a causé pas mal de remous, et certains se sont mis fort en colère quand je
+                    l’ai racontée, et n’ont pas voulu y croire. Mais elle s’est réalisée telle quelle. Il est tout
+                    simplement entré dans le pays avec ses armes modernes, et il a pris le pouvoir. Les autochtones
+                    n’étaient vraiment pas de taille. Mais la vision disait aussi que Mussolini aurait une fin horrible,
+                    quand son peuple se retournerait contre lui. C’est arrivé exactement comme cela avait été dit.
+                </p>
+            </div>
+            <hr class="paragraph-line">
+            <!-- Paragraphe 2 -->
+            <div class="paragraph-item anim-delay-2">
+                <img src="hitler.jpg" alt="Image 2" class="img-fluid">
+                <p>
+                    2. La vision suivante annonçait qu’un Autrichien du nom d’Adolf Hitler s’élèverait et deviendrait le
+                    dictateur de l’Allemagne, et qu’il entraînerait le monde dans la guerre. Elle montrait la ligne
+                    Siegfried, et tout le mal que nos troupes auraient à la franchir. Ensuite, elle montrait que Hitler
+                    aurait une fin mystérieuse.
+                </p>
+            </div>
+            <hr class="paragraph-line">
+            <!-- Paragraphe 3 -->
+            <div class="paragraph-item anim-delay-3">
+                <img src="russie.jpg" alt="Image 3" class="img-fluid">
+                <p>
+                    3. Le domaine de la troisième vision était celui de la politique mondiale, car elle me montrait
+                    qu’il y aurait trois grands ISMES : le fascisme, le nazisme et le communisme, mais que les deux
+                    premiers seraient absorbés par le troisième. La voix m’exhortait : “OBSERVE LA RUSSIE! OBSERVE LA
+                    RUSSIE! Surveille le Roi du Nord.”
+                </p>
+            </div>
+            <hr class="paragraph-line">
+            <!-- Paragraphe 4 -->
+            <div class="paragraph-item anim-delay-4">
+                <img src="Voiture.jpg" alt="Image 4" class="img-fluid">
+                <p>
+                    4. La quatrième vision montrait les grands progrès que ferait la science après la deuxième guerre
+                    mondiale. Elle était couronnée par la vision d’une automobile dont la partie supérieure avait l’air
+                    d’une bulle de plastique. Téléguidée, elle parcourait des routes magnifiques, et n’avait pas de
+                    volant, de sorte qu’on voyait les gens assis à l’intérieur jouer à un jeu quelconque pour passer le
+                    temps.
+                </p>
+            </div>
+            <hr class="paragraph-line">
+            <!-- Paragraphe 5 -->
+            <div class="paragraph-item anim-delay-5">
+                <img src="femme_imorale.jpg" alt="Image 5" class="img-fluid">
+                <p>
+                    5. La cinquième vision, qui avait trait au problème moral de notre âge, avait pour point central les
+                    femmes. Dieu me montra que les femmes avaient commencé à quitter leur position en recevant le droit
+                    de vote. Ensuite, elles se sont coupé les cheveux, ce qui signifie qu’elles n’étaient plus sous
+                    l’autorité de l’homme, mais insistaient pour avoir des droits égaux, ou, dans la plupart des cas,
+                    des droits supérieurs. Elles ont revêtu des vêtements d’homme, et elles se sont déshabillées de plus
+                    en plus, si bien que la dernière image que j’ai vue était celle d’une femme nue, à l’exception d’un
+                    petit tablier semblable à une feuille de figuier. Par cette vision, je vis la terrible perversion du
+                    monde tout entier, et son état moral lamentable.
+                </p>
+            </div>
+            <hr class="paragraph-line">
+            <!-- Paragraphe 6 -->
+            <div class="paragraph-item anim-delay-6">
+                <img src="cathedral.jpg" alt="Image 6" class="img-fluid">
+                <p>
+                    6. Puis, dans la sixième vision, une femme de la plus grande beauté, mais cruelle, s’éleva en
+                    Amérique. Elle avait un pouvoir total sur les gens. Je crus qu’il s’agissait de la montée de
+                    l’Église catholique romaine, mais je savais que c’était peut-être la vision d’une femme qui allait
+                    prendre un grand pouvoir en Amérique grâce au droit de vote des femmes.
+                </p>
+            </div>
+            <hr class="paragraph-line">
+            <!-- Paragraphe 7 -->
+            <div class="paragraph-item anim-delay-7">
+                <img src="explosion.jpg" alt="Image 7" class="img-fluid">
+                <p>
+                    7. Dans la septième et dernière vision, j’entendis une effroyable explosion. En me retournant pour
+                    regarder, je ne vis plus que décombres, cratères et fumée sur tout le territoire américain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Bouton "Retour en haut" -->
+  <button id="btn-back-to-top" class="btn btn-primary">
+   <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-light text-center">
+        <div class="container">
+            <small>&copy; 2025 Pierre Ministries. Tous droits réservés.</small>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour mettre à jour automatiquement la date -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dateElement = document.getElementById("date");
+            var today = new Date();
+            dateElement.innerText = "Date: " + today.toLocaleDateString('fr-FR');
+        });
+
+        // Gestion du bouton "Retour en haut"
+    const mybutton = document.getElementById("btn-back-to-top");
+
+    window.addEventListener("scroll", function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    });
+
+    mybutton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
